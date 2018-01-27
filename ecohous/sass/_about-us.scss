@@ -1,0 +1,28 @@
+.about-us{
+  padding: 65px 0 78px 0;
+}
+.about-us-items{
+  width: 1100px;
+	margin: 12px auto 0;
+}
+.about-us-item{
+  float: left;
+  width: 20%;
+}
+.about-us-item .icon{
+	width: 184px;
+  height: 193px;
+  margin: 0 auto;
+  font: 400 70px/182px 'pfdintextcomppro-medium';
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  background: url(../img/about-us-item.png) no-repeat;
+}
+.about-us-item .title{
+  margin-top: 14px;
+  font: 400 24px/24px 'pfdintextcomppro-medium';
+  color: #3d3d3d;
+  text-align: center;
+  animation-delay: 0.3s;
+}

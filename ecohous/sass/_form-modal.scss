@@ -1,0 +1,82 @@
+.mfp-close{
+  color: $accent !important;
+  right: -44px !important;
+  top: -44px !important;
+  transition: color 0.1s linear;
+  &:hover{color: $accent-hover !important;}
+}
+
+#form-modal{
+  position: relative;
+  margin: 0 auto;
+  width: 1000px;  
+}
+
+#form-modal .heading{
+  float: left;
+  margin: 35px 0 0;
+  padding: 0 40px 0 0;
+  width: 58%;
+}
+#form-modal h3{
+  display: inline-block;
+  padding: 0 20px;
+  font: 400 55px/64px 'pfdintextcomppro-medium';
+  color: #fff;
+  white-space: nowrap;
+  text-transform: uppercase;
+  background: #ffae00;
+}
+#form-modal .heading p{
+  font-size: 20px;
+  line-height: 28px;
+  color: #fff;
+  b{
+    font-weight: 600;
+    color: #ffae00;
+    text-transform: uppercase;
+  }
+}
+#form-modal .form{
+  float: right;
+  width: 42%;
+  padding-bottom: 35px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  background: url(../img/color-black-o50.png);
+}
+#form-modal .form .form-inputs{
+  padding: 27px 29px 0;
+  .input-wrap{
+    margin-top: 10px;
+    width: 100%;
+    padding: 11px 70px;
+    &::before{ top: 17px; }
+    &::after{ top: 15px; }
+  }
+  .form-button{
+    margin: 18px 0 0;
+    width: 100%;
+  }
+}
+#form-modal .form .privacy{
+  position: relative;
+  width: 270px;
+  margin: 22px auto 0;
+  padding-left: 25px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  &::before{
+    display: block;
+    content: '';
+    width: 14px;
+    height: 20px;
+    position: absolute;
+    left: 5px;
+    top: 7px;
+    background: url(../img/sprite-1.png) -77px -49px no-repeat;
+  }
+}

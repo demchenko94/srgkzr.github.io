@@ -1,0 +1,108 @@
+@import "parts/featherlight-popap";
+
+.st-projects{
+  padding: 57px 0 75px;
+}
+.st-projects .section-title{
+  margin-bottom: 30px;
+}
+
+
+.st-project{
+  float: left;
+  margin: 20px 0;
+  padding: 0 20px;
+  width: 33%;
+}
+.st-project_img{
+  width: 100%;
+  border: 3px solid transparent;
+  box-shadow: 0px 0px 0px 3px #5F9A0A;
+}
+.st-project > ul{
+  float: left;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 18px;
+}
+.st-project .button{
+  float: right;
+  margin: 44px 0 0;
+  padding: 10px 37px;
+  height: 50px;
+  font: 400 20px/30px 'pfdintextcomppro-medium';
+  &:active{ line-height: 32px; }
+}
+
+
+.st-projects-nav{
+  margin: 60px 0 0;
+  text-align: center;
+}
+.st-projects-nav > a {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 10px 16px;
+  background-color: #519105;
+  color: $white;
+  text-decoration: none;
+  transition: color 0.2s, background-color 0.2s;
+  &:hover{
+    background-color: $accent-hover;
+    color: #000;
+  }
+}
+
+
+$prm: #st-project_modal;
+
+#{$prm}{
+  width: 900px;
+  height: auto;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px 40px 25px;
+  border-radius: 4px;
+}
+
+#{$prm} .col-left{float: left; width: 60%;}
+#{$prm} .col-right{float: right; width: 40%;}
+
+#{$prm} .m-slider-wrap{
+  width: 450px;
+  overflow: hidden;
+}
+#{$prm} .m-slider-nav{
+  margin-top: 10px;
+  &:focus{outline: none;}
+}
+#{$prm} .m-slider-nav .slick-slide{
+  cursor: pointer;
+  &:focus{outline: none;}
+}
+
+#{$prm} .title, 
+#{$prm} .phone{margin: 0 0 20px 0; font-size: 23px;}
+#{$prm} .phone{text-align: right;}
+
+#{$prm} .area,
+#{$prm} .sizes{font-size: 16px; color:#444; b{font-weight: bold; color:$black;}}
+#{$prm} .area{margin: 20px 0 1px;}
+#{$prm} .sizes{margin: 0;}
+
+#{$prm} .notice{margin: 40px 0 0; font-size: 14px; color:#444;}
+
+#{$prm} .button{
+  display: block;
+  width: 60%;
+  margin: 15px 0 0;
+  padding: 10px 37px;
+  height: 50px;
+  font: 400 20px/30px 'pfdintextcomppro-medium';
+  cursor: pointer;
+  &:active{ line-height: 32px; }
+}
+
+
+

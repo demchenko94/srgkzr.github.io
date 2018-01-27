@@ -1,0 +1,43 @@
+.featherlight:last-of-type {
+  background: rgba(0,0,0,0.3);
+}
+
+.featherlight-content{
+	border-bottom: none !important;
+	background: none !important;
+	padding: 0 !important;
+}
+.featherlight-previous,
+.featherlight-next{
+	background: rgba(255, 255, 255, 0.10);
+	top: 0;
+	transition: background 0.3s;
+	&:hover{
+		background: rgba(255, 255, 255, 0.15);
+		span{
+			color: rgba(255, 255, 255, 0.9); 
+			text-shadow: none; 
+		}
+	}
+	span{
+		display: block; 
+		color: rgba(255, 255, 255, 0.25);
+		text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+		transition: color 0.3s;
+	}
+}
+.featherlight-previous { left: 0; right: 85%;}
+.featherlight-next { right: 0; left: 85%;}
+
+@media only screen and (max-width : 1200px){
+	.featherlight-previous { right: 80%; }
+	.featherlight-next { left: 80%; }
+
+	.featherlight-previous,
+	.featherlight-next{
+		background: rgba(255, 255, 255, 0.15);
+		span{ 
+			color: rgba(255, 255, 255, 1); 
+		}
+	}
+}
