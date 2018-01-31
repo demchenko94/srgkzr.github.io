@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <title>Unique - Responsive vCard Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Unique - Responsive vCard Template" />
+    <meta name="keywords" content="vcard, resposnive, retina, resume, jquery, css3, bootstrap, Unique, portfolio" />
+    <meta name="author" content="lmtheme" />
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link rel="stylesheet" href="css/transition-animations.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/main-red.css" type="text/css">
+
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+  </head>
+
+  <body>
+    <!-- Loading animation -->
+    <div class="preloader">
+      <div class="preloader-animation">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+      </div>
+    </div>
+    <!-- /endLoading animation -->
+
+    <div id="page" class="page template-style-dark">
+      <!-- Header -->
+      <header id="site_header" class="header mobile-menu-hide header-color-dark">
+        <div class="my-photo tilt-effect">
+          <img src="images/myPhoto1x1.jpg" alt="image">
+        </div>
+
+        <div class="site-title-block">
+          <h1 class="site-title">Sergei Kozyr</h1>
+        </div>
+
+        <!-- Navigation -->
+        <div class="site-nav">
+          <!-- Main menu -->
+          <ul id="nav" class="site-main-menu">
+          	<!-- href value = data-id without # of .pt-page. -->
+            <li>
+              <a class="pt-trigger" href="#portfolio" data-animation="19"><i class="menu-icon pe-7s-icon pe-7s-portfolio"></i>Portfolio</a>
+            </li>
+            <li>
+              <a class="pt-trigger" href="#about_me" data-animation="17"><i class="menu-icon pe-7s-icon pe-7s-user"></i>About me</a>
+            </li>
+            <li>
+              <a class="pt-trigger" href="#resume" data-animation="18"><i class="menu-icon pe-7s-icon pe-7s-id"></i>My skills</a>
+            </li>
+          </ul>
+          <!-- /Main menu -->
+        </div>
+        <!-- Navigation -->
+      </header>
+      <!-- /Header -->
+
+      <!-- Mobile Header -->
+      <div class="mobile-header mobile-visible">
+        <div class="mobile-logo-container">
+          <div class="mobile-site-title">Sergei Kozir</div>
+        </div>
+
+        <a class="menu-toggle mobile-visible">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <!-- /Mobile Header -->
+
+      <!-- Main Content -->
+      <div id="main" class="site-main">
+        <!-- Page changer wrapper -->
+        <div class="pt-wrapper" style="background-image: url(images/main_bg_light.jpg);">
+          <!-- Subpages -->
+          <div class="subpages">
+
+            <!-- Portfolio Subpage -->
+            <section class="pt-page pt-page-4" data-id="portfolio">
+              <div class="border-block-top-110"></div>
+              <div class="section-inner">
+                <div class="section-title-block">
+                  <div class="section-title-wrapper">
+                    <h2 class="section-title">Portfolio</h2>
+                    <h5 class="section-description">My Best Works</h5>
+                  </div>
+                </div>
+
+                <!-- Portfolio Content -->
+                <div class="portfolio-content">
+                              
+                  <!-- Portfolio filter -->
+                  <ul id="portfolio_filters" class="portfolio-filters">
+                    <li class="active">
+                      <a class="filter btn btn-sm btn-link active" data-group="all">All</a>
+                    </li>
+                    <li>
+                      <a class="filter btn btn-sm btn-link" data-group="HTML/CSS">HTML/CSS Coding</a>
+                    </li>
+                    <li>
+                      <a class="filter btn btn-sm btn-link" data-group="WORDPRESS">WORDPRESS</a>
+                    </li>
+<!--                     <li>
+                      <a class="filter btn btn-sm btn-link" data-group="video">DESIGN</a>
+                    </li> -->
+                  </ul>
+                  <!-- End of Portfolio filter -->
+
+                  <!-- Portfolio Grid -->
+                  <div id="portfolio_grid" class="portfolio-grid portfolio-masonry masonry-grid-3">
+
+                    <!-- Portfolio Item 1 -->
+                    <figure class="item" data-groups='["all", "HTML/CSS"]'>
+                      <a href="https://srgkzr.github.io/ecohous" title="Landpage">
+                        <img src="images/portfolio/ecohous-screen.jpg" alt="Landpage">
+                        <div>
+                          <h5 class="name">Ecohouse</small></h5>
+                          <small>HTML/CSS Coding, Landpage</small>
+                          <i class="pe-7s-icon pe-7s-display2"></i>
+                        </div>
+                      </a>
+                    </figure>
+                    <!-- /Portfolio Item 1 -->
+
+                    <!-- Portfolio Item 2 -->
+                    <figure class="item" data-groups='["all", "HTML/CSS", "WORDPRESS"]'>
+                      <a href="https://adamas-wp.000webhostapp.com" title="WordPress WooCommerce">
+                        <img src="images/portfolio/adamas-screen.jpg" alt="WooCommerce">
+                        <div>
+                          <h5 class="name">Adamas</h5>
+                          <small>HTML/CSS Coding, WordPress, WooCommerce</small>
+                          <i class="pe-7s-icon pe-7s-display2"></i>
+                        </div>
+                      </a>
+                    </figure>
+                    <!-- /Portfolio Item 2 -->
+
+                    <!-- Portfolio Item 3 -->
+                    <figure class="item" data-groups='["all", "HTML/CSS", "WORDPRESS"]'>
+                      <a href="http://snow-wp.comeze.com" title="WordPress">
+                        <img src="images/portfolio/snow-screen.jpg" alt="WordPress">
+                        <div>
+                          <h5 class="name">Snow</h5>
+                          <small>HTML/CSS Coding, WordPress</small>
+                          <i class="pe-7s-icon pe-7s-display2"></i>
+                        </div>
+                      </a>
+                    </figure>
+                    <!-- /Portfolio Item 3 -->
+
+                    <!-- Portfolio Item 4 -->
+                    <figure class="item" data-groups='["all", "HTML/CSS"]'>
+                      <a href="http://waxom.comeze.com" title="Landpage">
+                        <img src="images/portfolio/waxom-screen.jpg" alt="Landpage">
+                        <div>
+                          <h5 class="name">Waxom</small></h5>
+                          <small>HTML/CSS Coding, Landpage</small>
+                          <i class="pe-7s-icon pe-7s-display2"></i>
+                        </div>
+                      </a>
+                    </figure>
+                    <!-- /Portfolio Item 4 -->
+
+                    <!-- Portfolio Item 4 -->
+                    <figure class="item" data-groups='["all", "HTML/CSS"]'>
+                      <a href="http://tajam.comeze.com" title="Landpage">
+                        <img src="images/portfolio/tajam-screen.jpg" alt="Landpage">
+                        <div>
+                          <h5 class="name">Tajam</small></h5>
+                          <small>HTML/CSS Coding, Landpage</small>
+                          <i class="pe-7s-icon pe-7s-display2"></i>
+                        </div>
+                      </a>
+                    </figure>
+                    <!-- /Portfolio Item 4 -->
+
+                  </div>
+                  <!-- /Portfolio Grid -->
+
+                </div>
+                <!-- /Portfolio Content -->
+              </div>
+            </section>
+            <!-- /Portfolio Subpage -->
+
+            <!-- About Me Subpage -->
+            <section class="pt-page pt-page-2" data-id="about_me">
+              <div class="border-block-top-110"></div>
+              <div class="section-inner">
+                <div class="section-title-block">
+                  <div class="section-title-wrapper clearfix">
+                    <h2 class="section-title">About me</h2>
+                    <h5 class="section-description">HTML/CSS coder</h5>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-6 col-md-6 col-lg-4 subpage-block">
+                    <div class="my-photo-block tilt-effect">
+                      <img src="images/myPhoto1x1.jpg" alt="me">
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6 col-md-6 col-lg-4 subpage-block">
+                    <ul class="info-list">
+                      <li><span class="title">Age</span><span class="value">28</span></li>
+                      <li><span class="title">Residence</span><span class="value">Ukraine</span></li>
+                      <li><span class="title">Address</span><span class="value"></span></li>
+                      <li><span class="title">e-mail</span><span class="value"><a href="mailto:email@example.com">koz.srg@gmail.com</a></span></li>
+                      <li><span class="title">Phone</span><span class="value">+38 (050) 204 3438</span></li>
+                      <li><span class="title">Skype</span><span class="value">koz.srg</span></li>
+                      <li><span class="title">Freelance</span><span class="value available">Available</span></li>
+                    </ul>
+
+                    <ul class="social-links">
+                      <li><a class="tip social-button" href="https://github.com/srgkzr" title="GitHub"><i class="fa fa-github"></i></a></li>
+                      <li><a class="tip social-button" href="#" title="VK"><i class="fa fa-vk"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+            <!-- End of About Me Subpage -->
+
+            <!-- Contact Subpage -->
+            <section class="pt-page pt-page-5" data-id="resume">
+              <div class="border-block-top-110"></div>
+              <div class="section-inner">
+                <div class="section-title-block">
+                  <div class="section-title-wrapper">
+                    <h2 class="section-title">My skills</h2>
+                    <h5 class="section-description skills">.</h5>
+                  </div>
+                </div>
+
+                <div class="row">
+
+                  <div class="col-sm-6 col-md-5 subpage-block">
+										<div class="skills-info">
+                      <h4>HTML5</h4>                               
+                      <div class="skill-container">
+                        <div class="skill-percentage skill-4"></div>
+                      </div>
+
+                      <h4>CSS3</h4>
+                      <div class="skill-container">
+                        <div class="skill-percentage skill-5"></div>
+                      </div>
+
+                      <h4>jQuery</h4>
+                      <div class="skill-container">
+                        <div class="skill-percentage skill-6"></div>
+                      </div>
+
+                      <h4>Wordpress</h4>
+                      <div class="skill-container">
+                        <div class="skill-percentage skill-7"></div>
+                      </div>
+
+                      <h4>PHP</h4>
+                      <div class="skill-container">
+                        <div class="skill-percentage skill-8"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6 col-md-6 col-lg-4">
+                  	<ul class="my-skills-list">
+                  		<li>PSD to HTML</li>
+                  		<li>Photoshop, Inkscape</li>
+                  		<li>HTML/HTML5</li>
+                  		<li>CSS3, SASS/SCSS</li>
+                  		<li>JS/jQuery</li>
+                  		<li>Gulp</li>
+                  		<li>Git</li>
+                  		<li>PHP, WordPress</li>
+                  	</ul>
+                  </div>
+
+                </div>
+              </div>
+            </section>
+            <!-- End Contact Subpage -->
+
+          </div>
+        </div>
+        <!-- /Page changer wrapper -->
+      </div>
+      <!-- /Main Content -->
+    </div>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/pages-switcher.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/validator.js"></script>
+    <script src="js/jquery.shuffle.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/tilt.jquery.min.js"></script>
+    <script src="js/jquery.hoverdir.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
