@@ -1,0 +1,39 @@
+.for-others{
+	position: relative;
+	color: $white;
+  background: url(../img/bg-7.png);
+	&::before{
+		content: "";
+		z-index: -1;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+    background: url(../img/bg-6-2.jpg) center top no-repeat;
+		background-size: cover;
+	}
+}
+.for-others .sec-title{
+	font-size: 40px;
+  font-weight: 600;
+  color: #595d6e;
+  text-align: center;
+  text-transform: uppercase;
+}
+.for-others-list{
+  margin-top: 16px;
+  list-style: none;
+  text-align: center;
+}
+.for-others-list > li{
+	display: inline-block;
+  font-size: 18px;
+  line-height: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+	&:first-child {
+  border-left: none;
+	}
+}

@@ -1,0 +1,62 @@
+.steps{
+	z-index: 1;
+	position: relative;
+	padding: 73px 0 36px 0;
+	border-top: 1px solid #a1a1a1;
+}
+
+.step1,
+.step2,
+.step3,
+.step4,
+.step5,
+.step6{
+	padding: 0 5px;
+	min-height: 200px;
+	&::after{
+    content: '';
+    position: absolute;
+    right: -14px;
+    top: 51px;
+    width: 28px;
+    height: 9px;
+    background: url(../img/sprite-1.png) -80px -21px no-repeat;
+	}		
+}
+.step1,
+.step3,
+.step5,
+.step6{
+	display: block;
+}
+.step1{&::after{background-position: -51px -21px;}}
+.step4{&::after{background-position: -51px -21px;}}
+.step6{&::after{display: none;}}
+
+
+.step-icon1,
+.step-icon2,
+.step-icon3,
+.step-icon4,
+.step-icon5,
+.step-icon6{
+  position: relative;
+  margin: 0 auto;
+  width: 111px;
+  height: 111px;
+  background: url(../img/presentation-icons.png) no-repeat;
+}
+.step-icon1{background-position: 0 0;}
+.step-icon2{background-position: -111px 0;}
+.step-icon3{background-position: -334px 0;}
+.step-icon4{background-position: -223px 0;}
+.step-icon5{background-position: -446px 0;}
+.step-icon6{background-position: -557px 0;}
+
+.step-title{
+	margin-top: 18px;
+	text-align: center;
+	font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+}

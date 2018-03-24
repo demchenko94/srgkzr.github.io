@@ -1,0 +1,34 @@
+.photos{
+	padding: 74px 0 100px 0;
+}
+
+.photos-car{
+	margin: 0 auto;
+	max-width: 870px;
+}
+
+.photos-i{
+	margin: 0 auto;
+	max-width: 257px;
+	text-align: center;
+}
+.photos-i_img-wrap{
+	box-sizing: content-box;
+  display: block;
+  width: 230px;
+  height: 160px;
+  padding: 13px 13px 13px 14px;
+  text-decoration: none;
+  background: url(../img/photos-item-photo.png) no-repeat;
+}
+.photos-i_title{
+	margin-top: 15px;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.photos-i_text{
+	margin: 11px 3px 0;
+  font-size: 14px;
+  line-height: 18px;
+}

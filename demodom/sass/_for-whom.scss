@@ -1,0 +1,94 @@
+.for-whom{
+	position: relative;
+	padding: 74px 0 0;
+  background: url(../img/bg-7.png);
+	&::before{
+		content: "";
+		z-index: -1;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+    background: url(../img/bg-6-1.jpg) center top no-repeat;
+		background-size: cover;
+	}
+}
+
+.for-whom .sec-title{
+	color: $white;
+	font-weight: 200;
+	> b > sup{
+		color: #f00;
+		text-transform: none;
+	}
+}
+
+.for-whom-i{
+	position: relative;
+	margin: 0 auto;
+	&::before{
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 597px;
+    background: url(../img/for-you-man-1.png) no-repeat;
+	}
+	&.item1{&::before{background: url(../img/for-you-man-1.png) no-repeat;background-size: contain;}}
+	&.item2{&::before{background: url(../img/for-you-man-2.png) no-repeat;background-size: contain;}}
+	&.item3{&::before{background: url(../img/for-you-man-3.png) no-repeat;background-size: contain;}}
+}
+
+.for-whom-i{
+	.wrap1{
+		display: inline-block;
+  	background-size: contain;
+	}
+	.title{
+    color: $accent-c;
+    font-weight: bold;
+    text-transform: uppercase;
+	}
+	.text1{
+    text-align: justify;
+    color: $white;
+	}
+	.wrap2{
+  	color: $white;
+  }
+  .text2{
+  	font-size: 42px;
+    line-height: 40px;
+    font-weight: bold;
+  }
+  .text3{
+  	font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+#for-whom-car{
+	.owl-dots{
+		position: absolute;
+		left: 0;
+		right: 0;
+		text-align: center;
+	}
+	.owl-dot{
+		display: inline-block;
+		margin: 0 6px;
+		width: 7px;
+		height: 7px;
+		border-radius: 50%;
+		background-color: rgb(193,193,193);
+		transition: .4s;
+		&.active{
+			transform: scale(1.5);
+			background-color: $accent-c;
+		}
+	}
+}
+
+

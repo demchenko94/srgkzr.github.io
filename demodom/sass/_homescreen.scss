@@ -1,0 +1,66 @@
+.homescreen{
+	height: 700px;
+  background: url(../img/bg-1-1.jpg) center center no-repeat;
+  background-size: cover;
+  color: $white
+}
+
+.hs-heading-1{
+	padding-top: 21px;
+	> p{
+	font-size: 16px;
+  line-height: 20px;	
+	}
+  > img{
+  	margin: 0 0 0 50%;
+  }
+}
+
+.hs-heading-2{
+  text-align: center;
+  text-transform: uppercase;
+  background: url(../img/homescreen-heading.png) no-repeat;
+	background-size: cover;
+}
+h1{
+  font-weight: bold;
+  > span{
+  	color: $accent-c;
+  }
+}
+.hs-heading-2 > h3{
+  padding-top: 5px;
+  font-size: 19px;
+  letter-spacing: 3.8px;
+  font-weight: 200;
+  color: #afb4d1;
+}
+
+.hs-heading-3{
+	margin: 21px 0 0;
+	> h3{
+		font-size: 37px;
+		text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+	}
+	> p:first-of-type{
+    padding: 4px 8px;
+    line-height: 20px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    span{
+    	color: $accent-c;
+    }
+	}
+	> p {
+		font-size: 17px;
+		text-align: center;
+	}
+}
+
+.homescreen form{
+  margin: 143px 0 0 32px;
+}
+
+

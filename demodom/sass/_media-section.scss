@@ -1,0 +1,40 @@
+.media{
+  padding: 73px 0 86px 0;
+  border-top: 1px solid #a1a1a1;
+}
+
+.media-car{
+	margin: 0 auto;
+	max-width: 950px;
+}
+
+.media-i{
+	max-width: 474px;
+	padding: 0 21px;
+	margin: 0 auto;
+}
+.media-i_title{
+  font-size: 30px;
+  line-height: 34px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.media-i_subtitle{
+	display: block;
+	margin: 11px 0 0;
+  font-size: 16px;
+  line-height: 18px;
+  &::after{
+		display: block;
+    content: '';
+    margin: 12px 0 13px;
+    width: 10px;
+    height: 10px;
+    background: #f00;
+  }
+}
+.media-i_text{
+	font-size: 16px;
+  line-height: 18px;
+  text-align: justify;
+}

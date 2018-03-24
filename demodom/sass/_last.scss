@@ -1,0 +1,29 @@
+.last{
+	height: 750px;
+  background: url(../img/bg-10.jpg) center center no-repeat;
+  background-size: cover;
+  color: $white
+}
+
+.last-heading-wrap{
+  text-align: center;
+  text-transform: uppercase;
+  background: url(../img/last-screen-heading.png) no-repeat;
+	background-size: cover;
+}
+
+.last-heading .accent{
+  color: $accent-c;
+}
+
+.last h4{
+  margin: 126px 0 0 29px;
+  font-size: 23px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+
+

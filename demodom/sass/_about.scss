@@ -1,0 +1,44 @@
+.about{
+	min-height: 710px;
+	padding: 1px 0 0;
+  color: #fff;
+  background: url(../img/bg-8.jpg) center top no-repeat;
+  background-color: white;
+}
+
+.about_video-btn{
+	box-sizing: content-box;
+	display: block;
+  font-size: 21px;
+  color: #fff !important;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  outline: none;
+  text-decoration: none;
+  background: url(../img/about-play-btn.png) no-repeat;
+	background-size: contain;
+}
+.about_content{
+	text-transform: uppercase;
+}
+.about_title{
+	font-size: 40px;
+  font-weight: 800;
+}
+.about_sub-title{
+	font-weight: 200;
+  font-size: 20px;
+  line-height: 24px;
+}
+.about_text{
+	font-size: 15px;
+	.sup-live{
+		color: #f00;
+	}
+	> sup{
+		font-size: 14px;
+    text-transform: none;
+    line-height: 6px;
+	}
+}

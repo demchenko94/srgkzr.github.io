@@ -1,0 +1,49 @@
+
+.videos{
+	padding: 73px 0 83px 0;
+	border-top: 1px solid #a1a1a1;
+	background: url(../img/bg-9.png);
+}
+.videos-car{
+  margin: 0 auto;
+	max-width: 920px;
+}
+
+.videos-i{
+	padding-bottom: 11px;
+	max-width: 450px;
+	height: 388px;
+	margin: 0 auto;
+	background: $white;
+}
+.videos-i_img-wrap{
+	display: block;
+  position: relative;
+  margin: 0 auto;
+  max-width: 450px;
+  height: 280px;
+  text-decoration: none;
+	&::after{
+		display: block;
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 90px;
+    height: 63px;
+    margin: -32px 0 0 -45px;
+    background: url(../img/videos-play-btn.png) no-repeat;
+	}
+}
+.videos-i_title{
+  margin: 10px 13px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+.videos-i_text{
+  margin: 2px 13px 0;
+  font-size: 16px;
+  line-height: 18px;
+  color: #838383;
+  text-align: justify;
+}

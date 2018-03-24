@@ -308,7 +308,6 @@ function a(v) {
 			    if (item.attr("type") == "hidden") return;
 
 			  	if(item.val().length != 0){
-			  		item.val("");
 			      item.parent().removeClass('error');
 			  	}else{
 			      item.parent().addClass('error');
