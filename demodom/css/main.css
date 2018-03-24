@@ -628,6 +628,12 @@ p {
   margin: 0;
 }
 
+input {
+  padding: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .clear {
   clear: both;
 }
