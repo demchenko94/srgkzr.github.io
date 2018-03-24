@@ -776,7 +776,7 @@ body {
   height: 100%;
 }
 
-#sandwich {
+.sandwich {
   width: 40px;
   height: 40px;
   position: absolute;
@@ -837,21 +837,21 @@ body {
           transition-delay: 0.1s;
 }
 
-#sandwich.active .sw-topper {
+.sandwich.active .sw-topper {
   top: 14px;
   -webkit-transform: rotate(138deg);
       -ms-transform: rotate(138deg);
           transform: rotate(138deg);
 }
 
-#sandwich.active .sw-bottom {
+.sandwich.active .sw-bottom {
   top: 10px;
   -webkit-transform: rotate(-138deg);
       -ms-transform: rotate(-138deg);
           transform: rotate(-138deg);
 }
 
-#sandwich.active .sw-footer {
+.sandwich.active .sw-footer {
   opacity: 0;
   top: 0;
   -webkit-transform: rotate(180deg);
@@ -859,7 +859,7 @@ body {
           transform: rotate(180deg);
 }
 
-#sandwich.active .sw-topper, #sandwich.active .sw-bottom, #sandwich.active .sw-footer {
+.sandwich.active .sw-topper, .sandwich.active .sw-bottom, .sandwich.active .sw-footer {
   background: #ff9000;
 }
 
