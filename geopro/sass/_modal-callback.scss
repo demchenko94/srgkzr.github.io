@@ -1,0 +1,185 @@
+.mfp-close{
+  color: $acc-c-lighten !important;
+  right: -44px !important;
+  top: -44px !important;
+  transition: color 0.1s linear;
+  &:hover{color: $acc-c-darken !important;}
+}
+
+#modal-callback{
+  position: relative;
+  margin: 0 auto;
+  max-width: 1000px;  
+}
+
+#modal-callback .heading{
+  float: left;
+  margin: 35px 0 0;
+  padding: 0 40px 0 0;
+  width: 58%;
+}
+#modal-callback h3{
+  display: inline-block;
+  padding: 0 20px;
+  // font: 400 55px/64px;
+  font-size: 40px;
+  color: #fff;
+  white-space: nowrap;
+  text-transform: uppercase;
+  background: linear-gradient(to right,$acc-c-darken, $acc-c-lighten);
+}
+#modal-callback .heading p{
+  margin-top: 30px;
+  font-size: 20px;
+  line-height: 28px;
+  color: #fff;
+}
+
+/* 
+  START FORM
+*/
+.form{
+  width: 920px;
+  margin: 0 auto;
+  padding-bottom: 17px;
+  background: rgba(0,0,0,0.8);
+}
+.form h3{
+  margin: 0 auto;
+  padding: 16px 0 0;
+  text-align: center;
+  font-size: 27px;
+  line-height: 37px;
+  color: $c-w;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+.form-inputs{
+  padding: 9px 0 0;
+  text-align: center;
+}
+.input-wrap{
+  position: relative;
+  margin: 0 1%;
+  padding: 5px 5px 5px 64px;
+  background-color: #fff;
+  width: 29%;
+  display: inline-block;
+  vertical-align: middle;
+  &.error{
+    background-color: #ffcccc;
+  }
+  &::before{
+    display: block;
+    content: '';
+    position: absolute;
+    left: 16px;
+    top: 11px;
+    width: 20px;
+    height: 20px;
+  }
+  &::after{
+    display: block;
+    content: '';
+    position: absolute;
+    left: 48px;
+    top: 10px;
+    width: 1px;
+    height: 24px;
+    background: #96948a;
+    border-right: #cac9c5;
+  }
+}
+.input-name-wrap{
+  &::before{
+    background: url(../img/sprite-1.png) -77px 0 no-repeat;
+  }
+}
+.input-phone-wrap{
+  &::before{
+  background: url(../img/sprite-1.png) -77px -21px no-repeat;
+  }
+}
+
+.form-inputs input{
+  height: 33px;
+  width: 100%;
+  font-size: 18px;
+  line-height: 33px;
+  font-weight: 600;
+  color: #000;
+  position: relative;
+  border: none;
+  outline: none;
+  background: none;
+  &::placeholder{
+    color: #000;
+  }
+}
+
+.form-button{
+  margin: 0 1%;
+  padding: 0;
+  width: 29%;
+  height: 55px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 28px;
+  background: linear-gradient(to right,$acc-c-darken, $acc-c-lighten);
+  opacity: 0.9;
+  border: none !important;
+  outline: none !important;
+  text-transform: uppercase;
+  color: $c-w;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  &:hover{
+    opacity: 1;
+  }
+}
+
+//Переопределение ИЗМЕНИТЬ!!!!!!!
+
+#modal-callback .form{
+  float: right;
+  width: 42%;
+  padding-bottom: 35px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  background: url(../img/color-black-o50.png);
+}
+#modal-callback .form .form-inputs{
+  padding: 27px 29px 0;
+  .input-wrap{
+    margin-top: 10px;
+    width: 100%;
+    padding: 11px 70px;
+    &::before{ top: 17px; }
+    &::after{ top: 15px; }
+  }
+  .form-button{
+    margin: 18px 0 0;
+    width: 100%;
+  }
+}
+#modal-callback .form .privacy{
+  position: relative;
+  width: 270px;
+  margin: 22px auto 0;
+  padding-left: 25px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  &::before{
+    display: block;
+    content: '';
+    width: 14px;
+    height: 20px;
+    position: absolute;
+    left: 5px;
+    top: 7px;
+    background: url(../img/sprite-1.png) -77px -49px no-repeat;
+  }
+}
