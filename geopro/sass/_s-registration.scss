@@ -1,0 +1,55 @@
+.s-registration{
+	position: relative;
+	padding: 70px 0 75px;
+	background: url("../img/1920x1200.jpg") 50% no-repeat;
+	background-size: cover;
+	text-align: center;
+	color: $c-w;
+	&:before{
+    background-color: $section-black-out-layer;
+    bottom: 0;
+    content: "";
+    display: inline-block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+	}
+	>.container{
+		position: relative;
+	}
+}
+
+.registration_list{
+	display: inline-block;
+	margin: 29px auto 28px;
+	padding: 0 0 0 35px;
+	max-width: 500px;
+	text-align: left;
+	list-style: none;
+}
+.registration_list_i{
+	position: relative;
+	margin: 15px 0;
+	font-size: 20px;
+	font-weight: 200;
+	&::before{
+		content: "\f00c";
+		font-family: "FontAwesome";
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		left: -35px;
+		color: $acc-c;
+	}
+}
+
+.registration_button{
+	display: block;
+	margin: 0 auto;
+	max-width: 252px;
+	border-radius: 45px;
+	padding: 16px 45px;
+	font-size: 20px;
+	color: $c-w;
+}

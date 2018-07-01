@@ -1,0 +1,116 @@
+@media only screen and (min-width : 320px){
+	/**/
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 576px){
+	.callback-button{
+		padding: 7px 20px;
+	}
+	.menu-phones-col{
+		>ul{
+			>li{
+				>a{
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px){
+
+	.menu-phones-col{
+		>ul{
+			>li{
+				>a{
+					font-size: 17px;
+				}
+			}
+		}
+	}
+
+	.callback-button{
+		padding: 7px 5px;
+	}
+
+	.s-homescreen_title{
+		font-size: 45px;
+		line-height: 50px;
+	}
+	.s-homescreen_sub-title{
+		font-size: 23px;
+	}
+	.s-homescreen_text{
+		font-size: 21px;
+		line-height: 36px;
+	}
+
+}//768
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px){
+
+
+	.menu-phones-col{
+		>ul{
+			>li{
+				>a{
+					font-size: 20px;
+				}
+			}
+		}
+	}
+
+	.callback-button{
+		padding: 7px 20px;
+	}
+
+	/*	s-services	*/
+	.services-car_i{
+		flex-direction: row;
+		text-align: left;
+	}
+	.services-car_img-wrap{
+		margin: 0 15px 0 0;
+	}
+	.services-car_content{
+		margin: 0 0 0 15px;
+		padding: 0 0 0 30px;
+	}
+	//END s-services
+
+	/*	s-guarantee	*/
+	.guarantee_i{
+		margin: 75px 0 0;
+	}
+	//END s-guarantee
+
+	/*	s-projects	*/
+	.projects-car_i{
+		flex-direction: row;
+		text-align: left;
+	}
+	.projects-car_img-wrap{
+		margin: 0 15px 0 0;
+	}
+	.projects-car_content{
+		margin: 0 0 0 15px;
+		padding: 0 0 0 30px;
+	}
+	//END s-projects
+
+
+}//992
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px){
+
+	.callback-button-col{
+		text-align: left;
+	}
+
+}
+

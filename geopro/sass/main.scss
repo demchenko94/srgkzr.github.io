@@ -1,0 +1,131 @@
+@import "parts/fonts";
+@import "tools/variables";
+@import "tools/reset_and_basic-classes";
+
+
+@import "libs/sandwich";
+
+
+//sticky footer IE10+
+html,
+body {
+  height: 100%;
+  min-width: 340px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.page{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.main{
+  flex: 1 0 auto;
+}
+// header,
+footer{
+  flex: 0 0 auto;
+}
+//END sticky footer IE10+
+
+//main tags & classes
+html{}
+body{
+	position: relative;
+	min-width: 340px;
+	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;
+	color: $c-b;
+	background-color: #fff;
+}
+.page{
+	position: relative;
+  width: 1920px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+@media only screen and (min-width : 1200px){
+	.container {
+		max-width: 1200px;
+	}
+}
+.sec-title{
+  margin: 0 auto;
+  max-width: 720px;
+	text-align: center;
+	font-size: 33px;
+  line-height: 39px;
+  letter-spacing: 1px;
+  font-weight: 200;
+	&-white{
+		color: $c-w;
+	}
+	&-accent{
+		&:before{
+			content: "";
+			display: block;
+			margin: 0 auto 5px;
+			width: 38px;
+			height: 5px;
+			background-color: $acc-c;
+		}
+	}
+}
+@media only screen and (min-width : 768px){
+	.sec-title{font-size: 40px;}
+}
+
+
+.button{
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+	&:hover{
+		text-decoration: none;
+	}
+
+	&-1{ //button tansparent bg
+		padding: 7px 20px;
+		border-radius: 20px;
+		border: 1px solid $acc-c-lighten;
+		color: $c-b;
+		font-size: 16px;
+		transition: all 0.2s;
+		&:hover{
+			background: linear-gradient(to right,$acc-c-lighten, $acc-c-darken);
+			color: $c-w;
+		}
+	}
+
+	&-2{ //button accent bg
+		padding: 7px 20px;
+		border-radius: 20px;
+		font-size: 16px;
+		color: $c-w;
+		background-color: $acc-c-lighten;
+		transition: all 0.2s;
+		&:hover{
+			background-color: $acc-c-darken;
+			color: $c-w;
+		}
+	}
+
+}
+
+
+// @import "parts/";
+
+@import "header";
+
+@import "s-homescreen";
+@import "s-services";
+@import "s-registration";
+@import "s-guarantee";
+@import "s-projects";
+
+
+@import "s-slide-panel";
+@import "modal-callback";
+
+
+@import "media";

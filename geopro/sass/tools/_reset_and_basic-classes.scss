@@ -1,0 +1,17 @@
+//reset
+h1,h2,h3,h4,h5,h6{margin: 0; padding: 0;}
+a{&:focus{outline: none;}}
+ul{margin: 0; padding: 0;}
+p{margin: 0;}
+input{
+  padding: 0; //firefox and others add padding
+  box-shadow: none; //firefox add box-shadow
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+//basic classes
+.clear{clear: both;}
+.clear-a{&::after{content: " "; display: table; clear: both;}}

@@ -1,0 +1,242 @@
+.s-slide-panel-wrap{
+	z-index: 998;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 65px 46px 50px 35px;
+	width: 340px;
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	color: $c-b;
+	background: linear-gradient(to right,$acc-c-lighten_lide-panel, $acc-c-darken_lide-panel);
+	transition: $slide_panel_transitin;
+	ul{
+		list-style: none;
+	}
+}
+.s-slide-panel{
+	width: 259px;
+}
+
+//slide panel active stage
+.s-slide-panel-wrap.active{
+	// display: none;
+	padding: 65px 0 50px 90px;
+	width: 90px;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	.menu-pages-wrap{
+		>ul{
+			>li{
+				>a{
+					margin: 5px 0 5px -90px;
+					padding: 5px 0 5px 90px;
+					&::before{
+						left: 35px;
+					}
+				}
+			}
+		}
+	}
+}
+//END slide panel active stage
+
+
+.menu-pages-wrap{
+	margin-bottom: 20px;
+	>ul{
+		>li{
+			>a{
+				position: relative;
+				display: block;
+				margin: 5px 0;
+				padding: 5px 0 5px 35px;
+				font-size: 16px;
+				font-weight: 200;
+				letter-spacing: 0.2px;
+				color: $c-b;
+				transition: $slide_panel_transitin;
+				&:hover{
+					text-decoration: none;
+					color: $acc-c-red;
+					&::before{
+						// left: 5px;
+					}
+				}
+				&::before{
+					font-family: "FontAwesome";
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					font-size: 22px;
+					transition: left 0.4s;
+				}
+				&.menu-pages_home{
+					&::before{
+						content: "\f015";
+					}
+				}
+				&.menu-pages_print{
+					&::before{
+						content: "\f02f";
+					}
+				}
+				&.menu-pages_archive{
+					&::before{
+						content: "\f187";
+					}
+				}
+			}
+		}
+	}
+}
+//END menu pages
+
+.menu-categories-wrap{
+	margin-bottom: 20px;
+	>ul{
+		>li{
+			>a{
+				position: relative;
+				margin: 5px 0;
+				padding: 5px 0;
+				font-size: 14px;
+				font-weight: 600;
+				letter-spacing: 0.2px;
+				&:hover{
+					color: $acc-c-red;
+				}
+				&::after{
+					content: "\f0d7";
+					font-family: "FontAwesome";
+					display: inline-block;
+					padding: 1px 0 0 5px;
+					width: 16px;
+					height: 16px;
+					margin-left: 10px;
+					font-size: 10px;
+					background-color: #62804C;
+					color: $acc-c-lighten_lide-panel;
+					border-radius: 50%;
+					transition: all 0.5s;
+				}
+			}
+		}
+		a{
+			display: inline-block;
+			color: #000;
+			transition: all 0.2s;
+			&:hover{
+				&::after{
+					background-color: $acc-c-red;
+				}
+			}
+		}
+	}
+}
+
+//sub-menu
+.menu-categories-wrap{
+	>ul{
+		ul{
+			margin: 0 0 0 15px;
+			>li{
+				>a{
+					margin: 3px 0;
+					padding: 3px 0;
+				}
+			}
+		}
+	}
+}
+//active stage
+.menu-categories-wrap{
+	>ul{
+		>li.active{
+			>a{
+				color: $acc-c-red;
+				text-decoration: underline;
+				&::after{
+					content: "\f0d8";
+					// padding: 0 0 0 5px;
+					background-color: $acc-c-red;
+					transition: all 0.5s;
+				}
+			}
+		}
+	}
+}
+//END menu categories
+
+.slide-panel-button{
+	display: block;
+	margin: 0 0 20px;
+	padding: 8px 20px;
+	width: 100%;
+	max-width: 250px;
+	border-radius: 50px;
+	background-color: $c-w;
+	text-align: center;
+	color: $c-b;
+	font-size: 14px;
+	line-height: 18px;
+	transition: color 0.2s;
+	&:hover{
+		color: $acc-c-red;
+	}
+}
+
+
+.menu-phones-wrap{
+	padding: 1px 0 9px 0;
+	background: url("../img/slide-panel_phone-menu-bg_.jpg") no-repeat;
+	padding-left: 85px;
+	>ul{
+		margin-bottom: 5px;
+		>li{
+			>a{
+				display: block;
+				font-size: 18px;
+				color: $c-b;
+				&:hover{
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	.menu-phones-wrap_callback{
+		display: block;
+		text-decoration: underline;
+		text-decoration-style: dotted;
+		color: $acc-c-red;
+	}
+}
+
+//sandwich
+.slide-panel_sandwich-wrap{
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
+.slide-panel_sandwich{
+	.sw-topper, .sw-bottom, .sw-footer{
+		background: $c-b;
+	}
+	.active{
+		.sw-topper, .sw-bottom, .sw-footer{
+			background:$c-b;
+		}
+	}
+}
+.slide-panel_sandwich.active{
+	.sw-topper{
+		top: 13px
+	}
+	.sw-topper, .sw-bottom, .sw-footer{
+		background: $sandwich-color-active
+	}
+}
+
+//END sandwich
