@@ -1,0 +1,39 @@
+.s-plan{
+	padding: 80px 0 110px;
+	text-align: center;
+	background: url("../img/1920x1200.jpg") 50% no-repeat;
+	background-size: cover;
+}
+
+
+.s-plan_link-wrap{
+	display: flex;
+	justify-content: center;
+}
+.button-s-plan{
+	display: flex;
+	align-items: center;
+	margin: 60px 0 55px;
+	&:before{
+		content: "";
+		flex-grow: 1;
+		display: block;
+		margin-right: 15px;
+		// width: 36px;
+		max-width: 36px;
+		min-width: 36px;
+		height: 36px;
+		background: #aaa;
+	}
+}
+
+.s-plan_link{
+	display: inline-block;
+	color: $acc-c-red;
+	text-decoration: underline;
+	max-width: 250px;
+	&:hover{
+		color: $acc-c-red;
+		text-decoration: none;
+	}
+}

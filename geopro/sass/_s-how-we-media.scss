@@ -1,0 +1,164 @@
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px){
+
+.s-how-we{
+	padding: 75px 0 0;
+	.sec-title{
+		margin-bottom: 100px;
+	}
+}
+	.how-we_i{
+		z-index: 2;
+		position: relative;
+		display: flex;
+		margin: 0 0 0 auto;
+		// padding: 10px 0 0;//if some img < 80px
+		max-width: 400px;
+		height: 283px;
+		text-align: left;
+	}
+	.how-we_i-last{
+		height: 263px;
+	}
+
+
+	//how-we_left
+	.how-we_left{
+		margin: 0;
+	}	
+
+	.how-we_number{
+		display: block;
+		position: absolute;
+		top: 103px;
+		left: 15px;
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+		background-color: $acc-c;
+		text-align: center;
+		font-size: 18px;
+		font-weight: 600;
+		color: #49413E;
+		line-height: 45px;
+	}
+
+
+	//how-we_right
+	.how-we_right{
+		margin: 0 0 0 30px;
+		max-width: 320px;
+	}
+
+	.how-we_button-box{
+		margin: 75px 0 0;
+		max-width: 400px;
+		.button{
+			margin: 10px 0 0 0;
+		}
+	}
+
+
+	// line
+	.how-we_lines{
+		z-index: 1;
+		display: block;
+		position: absolute;
+		top: 125px;
+		width: 720px;//
+		height: 570px;
+		.how-we_lines_t,
+		.how-we_lines_b{
+			position: relative;
+			height: 50%;
+		}
+		.how-we_lines_t{
+			width: 95%;
+			top: 0;
+			right: -39px; //
+			border-top: 2px solid $acc-c;
+			border-right: 2px solid $acc-c;
+			border-bottom: 2px solid $acc-c;
+			border-top-right-radius: 50px;
+			border-bottom-right-radius: 50px;
+		}
+		.how-we_lines_b{
+			width: 60%;
+			bottom: 2px;
+			left: -3px;
+			border-top: 2px solid $acc-c;
+			border-left: 2px solid $acc-c;
+			border-bottom: 2px solid $acc-c;
+			border-top-left-radius: 50px;
+			border-bottom-left-radius: 50px;
+		}
+	}
+	//END line
+
+
+}//768
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px){
+
+	.how-we_button-box{
+		.button{
+			margin: 10px 0 0 15px;
+		}
+	}
+
+	// line
+	.how-we_lines{
+		width: 960px;//
+		.how-we_lines_t{
+			width: 87%;
+			right: -123px; //
+			border-top-right-radius: 300px;
+			border-bottom-right-radius: 300px;
+		}
+		.how-we_lines_b{
+			width: 65%;
+			left: -7px;
+			border-top-left-radius: 200px;
+			border-bottom-left-radius: 200px;
+		}
+	}
+	//END line
+
+}//992
+@media only screen and (min-width : 1040px){
+
+	// line
+	.how-we_lines{
+		.how-we_lines_b{
+			left: -30px;
+			border-top-left-radius: 300px;
+			border-bottom-left-radius: 300px;
+		}
+	}
+	//END line
+
+
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px){
+
+	// line
+	.how-we_lines{
+		width: 1000px;
+		.how-we_lines_t{
+			width: 87%;
+			right: -240px;
+			border-top-right-radius: 300px;
+			border-bottom-right-radius: 300px;
+		}
+		.how-we_lines_b{
+			width: 65%;
+			left: 60px;
+			border-top-left-radius: 300px;
+			border-bottom-left-radius: 300px;
+		}
+	}
+	//END line
+
+}//1200
+

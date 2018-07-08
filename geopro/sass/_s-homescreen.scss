@@ -1,53 +1,93 @@
 .s-homescreen{
 	position: relative;
-	padding: 155px 0 135px;
-	height: 1200px;
 	text-align: center;
-	background: url("../img/1920x1200.jpg") 50% no-repeat;
-	background-size: cover;
-}
-.s-homescreen_title{
-	margin: 0 auto;
-	max-width: 720px;
-	font-size: 35px;
-	letter-spacing: 1px;
-	line-height: 36px;
-	font-weight: 200;
-}
-.s-homescreen_sub-title{
-	margin: 18px auto 0;
-	font-size: 20px;
-	font-weight: 200;
-}
-.s-homescreen_button{
-	display: inline-block;
-	margin-top: 40px;
-	max-width: 360px;
-	padding: 13px 50px;
-	transition: opacity 0.3s;
-	background: linear-gradient(to right,$acc-c-darken, $acc-c-lighten);
-	font-size: 22px;
-	font-weight: 200;
-	line-height: 26px;
-	color: $c-w;
-	border-radius: 60px;
-	box-shadow: 6px 6px 25px 2px rgba(0, 0, 0, 0.21);
-	opacity: 1;
-	&:hover{
-		color: $c-w;
-		opacity: 0.84;
+	&::before{
+		content: "";
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background: url("../img/homescreen-bg-top-good.jpg") 50% no-repeat;
+		background-size: cover;
+	}
+	&::after{
+		content: "";
+		display: inline-block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background: url("../img/homescreen-bg-bottom-good.jpg") 50% no-repeat;
+		background-size: cover;
+	}
+	>.container{
+		z-index: 1;
+		position: relative;
+		height: 100%;
+		&::before{
+			content: "";
+			display: inline-block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 100%;
+			background: url("../img/homescreen-bg-center.png");
+			background-repeat: no-repeat;
+		}
+		&::after{
+			content: "";
+			z-index: 0;
+			position: absolute;
+			background: url("../img/homescreen-bg-bottom-icon.png");
+			background-size: cover;
+		}
 	}
 }
+
+
+.s-homescreen_title{
+	z-index: 1;
+	position: relative;
+	margin: 0 auto;
+	max-width: 240px;
+	font-size: 19px;
+	line-height: 1.05;
+	font-weight: 600;
+}
+
+.s-homescreen_sub-title{
+	z-index: 1;
+	position: relative;
+	margin: 15px auto 15px;
+	max-width: 260px;
+	font-size: 14px;
+	line-height: 1.05;
+	font-weight: 200;
+}
+
+.s-homescreen_button{
+	z-index: 1;
+	position: relative;
+	max-width: 200px;
+	padding: 7px 10px;
+	font-size: 17px;
+	line-height: 1.05;
+	>span{
+		display: none;
+	}
+}
+
 .s-homescreen_text{
 	position: absolute;
-	bottom: 127px;
+	z-index: 1;
+	bottom: 0px;
 	left: 0;
 	right: 0;
 	margin: 0 auto;
+	max-width: 300px;
 	padding: 0 15px;
-	max-width: 950px;
 	color: $c-w;
-	font-size: 18px;
+	font-size: 14px;
 	font-weight: 200;
-	line-height: 27px;
 }

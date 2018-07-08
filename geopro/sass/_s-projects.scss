@@ -36,6 +36,15 @@
 }
 .projects-car_content_text{
 	margin: 0 0 40px;
+	.projects-car_price{
+		&::before{
+			content: "\f02b";
+			font-family: "FontAwesome";
+			display: inline-block;
+			margin-right: 10px;
+			transform: rotate(90deg);
+		}
+	}
 	>p{
 		line-height: 28px;
 	}
@@ -106,3 +115,8 @@
 /*
 	END projects-nav
 */
+
+.s-projects_button-wrap{
+	margin: 58px 0 0;
+	text-align: center;
+}

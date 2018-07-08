@@ -10,8 +10,7 @@
 html,
 body {
   height: 100%;
-  min-width: 340px;
-	font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
 }
 .page{
   display: flex;
@@ -31,26 +30,31 @@ footer{
 html{}
 body{
 	position: relative;
-	min-width: 340px;
+	min-width: 320px;
 	font-size: 14px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "gothic";
 	color: $c-b;
 	background-color: #fff;
 }
+
+footer{
+	height: 500px;
+}
+// .container{
+//   background-color: rgba(0,0,0,0.05);
+// }
+
 .page{
 	position: relative;
-  width: 1920px;
-  max-width: 100%;
+	overflow-x: hidden;
   margin: 0 auto;
+  max-width: 100%;
+  width: 1920px;
 }
-@media only screen and (min-width : 1200px){
-	.container {
-		max-width: 1200px;
-	}
-}
+
 .sec-title{
   margin: 0 auto;
-  max-width: 720px;
+  max-width: 900px;
 	text-align: center;
 	font-size: 33px;
   line-height: 39px;
@@ -79,53 +83,132 @@ body{
 	text-decoration: none;
 	display: inline-block;
 	text-align: center;
+	outline: none;
+	border: none;
 	cursor: pointer;
+	transition: color 0.2s, background-color 0.2s, opacity 0.3s, transform 0.1s;
 	&:hover{
 		text-decoration: none;
 	}
-
+	&:active{
+		opacity: 1;
+		transform: translateY(0.5px);
+		transition: opacity 0.1s, transform 0.1s;
+	}
 	&-1{ //button tansparent bg
-		padding: 7px 20px;
+		padding: 6.5px 21px;
 		border-radius: 20px;
 		border: 1px solid $acc-c-lighten;
+		font-size: 17px;
+    font-family: $f-segoe;
+    font-weight: 400;
 		color: $c-b;
-		font-size: 16px;
-		transition: all 0.2s;
 		&:hover{
-			background: linear-gradient(to right,$acc-c-lighten, $acc-c-darken);
+			background: $acc-c;
 			color: $c-w;
 		}
 	}
-
-	&-2{ //button accent bg
-		padding: 7px 20px;
+	&-2{ //button tansparent bg bigger
+		padding: 10.5px 23px;
 		border-radius: 20px;
-		font-size: 16px;
-		color: $c-w;
-		background-color: $acc-c-lighten;
-		transition: all 0.2s;
+		border: 1px solid $acc-c-lighten;
+		font-size: 15px;
+		font-family: $f-gotic;
+    font-weight: 400;
+		color: $c-b;
 		&:hover{
-			background-color: $acc-c-darken;
+			background: $acc-c;
 			color: $c-w;
 		}
 	}
+	&-3{ //button accent bg to opacity
+		padding: 10.5px 41px;
+		border-radius: 20px;
+		font-family: $f-gotic;
+		font-size: 16px;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: $c-w;
+		background-color: $acc-c;
+		&:hover{
+			opacity: 0.8;
+			color: $c-w;
+		}
+	}
+	&-4{//button big gradient
+		padding: 15px 63px;
+		background: linear-gradient(to right,$acc-c-darken, $acc-c-lighten);
+		font-family: $f-gotic;
+		font-size: 22px;
+		line-height: 25px;
+		font-weight: 200;
+		color: $c-w;
+		border-radius: 60px;
+		box-shadow: 6px 6px 25px 2px rgba(51,102,51,0.4);
+		opacity: 1;
+		&:hover{
+			color: $c-w;
+			opacity: 0.8;
+		}
+	}
+	&-5{//button big long gradient
+		padding: 27.5px 35px;
+		background: linear-gradient(to right,$acc-c-darken, $acc-c-lighten);
+		font-family: $f-gotic;
+		font-size: 22px;
+		line-height: 25px;
+		font-weight: 200;
+		color: $c-w;
+		border-radius: 60px;
+		box-shadow: 6px 6px 25px 2px rgba(51,102,51,0.45);
+		opacity: 1;
+		&:hover{
+			color: $c-w;
+			opacity: 0.8;
+		}
+	}
+	&-6{//button big long gradient-dark
+		padding: 27.5px 35px;
+		background: linear-gradient(to right,#77674D, #433C2C);
+		font-family: $f-gotic;
+		font-size: 22px;
+		line-height: 25px;
+		font-weight: 200;
+		color: $c-w;
+		border-radius: 60px;
+		box-shadow: 6px 6px 25px 2px rgba(51,102,51,0.45);
+		opacity: 1;
+		&:hover{
+			color: $c-w;
+			opacity: 0.8;
+		}
+	}
 
-}
+
+}//button
 
 
-// @import "parts/";
+
 
 @import "header";
 
 @import "s-homescreen";
+@import "s-homescreen-media";
 @import "s-services";
 @import "s-registration";
 @import "s-guarantee";
 @import "s-projects";
-
-
-@import "s-slide-panel";
-@import "modal-callback";
-
+@import "s-how-we";
+@import "s-how-we-media";
+@import "s-plan";
+@import "s-partners";
+@import "s-form";
 
 @import "media";
+
+@import "s-slide-panel";
+@import "s-slide-panel-media";
+
+// @import "modal-callback";
+
+

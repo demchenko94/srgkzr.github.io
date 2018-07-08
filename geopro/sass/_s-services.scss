@@ -1,6 +1,6 @@
 .s-services{
 	position: relative;
-	padding: 54px 0 74px;
+	padding: 54px 0 70px;
 	// background: url("../img/1920x1200.jpg") 50% no-repeat;
 	// background-size: cover;
 }
@@ -9,7 +9,7 @@
 	services-car
 */
 .services-car{
-	margin: 50px 0 40px;
+	margin: 60px 0 40px;
 }
 .services-car_i{
 	display: flex;
@@ -93,7 +93,7 @@
 	font-weight: 600;
 	color: $c-w;
 	transition: background-color 0.4s;
-	background-color: $slider-nav-layer;
+	// background-color: $slider-nav-layer;
 }
 
 

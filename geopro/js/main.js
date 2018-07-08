@@ -10,38 +10,82 @@ function a(v){console.log(v)};
 	  basicScript for all pages
 	*************************/
 	function basicScript() {
-
-		/*----------------------
-	  	slide panel toogle
-		-----------------------*/
-		$(".sandwich").on("click", function (){
-			$("#s-slide-panel-wrap").toggleClass("active");
-			$(".sandwich").toggleClass("active");
-		})
-
-		/*----------------------
-	  	menuCategories
-		-----------------------*/
-			var categoriesSubMenus = $(".menu-categories-wrap").find("ul");
-			categoriesSubMenus.find("ul").each(function (){
-				$this = $(this);
-	
-				$this.hide(0);//hide all menus
-				$this.prev().on("click", function (event){
-					event.preventDefault();
-	
-					$this = $(this);
-	
-					$this.parent().toggleClass("active");
-					$this.next().slideToggle(300);
-				})
-			})
 	
 			/*----------------------
 		  	
 			-----------------------*/
 
 	};//basicScript
+
+
+
+	/*************************
+	  slidePanel
+	*************************/
+	function slidePanel(){
+
+		//slide-panel new scroll - niceScroll
+		if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) && $(window).outerWidth() > 1200){
+
+			var slidePanelScroll_active = true
+			var slidePanelScroll_box = $(".slide-panel_content");
+			slidePanelScroll_box.niceScroll(".slide-panel_content-inner",{//
+			  scrollspeed: 50,//ms 60
+			  mousescrollstep: 30, //35
+			  cursorwidth: 5,
+			  cursorborder: 0,
+			  cursorcolor: 'rgba(255,255,255,0.6)',//'rgba(178, 217, 111, 0.7)', //'rgba(139, 198, 46, 0.5)',
+			  cursorborderradius: 2,
+			  autohidemode: true,
+			  horizrailenabled: false,
+			});
+			//reset scroll after resize
+			window.slidePanelScrollResize = function(delay){
+				setTimeout(function(){ 
+					slidePanelScroll_box.getNiceScroll().resize(); 
+				}, delay);
+			};
+			
+		}//if
+
+	  //toogle slide panel
+		$(".site-nav_wrap").fadeToggle(0); //display none чтоб не было скролла при закрытом меню
+		
+		$(".sandwich").on("click", function (){
+
+			$("#slide-panel").toggleClass("active");
+			$(".sandwich").toggleClass("active");
+			$(".site-nav_wrap").fadeToggle(400);
+
+			if (slidePanelScroll_active){
+				slidePanelScrollResize(430);//fix for scroll - 400 delay before reset
+				slidePanelScrollResize(630);//fix for scroll - 400 delay before reset
+			}
+		});
+	  
+	  //menuCategories - меню в слайд панели
+		var categoriesSubMenus = $(".menu-categories-wrap").find("ul");
+		categoriesSubMenus.find("ul").each(function (){
+			$this = $(this);
+	
+			$this.hide(0);//hide all menus
+			$this.prev().addClass("sub-menu-sibling");
+			$this.prev().on("click", function (event){
+				event.preventDefault();
+	
+				$this = $(this);
+	
+				$this.parent().toggleClass("active");
+				$this.next().slideToggle(300);
+
+				if (slidePanelScroll_active){
+					slidePanelScrollResize(300);//fix for scroll - 300 delay before reset
+				}
+			});
+		});
+
+	};//END slidePanel
+
 
 
 	/*************************
@@ -122,14 +166,14 @@ function a(v){console.log(v)};
 			  autoplay: false, //true,
 			});
 			$('#projects-nav').slick({
-			  slidesToShow: 6,
+			  slidesToShow: 6, //5
 			  slidesToScroll: 1,
 			  asNavFor: '#projects-car',
 			  dots: false,
 			  arrows: false,
 			  // centerMode: true,
 			  focusOnSelect: true,
-			  // centerPadding: "0",
+			  // centerPadding: "100px",
 			  autoplay: false, //true,
 			 	responsive: [
 					{
@@ -171,11 +215,67 @@ function a(v){console.log(v)};
 
 
 	/*************************
+	  partnersCarousel
+	*************************/
+	function partnersCarousel(){
+		if($("#partners-car").length){
+
+			$('#partners-car').slick({
+			  slidesToShow: 7,
+			  slidesToScroll: 1,
+			  dots: false,
+			  arrows: false,
+			  // centerMode: true,
+			  focusOnSelect: true,
+			  // centerPadding: "0",
+			  autoplay: false, //true,
+			  draggable: false,
+			  // focusOnSelect: false,
+			 	responsive: [
+					{
+					  breakpoint: 1200,
+					  settings: {
+					  	dots: false,
+					    arrows: false,
+					    slidesToShow: 5
+					  }
+					},
+					{
+					  breakpoint: 992,
+					  settings: {
+					  	dots: false,
+					    arrows: false,
+					    slidesToShow: 4
+					  }
+					},
+					{
+					  breakpoint: 768,
+					  settings: {
+					  	dots: false,
+					    arrows: false,
+					    slidesToShow: 3
+					  }
+					},
+					{
+					  breakpoint: 500,
+					  settings: {
+					  	dots: false,
+					    arrows: false,
+					    slidesToShow: 2
+					  }
+					}
+				]
+			});
+		}
+	}//partnersCarousel
+
+
+	/*************************
 	 popapCallback
 	*************************/
 	function popapCallback(){
 
-		$('.button-call-callback').magnificPopup({
+		$('.button_modal').magnificPopup({
 				type: 'inline',
 				fixedContentPos: true,
 				fixedBgPos: true,
@@ -186,12 +286,11 @@ function a(v){console.log(v)};
 				removalDelay: 300,////time open window
 				mainClass: 'my-mfp-zoom-in',
 				callbacks: {
-					open: function() {
-						setTimeout(function(){ 
-	  					$("#modal-callback .input-name-wrap").find("input").focus();
-						}, 300);//time for open window
-
-	  			},
+					// open: function() {
+					// 	setTimeout(function(){ 
+	  		// 			$("#modal-callback .input-name-wrap").find("input").focus();
+					// 	}, 300);//time for open window
+	  		// 	},
 	  		}
 		});
 
@@ -253,27 +352,36 @@ function a(v){console.log(v)};
 	};//END contactForm
 
 
-	$(document).ready(function(){
-		basicScript();
-		servicesCarousel();
-		projectsCarousel()
-		popapCallback();
-		contactForm();
-	});
 
-	$(window).on( "load", function(){});
-	$(window).on( "resize", function(){
-
+function asdf(){
 		/*----------------------
 	  	slide panel toogle
 		-----------------------*/
-		if ($(window).outerWidth() < 1349){
+		if ($(window).outerWidth() < 1340){
 			$("#s-slide-panel-wrap").hide(500)
 		}else{
 			$("#s-slide-panel-wrap").show(500)
 		}
+}
 
+
+	$(document).ready(function(){
+		basicScript();
+		slidePanel();
+		servicesCarousel();
+		projectsCarousel();
+		partnersCarousel();
+		popapCallback();
+		contactForm();
 	});
+
+	$(window).on( "load", function(){
+		// asdf();
+	});
+	$(window).on( "resize", function(){
+		// asdf();
+	});
+
 	$(window).on( "scroll", function() {});
 
 })(jQuery);
