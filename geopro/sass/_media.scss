@@ -32,7 +32,11 @@
 	}
 	//END s-header
 
-
+	/*	s-guarantee	*/
+	.s-guarantee{
+		display: block;
+	}
+	//s-guarantee
 
 }//498
 /* Small Devices, Tablets */
@@ -49,6 +53,36 @@
 	}
 	//END s-header
 
+	/*	s-guarantee	*/
+	.s-guarantee{
+		padding: 55px 0 82px;
+		.sec-title{
+			margin-bottom: 22px;
+		}
+	}
+
+	.guarantee_i{
+		margin: 35px 0 0;
+	}
+	.guarantee_i_img-wrap{
+		width: 64px;
+		height: 64px;
+		margin: 0 15px 0;
+	}
+	.guarantee_i_img{
+		width: 64px;
+		height: 64px;
+	}
+
+	.guarantee_i_text{
+		height: 64px;
+		>a{
+			bottom: -22px;
+		}
+	}
+
+
+	//s-guarantee
 
 }//768
 /* Medium Devices, Desktops */
@@ -98,24 +132,33 @@
 	//END s-services
 
 	/*	s-guarantee	*/
+	.s-guarantee{
+		padding: 46px 0 89px;
+		.sec-title{
+			margin-bottom: 15px;
+		}
+	}
 	.guarantee_i{
-		margin: 75px 0 0;
+		margin: 40px 0 0;
 	}
-	//END s-guarantee
+	.guarantee_i_img-wrap{
+		width: 74px;
+		height: 74px;
+		margin: 0 15px 0;
+	}
+	.guarantee_i_img{
+		width: 74px;
+		height: 74px;
+	}
+	.guarantee_i_text{
+		height: 74px;
+		font-size: 16px;
+		>a{
+			bottom: -24px;
+		}
+	}
+	//s-guarantee
 
-	/*	s-projects	*/
-	.projects-car_i{
-		flex-direction: row;
-		text-align: left;
-	}
-	.projects-car_img-wrap{
-		margin: 0 15px 0 0;
-	}
-	.projects-car_content{
-		margin: 0 0 0 15px;
-		padding: 0 0 0 30px;
-	}
-	//END s-projects
 
 
 }//992
@@ -126,5 +169,42 @@
 		padding-left: 200px;
 	}
 	//END s-header
+
+	/*	s-guarantee	*/
+	.s-guarantee{
+		padding: 64px 0 56px;
+		.sec-title{
+			margin-bottom: 0;
+		}
+	}
+	.guarantee_i{
+		margin: 69px 0 18px;
+		display: block;
+		text-align: center;
+	}
+	.guarantee_i_img-wrap{
+		margin: 0 auto 23px;
+	}
+	.guarantee_i_text{
+		display: block;
+		height: auto;
+		font-size: 17px;
+		line-height: 29px;
+			>a{
+				width: 100%;
+				text-align: center;
+				bottom: -26px;
+			}
+	}
+	.guarantee_i-work{
+		.guarantee_i_text{
+			margin: 0 -8px;
+		}
+	}
+
+
+	//s-guarantee
+
+
 }
 

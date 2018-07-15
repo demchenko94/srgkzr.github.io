@@ -9,7 +9,7 @@
 //sticky footer IE10+
 html,
 body {
-  height: 100%;
+  // height: 100%;
   width: 100%;
 }
 .page{
@@ -54,11 +54,7 @@ footer{
 
 .sec-title{
   margin: 0 auto;
-  max-width: 900px;
 	text-align: center;
-	font-size: 33px;
-  line-height: 39px;
-  letter-spacing: 1px;
   font-weight: 200;
 	&-white{
 		color: $c-w;
@@ -67,23 +63,23 @@ footer{
 		&:before{
 			content: "";
 			display: block;
-			margin: 0 auto 5px;
 			width: 38px;
 			height: 5px;
 			background-color: $acc-c;
 		}
 	}
 }
-@media only screen and (min-width : 768px){
-	.sec-title{font-size: 40px;}
-}
-
+@media only screen and (min-width : 1px){ .sec-title{font-size: 23px; line-height: 1.27; &-accent{&:before{margin: 0 auto 8px;height: 3px;}}} }
+@media only screen and (min-width : 498px){ .sec-title{font-size: 30px; &-accent{&:before{margin: 0 auto 5px;}}} }
+@media only screen and (min-width : 768px){ .sec-title{font-size: 32px; &-accent{&:before{height: 5px;}}} }
+@media only screen and (min-width : 992px){ .sec-title{font-size: 35px;} }
+@media only screen and (min-width : 1310px){ .sec-title{font-size: 40px;} }
 
 .button{
 	text-decoration: none;
 	display: inline-block;
 	text-align: center;
-	outline: none;
+	outline: none !important;
 	border: none;
 	cursor: pointer;
 	transition: color 0.2s, background-color 0.2s, opacity 0.3s, transform 0.1s;
@@ -195,14 +191,19 @@ footer{
 @import "s-homescreen";
 @import "s-homescreen-media";
 @import "s-services";
+@import "s-services-media";
 @import "s-registration";
+@import "s-registration-media";
 @import "s-guarantee";
 @import "s-projects";
+@import "s-projects-media";
 @import "s-how-we";
 @import "s-how-we-media";
 @import "s-plan";
 @import "s-partners";
-@import "s-form";
+
+@import "part-form";
+@import "part-form-media";
 
 @import "media";
 

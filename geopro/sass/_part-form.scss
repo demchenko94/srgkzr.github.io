@@ -1,0 +1,89 @@
+$form_border_c: #D5D1C5;
+$form_placeh_c: #A09A85;
+$form_link_c: #A3714C;
+// //max-width - писать форме и врапперу inputs 100%
+
+.form-wrap{
+	position: relative;
+	margin: 0 auto;
+	max-width: 630px;
+	text-align: center;
+	font-family: $f-segoe;
+	background-color: #fff;
+	color: $c-b;
+}
+
+.form{
+	position: relative;
+	margin: 0 auto;
+	max-width: 470px;
+}
+
+.form_input-wrap{
+	width: 100%;
+	padding: 0 15px;
+	line-height: 1.8;
+	>input,
+	>textarea{
+		display: block;
+		padding: 0 15px;
+		width: 100%;
+		border: none;
+		outline: none;
+		border-bottom: 1px solid $form_border_c;
+		&::placeholder {
+		  color: $form_placeh_c;
+		}
+	}
+	textarea {
+		resize: none;
+	}
+}
+
+
+.form-title{
+	margin: 0 auto;
+	font-weight: 400;
+	font-family: $f-gotic;
+}
+.form-sub-title{
+	margin: 0 auto;
+	font-size: 18px;
+	font-family: $f-gotic;
+}
+.form_privacy{
+	margin: 0 auto;
+	padding: 0 15px;
+	max-width: 360px;
+	>label{
+		display: inline;
+		>input{
+			display: inline-block;
+			margin-right: 10px;
+		}
+	}
+	>a{
+		text-decoration: underline;
+		color: $form_link_c;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}
+
+
+.form_subject-wrap{//hiden field
+	display: none;
+}
+
+
+// MODAL WINDOW STYLE
+.modal-form-wrap{
+	position: relative;
+	margin: 0 auto;
+	max-width: 630px;
+	.mfp-close{
+		font-size: 29px;
+		color: #8AC630;
+	}
+}
