@@ -1,16 +1,24 @@
 .s-plan{
-	padding: 80px 0 110px;
-	text-align: center;
+	padding: 29px 0 35px;
 	background: url("../img/plan-bg.jpg") 50% no-repeat;
 	background-size: cover;
+	text-align: left;
+	.sec-title{
+		font-size: 16px;
+		line-height: 23px;
+		letter-spacing: 0.4px;
+		font-weight: 600;
+		text-align: left;
+	}
 }
 
 
 .s-plan_link-wrap{
+
 }
 .button-s-plan{
 	position: relative;
-	margin: 60px 0 55px;
+	margin: 23px 0 19px;
 	padding-left: 101px;
 	&:before{
 		content: "";
@@ -28,11 +36,24 @@
 
 .s-plan_link{
 	display: inline-block;
-	color: $acc-c-red;
+	color: #433C2C;
 	text-decoration: underline;
 	max-width: 250px;
+	font-size: 16px;
 	&:hover{
-		color: $acc-c-red;
+		color: #433C2C;
 		text-decoration: none;
+	}
+}
+@media only screen and (max-width : 497px){
+	.button-s-plan{
+		padding: 13px 32px;		
+		font-size: 20px;
+		&:before{
+			display: none;
+		}
+		>span{
+			display: none;
+		}
 	}
 }

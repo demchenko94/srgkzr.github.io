@@ -1,21 +1,19 @@
-
 .s-partners-and-s-form{
-	background: url("../img/1920x1200.jpg") 50% no-repeat;
+	background: url("../img/partners-bg.jpg") 50% 50% no-repeat;
 	background-size: cover;
 }
 
-
 .s-partners{
-	padding: 50px 0;
-}
-.partners-car_i{
-	>img{
-		margin: 0 auto;
-	}
+	padding: 16px 0 16px;
 }
 
-.partners-car{
-	.slick-slide{
-		outline: none !important;
-	}
+.partners{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.partners_i{
+	padding: 4px;
+	width: 33%;
 }

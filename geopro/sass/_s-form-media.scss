@@ -1,0 +1,106 @@
+@media only screen and (max-width: 767px) and (min-width: 1px){
+
+.s-form{
+	padding: 0 0 0px;
+	.form-sub-title{
+		display: block;
+		font-size: 17px;
+		font-weight: 600;
+	}
+	.form-wrap{
+		padding: 1px 0 30px;
+		background-color: transparent;
+		box-shadow: none;
+	}
+	.s-form_button_submit{
+		display: none;
+	}
+	.form_input-wrap{
+		display: none;
+	}
+	.form_privacy{
+		display: none;
+	}
+	.s-form_button_mobile{
+		padding: 14px 19px;
+		font-size: 17px;
+	}
+	.form-wrap .form_button-wrap .button-1{
+		padding: 9px 22px;
+	}
+}
+
+}//1
+@media only screen and (max-width: 767px) and (min-width: 498px){
+
+.s-form{
+	.form > .form-sub-title{
+		margin-bottom: 21px;
+		font-size: 20px;
+		font-weight: 200;
+	}
+	.s-form_button_mobile{
+		padding: 18px 42px;
+		font-size: 22px;
+	}
+	.form-wrap .form_button-wrap .button-1{
+		padding: 13px 40px;
+	}
+}
+
+}//576
+@media only screen and (min-width : 768px){
+
+.s-form{
+	padding: 23px 0 20px;
+}
+
+.s-form_button_mobile{
+	display: none;
+}
+
+
+}//768
+@media only screen and (min-width : 992px){
+
+.s-form{
+	padding: 53px 0 40px;
+	.container{
+		position: relative;
+		&::before{
+			content: "";
+			display: block;
+			position: absolute;
+			top: -10%;
+			left: -10%;
+			width: 120%;
+			height: 120%;
+			background: url("../img/s-form-bg.png") 2% 72% no-repeat;
+			background-size: 560px;
+		}
+	}
+}
+
+}//992
+@media only screen and (min-width : 1310px){
+.s-form{
+	padding: 102px 0 40px;
+	.container{
+		position: relative;
+		&::before{
+			content: "";
+			display: block;
+			position: absolute;
+			top: -10%;
+			left: -10%;
+			width: 120%;
+			height: 120%;
+			background-position: 12% -40px;
+			background-size: 740px;
+		}
+	}
+}
+
+
+}//1218
+

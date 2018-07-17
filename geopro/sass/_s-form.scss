@@ -1,0 +1,27 @@
+.s-form{
+	padding: 102px 0 20px;
+	.form-wrap{
+		padding: 50px 0 60px;
+		box-shadow: 2px 2px 40px 0 rgba(0,0,0, 0.10);
+		.form_button-wrap{
+			>span{
+				display: block;
+				margin: 10px 0;
+				text-align: center;
+				font-size: 28px;
+				text-transform: uppercase;
+				font-family: $f-gotic;
+			}
+			.button-1{
+				padding: 12.5px 61px;
+				font-size: 21px;
+				border-radius: 55px;
+				color: $acc-c;
+				border: 2px solid $acc-c;
+				&:hover{
+					color: $c-w;
+				}
+			}
+		}
+	}
+}

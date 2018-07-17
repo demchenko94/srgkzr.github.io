@@ -34,9 +34,13 @@ $form_link_c: #A3714C;
 		&::placeholder {
 		  color: $form_placeh_c;
 		}
+		&.error{
+			border-bottom: 1px solid red;
+		}
 	}
 	textarea {
 		resize: none;
+		line-height: 1.6;
 	}
 }
 
@@ -57,6 +61,9 @@ $form_link_c: #A3714C;
 	max-width: 360px;
 	>label{
 		display: inline;
+		&.error{
+			color: red;
+		}
 		>input{
 			display: inline-block;
 			margin-right: 10px;

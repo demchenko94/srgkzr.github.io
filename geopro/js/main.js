@@ -1,4 +1,4 @@
-function a(v){console.log(v)};
+function aaa(v){console.log(v)};
 
 // (function () {
   
@@ -223,67 +223,20 @@ function a(v){console.log(v)};
 	//projectsShowMore
 
 
-
 	/*************************
-	  partnersCarousel
+	  scrollIdAnimateMain
 	*************************/
-	function partnersCarousel(){
-		if($("#partners-car").length){
-
-			$('#partners-car').slick({
-			  slidesToShow: 7,
-			  slidesToScroll: 1,
-			  dots: false,
-			  arrows: false,
-			  // centerMode: true,
-			  focusOnSelect: true,
-			  // centerPadding: "0",
-			  autoplay: false, //true,
-			  draggable: false,
-			  // focusOnSelect: false,
-			 	responsive: [
-					{
-					  breakpoint: 1200,
-					  settings: {
-					  	dots: false,
-					    arrows: false,
-					    slidesToShow: 5
-					  }
-					},
-					{
-					  breakpoint: 992,
-					  settings: {
-					  	dots: false,
-					    arrows: false,
-					    slidesToShow: 4
-					  }
-					},
-					{
-					  breakpoint: 768,
-					  settings: {
-					  	dots: false,
-					    arrows: false,
-					    slidesToShow: 3
-					  }
-					},
-					{
-					  breakpoint: 500,
-					  settings: {
-					  	dots: false,
-					    arrows: false,
-					    slidesToShow: 2
-					  }
-					}
-				]
-			});
+	function scrollIdAnimateMain(){
+		if ($("#slide-panel").length){
+			window.scroll = new SmoothScroll('.menu-pages-wrap a', {speed: 1000});
 		}
-	}//partnersCarousel
+	}//scrollIdAnimateMain
 
 
 	/*************************
-	 popapCallback
+	 modalWindows
 	*************************/
-	function popapCallback(){
+	function modalWindows(){
 
 		$('.button_modal').magnificPopup({
 				type: 'inline',
@@ -295,70 +248,118 @@ function a(v){console.log(v)};
 				midClick: true,
 				removalDelay: 300,////time open window
 				mainClass: 'my-mfp-zoom-in',
-				// callbacks: {
-				// 	// open: function() {
-				// 	// 	setTimeout(function(){ 
-	  	// 	// 			$("#modal-callback .input-name-wrap").find("input").focus();
-				// 	// 	}, 300);//time for open window
-	  	// 	// 	},
-	  	// 	}
+				callbacks: {
+					open: function() {
+						//focus on select. if > 1200. 300-time for open window
+						$this = this;
+						setTimeout(function(){
+							$this.content.find(".form_name-wrap").find("input").focus();
+						}, 300);
+	  			},
+	  		}
 		});
 
-	};//END popapCallback
+	};//END modalWindows
 
 
 	/*************************
 	  contactForm
 	*************************/
 	function contactForm() {
-		if($("#modal-callback").length){
+		if($(".form").length){
 
-		  $("#modal-callback").submit(function(event) {
+			var forms = $(".form");
 
-				event.preventDefault();
+			forms.each(function (){
 
-				var form = $(this);
-				var name = form.find('input[name=name]');
-				var phone = form.find('input[name=phone]');
-				var error = 0;
+				$this = $(this);
 
-	      if (!name.val().length){
-				  name.parent().addClass('error');
-				  if (!error) name.focus();
-	        error++;
-	      }else {
-				  name.parent().removeClass('error');
-	      }
+				//mask for phone
+				$this.find(".form_phone-wrap").find("input").mask("+9(999)999-99-99");
 
-	      if (!phone.val().length){
-				  phone.parent().addClass('error');
-				  if (!error) phone.focus();
-	        error++;
-	      }else {
-				  phone.parent().removeClass('error');
-	      }
+				//textarea resize
+				$this.find("textarea").each(function(){
+					autosize(this);
+				})
 
-				if (error) return;
+				//submit
+			  $this.submit(function(event) {
+					event.preventDefault();
 
-				$.ajax({
-					type: "POST",
-			  	url: 'mail.php',
-			  	data: form.serialize(),
-			  	dataType: "json",
-			  	beforeSend: function(jqXHR, settings) {},
-			  	success: function(data, textStatus, jqXHR) {
-			  		if (data === 'OK') {
-			        form[0].reset();
-			        alert('Данные успешно отправленны');
+					// var subject = form.find('input[name=subject]');
+					// var calltime = form.find('input[name=calltime]');
+					// var question = form.find('textarea[name=question]');
+
+					var form = $(this);
+					var name = form.find('input[name=name]');
+					var phone = form.find('input[name=phone]');
+					var email = form.find('input[name=email]');
+					var privacy = form.find('input[name=privacy]');
+					var error = 0;
+
+					//check privacy
+			    if(privacy.prop("checked") != true) { 
+			      // window.alert('Дайте свое согласие на обработку данных!');
+					  privacy.parent().addClass('error');
+			      return false;
+			    }else{
+					  privacy.parent().removeClass('error');
+			    }
+
+					//check name
+		      if (!name.val().length){
+					  name.addClass('error');
+					  if (!error) name.focus();
+		        error++;
+		      }else {
+					  name.removeClass('error');
+		      }
+
+		      //check phone
+		      if (!phone.val().length){
+					  phone.addClass('error');
+					  if (!error) phone.focus();
+		        error++;
+		      }else {
+					  phone.removeClass('error');
+		      }
+
+		      //check email
+		      if (email.length){
+			      if (!email.val().length){
+						  email.addClass('error');
+						  if (!error) email.focus();
+			        error++;
+			      }else {
+						  email.removeClass('error');
 			      }
-			  	},
-			  	error: function(jqXHR, textStatus, errorThrown) {
-			  		alert('Ошибка отправки данных. Попробуйте еще раз.');
-			  	},
-			  	complete: function(jqXHR, textStatus) {},
-			  });
-			});
-		};
+		      }
+
+		      //check error
+					if (error) return;
+
+					//sending
+					$.ajax({
+						type: "POST",
+				  	url: 'mail.php',
+				  	data: form.serialize(),
+				  	dataType: "json",
+				  	beforeSend: function(jqXHR, settings) {},
+				  	success: function(data, textStatus, jqXHR) {
+				  		if (data === 'OK') {
+				        form[0].reset();
+				        alert('Данные успешно отправленны');
+				      }
+				  	},
+				  	error: function(jqXHR, textStatus, errorThrown) {
+				  		alert('Ошибка отправки данных. Попробуйте еще раз.');
+				  	},
+				  	complete: function(jqXHR, textStatus) {},
+				  });
+				});
+
+			})//each
+		};//if
 	};//END contactForm
 
 
@@ -374,15 +375,13 @@ function a(v){console.log(v)};
 	$(document).ready(function(){
 		saveWindowWidth();
 
-
-
 		basicScript();
 		slidePanel();
 		servicesTabs();
 		projectsCarousel();
-		projectsShowMore()
-		partnersCarousel();
-		popapCallback();
+		projectsShowMore();
+		scrollIdAnimateMain();
+		modalWindows();
 		contactForm();
 
 	});

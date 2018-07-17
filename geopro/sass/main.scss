@@ -37,13 +37,6 @@ body{
 	background-color: #fff;
 }
 
-footer{
-	height: 500px;
-}
-// .container{
-//   background-color: rgba(0,0,0,0.05);
-// }
-
 .page{
 	position: relative;
 	overflow-x: hidden;
@@ -140,7 +133,7 @@ footer{
 		font-weight: 200;
 		color: $c-w;
 		border-radius: 60px;
-		box-shadow: 6px 6px 25px 2px rgba(51,102,51,0.4);
+		box-shadow: 6px 6px 25px 2px rgba(51,102,51,0.35);
 		opacity: 1;
 		&:hover{
 			color: $c-w;
@@ -156,7 +149,7 @@ footer{
 		font-weight: 200;
 		color: $c-w;
 		border-radius: 60px;
-		box-shadow: 6px 6px 25px 2px rgba(51,102,51,0.45);
+		box-shadow: 6px 6px 25px 2px rgba(51,102,51,0.35);
 		opacity: 1;
 		&:hover{
 			color: $c-w;
@@ -172,7 +165,7 @@ footer{
 		font-weight: 200;
 		color: $c-w;
 		border-radius: 60px;
-		box-shadow: 6px 6px 25px 2px rgba(51,102,51,0.45);
+		box-shadow: 6px 6px 25px 2px rgba(119, 103, 77, 0.45);
 		opacity: 1;
 		&:hover{
 			color: $c-w;
@@ -201,6 +194,13 @@ footer{
 @import "s-how-we-media";
 @import "s-plan";
 @import "s-partners";
+@import "s-form";
+@import "s-form-media";
+@import "s-contacts";
+@import "s-contract";
+@import "footer";
+@import "footer-media";
+
 
 @import "part-form";
 @import "part-form-media";
