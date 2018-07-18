@@ -7,9 +7,11 @@
 
 
 //sticky footer IE10+
-html,
+html{
+  // height: 100%;// нужно ли? могут быть проблемы) c скроллом)
+}
 body {
-  // height: 100%;
+  // height: 100%;// нужно ли? могут быть проблемы) c скроллом)
   width: 100%;
 }
 .page{
@@ -210,6 +212,6 @@ body{
 @import "s-slide-panel";
 @import "s-slide-panel-media";
 
-// @import "modal-callback";
+
 
 

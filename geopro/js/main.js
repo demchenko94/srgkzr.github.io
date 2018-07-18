@@ -18,7 +18,6 @@ function aaa(v){console.log(v)};
 	};//basicScript
 
 
-
 	/*************************
 	  slidePanel
 	*************************/
@@ -250,7 +249,7 @@ function aaa(v){console.log(v)};
 				mainClass: 'my-mfp-zoom-in',
 				callbacks: {
 					open: function() {
-						//focus on select. if > 1200. 300-time for open window
+						//focus on select. 300-time for open window
 						$this = this;
 						setTimeout(function(){
 							$this.content.find(".form_name-wrap").find("input").focus();
@@ -260,6 +259,101 @@ function aaa(v){console.log(v)};
 		});
 
 	};//END modalWindows
+
+	/*************************
+	 modalthanks
+	*************************/
+	function modalthanks(){
+
+		$(".button_modal-thanks").on("click", function (){
+			$.magnificPopup.close();
+		});
+
+		$.magnificPopup.open({
+				items: {
+				  src: '#modal-thanks'
+				},
+				type: 'inline',
+				fixedContentPos: true,
+				fixedBgPos: true,
+				overflowY: 'auto',
+				closeBtnInside: true,
+				preloader: false,
+				midClick: true,
+				removalDelay: 300,////time open window
+				mainClass: 'my-mfp-zoom-in',
+				callbacks: {
+					open: function(){
+
+						setTimeout(function(){
+							$.magnificPopup.close();
+						}, 5000);
+
+		  		},
+		  	}
+		});
+	}
+	//END  modalthanks
+
+	/*************************
+	 modalMap
+	*************************/
+	function modalMap(){
+
+		window.google_map_exist = false;
+
+		$('.button_modal_map').magnificPopup({
+				type: 'inline',
+				fixedContentPos: true,
+				fixedBgPos: true,
+				overflowY: 'auto',
+				closeBtnInside: true,
+				preloader: false,
+				midClick: true,
+				removalDelay: 300,////time open window
+				mainClass: 'my-mfp-zoom-in',
+				callbacks: {
+					open: function() {
+						
+						if (!google_map_exist){
+							initMap();
+						}
+
+	  			},
+	  		}
+		});
+
+	}
+	//END modalMap
+
+	/*************************
+	  initMap
+	*************************/
+	window.initMap = function (){
+
+		var element = document.getElementById('map');
+		var options = {
+			zoom: 15,
+	    center: {lat: 55.669755, lng: 37.254599},
+		}
+
+	  var map = new google.maps.Map(element, options);
+
+	  var marker1 = new google.maps.Marker({
+	    position: {lat: 55.669755, lng: 37.254599},
+	    map: map
+	  });
+
+	 //  var info_window1 = new google.maps.InfoWindow({
+	 //    content: "<p>Наш офис</p>"
+	 //  });
+
+		// info_window1.open(map, marker1);
+
+
+		window.google_map_exist = true;
+	}
+	//END initMap
 
 
 	/*************************
@@ -346,21 +440,31 @@ function aaa(v){console.log(v)};
 				  	dataType: "json",
 				  	beforeSend: function(jqXHR, settings) {},
 				  	success: function(data, textStatus, jqXHR) {
-				  		if (data === 'OK') {
+				  		
+				  		if (data === 'OK'){
 				        form[0].reset();
-				        alert('Данные успешно отправленны');
-				      }
+
+				        //close popap
+								$.magnificPopup.close();
+								//open thanks popap, delay 300 for close
+								setTimeout(function(){
+									modalthanks();
+								}, 300);
+
+				      }//if
+
 				  	},
 				  	error: function(jqXHR, textStatus, errorThrown) {
 				  		alert('Ошибка отправки данных. Попробуйте еще раз.');
 				  	},
 				  	complete: function(jqXHR, textStatus) {},
 				  });
-				});
 
+				});//submit
 			})//each
 		};//if
 	};//END contactForm
+
 
 
 	/*************************
@@ -382,6 +486,7 @@ function aaa(v){console.log(v)};
 		projectsShowMore();
 		scrollIdAnimateMain();
 		modalWindows();
+		modalMap();
 		contactForm();
 
 	});

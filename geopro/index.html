@@ -7,10 +7,10 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
 
-  <link rel="stylesheet" href="css/libs.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/main.min.css">
 
-  <title>Project name</title>
+  <title>GeoPRO-геодезическая, кадастовая компания</title>
 </head>
 <body class="front-page">
 
@@ -501,14 +501,14 @@
               <div class="contacts_adress contacts_col">
                 <h3 class="contacts_title">Адрес</h3>
                 <p class="contacts_adress_text">Московская область, Одинцовский район, г. Одинцово, ул. Садовая, д.3</p>
-                <a href="#" class="contacts_adress_map">Посмотреть на карте</a>
+                <a href="#modal-map" class="button_modal_map contacts_adress_map">Посмотреть на карте</a>
               </div>
             </div>
             <div class="col-12 col-md-5 col-lg-3 col-xl-3 offset-xl-1">
               <div class="contacts_email contacts_col">
                 <h3 class="contacts_title">E-mail</h3>
                 <a class="contacts_email_l" href="mailto:info@geodeziyapro.ru">info@geodeziyapro.ru</a>
-                <a href="#modal-consultation" class="button_modal button button-1">Задать вопрос</a>
+                <a href="#modal-question" class="button_modal button button-1">Задать вопрос</a>
               </div>
             </div>
             <div class="col-12 col-md-7 col-lg-3 col-xl-3">
@@ -589,7 +589,7 @@
         <div class="footer_row-info row">
           <div class="col-xl-6">
             <div class="footer-info footer-info-main">
-              <a class="footer-info_img-w">
+              <a href="#" class="footer-info_img-w">
                 <img src="img/svg/front-page/logo_footer.svg" alt="Логотип">
               </a>
               <h2 class="footer-info_title">GeoPRO-геодезическая,кадастровая и земельная компания</h2>
@@ -716,7 +716,7 @@
         <div class="form_name-wrap form_input-wrap">
           <input required type="text" name="name" placeholder="Как вас зовут?">
         </div>
-        <div class="form_email-phone-wrap"><!-- if only one of, email or phone, delete this div -->
+        <div class="form_email-phone-wrap">
           <div class="form_email-wrap form_input-wrap">
             <input required type="email" name="email" placeholder="E-mail">
           </div>
@@ -732,14 +732,59 @@
     </div>
   </div>
   <!-- END Modal consultation form -->
+  <!-- Modal question form -->
+  <div id="modal-question" class="modal-form-wrap zoom-anim-dialog mfp-hide">
+    <div class="form-wrap">
+      <form class="form" action="#">
+        <h3 class="form-title form-title-court form-title-registration">Задать вопрос</h3>
+        <div class="form_subject-wrap">
+          <input type="text" name="subject" value="Вопрос">
+        </div>
+        <div class="form_name-wrap form_input-wrap">
+          <input required type="text" name="name" placeholder="Как вас зовут?">
+        </div>
+        <div class="form_email-phone-wrap">
+          <div class="form_email-wrap form_input-wrap">
+            <input required type="email" name="email" placeholder="E-mail">
+          </div>
+          <div class="form_phone-wrap form_input-wrap">
+            <input required type="tel" name="phone" placeholder="Номер телефона">
+          </div>
+        </div>
+        <div class="form_question-wrap form_input-wrap">
+          <textarea name="question" cols="30" rows="1" placeholder="Комментарий"></textarea>
+        </div>
+        <div class="form_privacy"><label><input name="privacy" type="checkbox" checked value="true">Я согласен на обработку персональных данных согласно</label><a href="#"> политике конфиденциальности</a></div>
+        <div class="form_button-wrap">
+          <button class="button button-4" type="submit">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- END Modal question form -->
 
+  <div id="modal-thanks" class="modal-form-wrap zoom-anim-dialog mfp-hide">
+    <div class="thanks">
+      <p class="thanks-1">Спасибо!</p>
+      <p class="thanks-2">Ваша заявка принята!</p>
+      <p class="thanks-3">В ближайшее время мы <br>с Вами свяжемся</p>
+      <a href="#" class="button_modal-thanks button button-1">Ok</a>
+    </div>
+  </div>
 
-
+  <div id="modal-map" class="zoom-anim-dialog mfp-hide">
+    <p class="map-adress">Московская область, Одинцовский район, г. Одинцово, ул. Садовая, д.3</p>
+    <div id="map"></div>
+  </div>
 
 
 
 	<script src="js/libs.min.js"></script>
 	<script src="js/main.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0zg-FW6RHNPOnGIUKT5cULFnPcsNSV2Q"
+  type="text/javascript"></script>
+
+
 
 </body>
 </html>
