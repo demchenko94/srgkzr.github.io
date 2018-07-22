@@ -1337,7 +1337,7 @@ ul.social-links li:last-child a {
 }
 /*Skill 8*/
 .skill-percentage.skill-8 {
-  width: 10%;
+  width: 5%;
 }
 /* Skills */
 
@@ -2211,6 +2211,8 @@ p.my-skills-text{
   margin: 0 0 15px;
 }
 .my-skills-list{
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 .my-skills-list > li{
@@ -2218,6 +2220,11 @@ p.my-skills-text{
   font-family: 'Oxygen', Helvetica, sans-serif;
   font-weight: 700;
   color: #fff;
+  margin-bottom: 3px;
+}
+.my-skills-list > li > span{
+  font-weight: 200;
+  font-style: 16px;
 }
 .template-style-dark ul.social-links li a{
   color: #ff724c;
