@@ -1,0 +1,38 @@
+.testimonial-nav {
+  margin: 0 auto;
+  width: 570px;
+}
+
+.testimonial-nav-i {
+  margin: 0 auto;
+  max-width: 190px;
+  text-align: center;
+}
+
+.testimonial-nav-i > img {
+  padding: 50px 0 0;
+  width: 95px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.testimonial-nav-i > h4 {
+  display: none;
+}
+
+.testimonial-nav-i > span {
+  display: none;
+}
+
+.slick-center .testimonial-nav-i > img {
+  padding: 0;
+  width: 190px;
+}
+
+.slick-center .testimonial-nav-i > h4 {
+  display: block;
+}
+
+.slick-center .testimonial-nav-i > span {
+  display: block;
+}

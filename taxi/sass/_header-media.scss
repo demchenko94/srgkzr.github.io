@@ -1,0 +1,168 @@
+@media only screen and (min-width : 1px){
+	.top-line-wrap{
+		margin: 0px;
+		height: 0px;
+	}
+	.top-line{
+		padding: 0;
+		height: 0px;
+		opacity: 0;
+		justify-content: space-around;
+		flex-direction: column;
+	}
+	header{
+		&.active-1{
+			div.top-line-wrap{
+				margin: 0 0 15px;
+				height: 130px;
+			}
+			div.top-line{
+				display: flex;
+				opacity: 1;
+				padding: 12px 0 0;
+				height: 130px;
+			}	
+		}
+	}
+
+	.top-line_info{
+		>li{
+			margin: 0px 15px 10px;
+		}
+	}
+	.top-line-toogle{
+		display: block;
+	}
+
+}
+
+@media only screen and (min-width : 480px){
+	/**/
+}
+
+@media only screen and (min-width : 544px){
+	header{
+		&.active-1{
+			div.top-line-wrap{
+				height: 100px;
+			}
+			div.top-line{
+				display: flex;
+				padding: 12px 0 0;
+				height: 100px;
+			}	
+		}
+	}
+
+}
+@media only screen and (min-width : 768px){
+	.top-line{
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	header{
+		&.active-1{
+			div.top-line-wrap{
+				height: 42px;
+			}
+			div.top-line{
+				display: flex;
+				padding: 12px 0 0;
+				height: 42px;
+			}	
+		}
+	}
+
+	.top-line_info{
+		>li{
+			margin: 0 30px 0 0;
+			&:last-child{
+				margin: 0;
+			}
+		}
+	}
+
+	.logo-link{
+		width: 250px;
+	}
+
+}
+
+
+@media only screen and (min-width : 992px){
+	.top-line-wrap{
+		margin: 0 0 55px;
+		height: 42px;
+	}
+	.top-line{
+		padding: 12px 0 0;
+		opacity: 1;
+	}
+
+	.top-line-toogle{
+		display: none;
+	}
+	#main-menu{
+		padding: 0 20px 0 0;
+	}
+
+
+	//accent border
+	#main-menu{
+		>li{
+			>a,{
+				&:hover{
+					&:before{
+	   			  width: 100%;
+					}
+				}
+				&:before{
+			    background-color: #000;
+			    content: "";
+			    position: absolute;
+			    left: 0;
+			    width: 0;
+			    height: 5px;
+			    bottom: 0;
+			    -webkit-transition: all 0.5s ease 0s;
+			    -moz-transition: all 0.5s ease 0s;
+			    -o-transition: all 0.5s ease 0s;
+			    transition: all 0.5s ease 0s;
+				}
+			}
+			>.current{
+				&:before{
+	   		  width: 100%;
+				}
+			}
+		}
+	}
+	//accent border
+
+	//stickyHeader
+	header{
+		&.active{
+			#main-menu{
+				>li{
+					a{
+						padding: 23px 12px;
+					}
+				}
+			}
+		}
+	}
+	//stickyHeader
+
+}
+
+@media only screen and (min-width : 1200px){
+	.logo-link{
+		width: 310px;
+	}
+	#main-menu{
+		padding: 0 30px 0 0;
+	}
+
+}
+

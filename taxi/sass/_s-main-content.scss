@@ -1,0 +1,24 @@
+.s-main-content{
+	margin: 100px auto;
+}
+
+.widget-area{
+	margin-top: 80px;
+}
+@media (min-width: 768px){
+	.widget-area{
+		margin-top: 0;
+	}
+}
+
+@media (min-width: 1200px){
+	.content-area {
+	    flex: 0 0 71%;
+	    max-width: 71%;
+	}
+	.widget-area {
+	    flex: 0 0 29%;
+	    max-width: 29%;
+	    padding-left: 25px;
+	}
+}

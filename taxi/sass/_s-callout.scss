@@ -1,0 +1,38 @@
+.s-callout{
+		text-align: center;
+    position: relative;
+    padding: 86px 0 82px;
+    background-image: url(../img/callout-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+	&.black-out-layer{
+		&:before{
+    	background-color: rgba(0,0,0,0.85);
+		}
+	}
+	.section-heading{
+		margin: 0 0 23px;
+		font-size: 30px;
+		font-weight: bold;
+		> span{
+			color: $accent-c;
+    	font-style: italic;
+		}
+	}
+	.section-hint{
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    line-height: 0.56;
+    letter-spacing: 0.594px;
+    >a{
+    	color: $w;
+    	text-decoration: none;
+    	font-family: Arial,Helvetica,sans-serif;
+    	font-style: italic;
+    }
+	}
+	.button{
+		position: relative;
+		margin: 40px 0 0;
+	}
+}

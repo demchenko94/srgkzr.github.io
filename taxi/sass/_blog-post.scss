@@ -1,0 +1,235 @@
+/* 
+	Blog post 
+*/
+article.post{
+	display: inline-block;
+	width: 100%;
+	&+article.post{
+		margin-top: 50px;
+	}
+	a{
+		transition: color 0.3s;
+	}
+}
+
+.post_entry-cover{
+	position: relative;
+	.entry-meta{
+		display: flex;
+	  align-items: center;
+	  flex-wrap: wrap;
+		background-color: rgba(0,0,0,0.75);
+		position: absolute;
+		left: 0 ;
+		bottom: 0;
+		right: 0;
+		padding: 15px 25px;
+		span {
+			color: $w;	
+		}
+		.posted-on{
+			text-transform: capitalize;
+			letter-spacing: 0.35px;
+			line-height: 1;
+			text-align: center;
+			padding: 0 22px 0 7px;
+			border-right: 4px solid $acc-c;
+			> a{
+				color: $w;
+				font-size: 11.66px;
+				text-decoration: none;
+				transition: all 0.5s ease 0s;
+				> b{
+					display: block;
+					margin-bottom: 10px;
+					font-size: 23.31px;
+				}
+			}
+		}//posted-on
+		.author {
+			margin: 0 20px;
+			> span {
+				color: #909090;
+				display: block;
+				font-size: 12.63px;
+				margin-top: 5px;
+				margin-bottom: 5px;
+				letter-spacing: 0.5052px;
+				> a {
+					color: $w;
+					text-decoration: none;
+					&:hover {
+						color: $acc-c;
+					}
+				}
+			}
+		}//author
+		.post-count {
+			margin: 10px 0 0;
+			> span {
+				color: #fff;
+				font-size: 12.63px;
+				display: inline-block;
+				&+span{
+					margin-left: 20px;
+				}
+				> i {
+					color: #f8c12c;
+					margin-right: 12px; 
+				}
+				> a {
+					color: #fff;
+					text-decoration: none;
+					&:hover {
+						color: #f8c12c;
+					}
+				}
+			}
+		}//post-count
+	}//entry-meta
+}//post_entry-cover
+@media (min-width: 992px){
+	.post_entry-cover .entry-meta .post-count {
+	  margin: 0 0 0 auto;
+	}
+}//post_entry-cover media
+
+.post_entry-content{
+	border: 1px solid #e0e0e0;
+	padding: 34px 28px 31px;
+	display: inline-block;
+	width: 100%;
+
+	.entry-title{
+		color: #222;
+		font-size: 13.6px;
+		font-weight: bold;
+		letter-spacing: 0.544px;
+		line-height: 1.86;
+		margin-bottom: 7px;
+		text-transform: uppercase;
+		> a{
+			color: #222;
+			text-decoration: none;
+			&:hover {
+				color: $acc-c;
+			}
+		}
+	}//entry-title
+
+	p {
+		color: #909090;
+		font-size: 13px;
+		letter-spacing: 0.52px;
+		line-height: 1.79;
+		margin-bottom: 0;
+	}
+	> a {
+		border-radius: 10px;
+		color: #222;
+		float: right;
+		font-size: 12.63px;
+		font-weight: bold;
+		letter-spacing: 0.5052px;
+		display: inline-block;
+		text-decoration: none;
+		text-transform: capitalize;
+		margin-top: 0;
+		&::before { 
+			color: $acc-c;
+			content: "\f178";
+			font-size: 12.63px;
+			font-family: FontAwesome;
+			margin-right: 12px;
+		}
+		&:hover {
+			color: $acc-c;
+		}
+	}
+}//post_entry-content
+
+/* 
+	END Blog post 
+*/
+
+/* 
+	навигация страниц и постов
+*/
+.navigation.pagination, //навигация страниц постов
+.navigation.comments-pagination{ //навигация коментариев к посту
+	margin-top: 40px;
+	.screen-reader-text {
+		display: none;
+	}
+	.page-numbers{
+		border: 1px solid #f8c12c;
+		border-radius: 50%;
+		color: #222;
+		display: inline-block;
+		font-size: 11.01px;
+		font-weight: 500;
+		margin: 0 2px;
+		padding: 10px 15px;
+		text-decoration: none;
+		vertical-align: middle;
+		text-transform: uppercase;
+		min-width: 30px;
+		min-height: 30px;
+		&.next,
+		&.prev{
+			font-size: 0;
+			border: none;
+			color: #f8c12c;
+			padding-left: 5px;
+			padding-right: 5px;
+			&::after{
+		    font-family: FontAwesome;
+		    font-size: 14px;
+			}
+		}
+		&.next{
+			&::after{
+		    content: "\f178";
+			}
+		}
+		&.prev{
+			&::after{
+		    content: "\f177";
+			}
+		}
+	}
+	.page-numbers.current{
+		background-color: #f8c12c;
+		border-color: transparent;
+		color: #fff;
+	}
+}
+/* 
+	END навигация страниц и постов
+*/
+
+
+
+//////////////////////////////////////////////////
+.woocommerce-pagination{ //навигация страниц товаров. нужно только оформление: цвет и тд.
+	margin-top: 40px;
+	>.page-numbers{ //ul - tag
+		list-style: none;
+		>li{
+
+		}
+		.page-numbers{ //a - tag
+
+		}
+		.page-numbers.next{
+
+		}
+		.page-numbers.prev{
+
+		}
+		&.current{
+
+		}
+	}
+}
+//////////////////////////////////////////////////

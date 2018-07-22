@@ -1,0 +1,60 @@
+footer {
+  color: #888;
+}
+
+footer .widget {
+  background-color: #ccc;
+}
+
+.latest-post {
+  list-style: none;
+}
+
+.latest-post_i {
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  padding-left: 95px;
+  margin-bottom: 30px;
+  min-height: 80px;
+}
+
+.latest-post_i > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.latest-post_i h4 {
+  font-size: 14px;
+  font-weight: 200;
+  letter-spacing: 0.462px;
+  line-height: 1.71;
+  margin-bottom: 4px;
+  margin-top: -4px;
+}
+
+.latest-post_i h4:hover {
+  color: #f8c12c;
+}
+
+.latest-post_i > span {
+  font-size: 12px;
+  display: inline-block;
+  letter-spacing: 0.3px;
+  font-style: italic;
+  color: #f8c12c;
+}
+
+.latest-post_i > span > a {
+  text-decoration: none;
+  color: #f8c12c;
+  -webkit-transition: color 1s ease 0s;
+  -o-transition: color 1s ease 0s;
+  transition: color 1s ease 0s;
+}
+
+.latest-post_i > span > a:hover {
+  color: #fff;
+  text-decoration: underline;
+}

@@ -1,0 +1,114 @@
+@media only screen and (min-width : 480px){
+
+//.s-choose
+	.choose-tab_i{
+  	padding: 15px 22px;
+		font-size: 13px;
+
+	}
+
+}//480px
+
+@media only screen and (min-width : 576px){
+
+//.s-choose
+	.choose-tab_i{
+  	padding: 16px 45px;
+		font-size: 13px;
+
+	}
+	
+//l-blog-i
+	.l-blog-i{
+		flex-direction: row;
+		max-width: 100%;
+	}
+
+	.l-blog-i_content{
+		padding: 23px 0 0 28px;
+		border-top: 2px solid #e0e0e0;
+	}
+
+
+}//576
+@media only screen and (min-width : 768px){
+//s-about
+	.about_content,
+	.about_img{
+	  flex: 0 0 50%;
+	  max-width: 50%;
+	}
+	.about_img{margin-top: 0;}
+
+//s-booking
+	.form-book_i{
+		.button{
+			display: inline-block;
+			margin-top: 0;
+		}
+	}
+
+//s-app
+	.app_text{
+		margin-bottom: 0;
+	}
+
+
+
+}//768px
+
+
+@media only screen and (min-width : 992px){
+//s-baner
+	.s-baner{padding-top: 310px;}
+	
+//s-about
+	.s-about{padding: 147px 0;}
+
+//s-booking
+	.s-booking{
+	  padding: 145px 0;
+	}
+//s-choose
+	.s-choose{
+		padding: 120px 0;
+	}
+//s-testimonial
+	.s-testimonial{
+		padding: 140px 0 135px;
+	}
+	.testimonial-car-i > p{
+		padding: 20px 40px;
+		&:before{
+			top: -5px;
+		}
+		&:after{
+			bottom: -5px;
+		}
+	}
+//s-news
+	.s-news{
+		padding: 140px 0;
+	}
+
+
+//l-blog-i
+	.l-blog-i{
+		&:first-of-type{
+			margin: 0 auto;
+		}
+	}
+
+}//992px
+
+@media only screen and (min-width : 1200px){
+
+//s-app
+	.s-app{
+		margin: 140px 0;
+	}
+
+
+
+}//1200px
+

@@ -1,0 +1,123 @@
+.s-choose{
+	padding: 90px 0;
+}
+
+.choose-tab{
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 40px 0;
+}
+.choose-tab_i{
+  padding: 10px 12px;
+	border: 1px solid transparent;
+	border-bottom: 1px solid $accent-c;
+	cursor: pointer;
+	color: $gray-font-c;
+	font-size: 12px;
+  letter-spacing: 0.52px;
+  line-height: 2.15;
+  text-transform: uppercase;
+  transition: all 0.2s;
+	&:hover{
+		border: 1px solid $accent-c;
+		border-bottom: 1px solid transparent;
+		color: $b;
+	}
+	&.active{
+		border: 1px solid $accent-c;
+		border-bottom: 1px solid transparent;
+		color: $b;
+	}
+}
+//END tabs nav 
+
+
+.choose-content_i{
+	display: none;
+	position: relative;
+	&.active{
+		display: block;
+	}
+}
+//end tab content
+
+.choose-nav{
+	margin-bottom: 40px;
+	.slick-slide {
+	  margin: 0 7px;
+	  cursor: pointer;
+	}
+	.slick-list {
+	  margin: 0 -7px;
+	}
+	img{
+	border: 10px solid #f6f6f6;
+	width: 100%;
+	}
+	.slick-current {
+		img{
+		border: 10px solid $accent-c;
+		}
+	} 
+}
+//end choose-nav
+
+.choose-car_content{
+	> h3{
+		margin-bottom: 8px;
+		color: #222;
+    font-size: 18px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.556;
+    letter-spacing: 0.72px;
+	}
+	> span{
+		color: $gray-font-c;
+    letter-spacing: 0.56px;
+    line-height: 2;
+	}
+	> h4{
+		color: $accent-c;
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    letter-spacing: 0.56px;
+    text-transform: uppercase;
+    line-height: 2;
+	}
+	> p{
+		margin-bottom: 15px;
+	}
+}
+.choose-car_content_characteristics{
+	margin: 0 0 30px;
+  font-size: 13px;
+  color: $section-heading-black;
+  line-height: 2.154;
+  letter-spacing: 0.56px;
+  > span{
+    display: inline-block;
+    margin-right: 30px;
+    &:last-of-type{
+    	margin-right: 0;
+    }
+  }
+	.fa{
+		margin-right: 7px;
+		font-size: 15px;
+		color: $accent-c;
+	}
+}
+//end column choose-car_content
+
+.choose-car_img-wrap{
+	margin-top: 32px;
+	> img{
+		max-width: 100%;
+	}
+}
+//end column choose-car_img-wrap

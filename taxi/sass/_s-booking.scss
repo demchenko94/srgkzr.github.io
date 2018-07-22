@@ -1,0 +1,60 @@
+.s-booking{
+  background-image: url(../img/book-tax-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 90px 0;
+}
+
+.form-book{
+	margin: 50px 0 0;
+	position: relative;
+}
+
+.form-book_i{
+	margin-bottom: 27px;
+	> label{
+    display: block;
+		color: $w;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+	}
+	> input,
+	> select{
+		display: block;
+    width: 100%;
+    line-height: 1.5;
+		background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    color: #cacaca;
+    font-size: 13px;
+    padding: 13px 20px;
+    box-shadow: none;
+    outline: none;
+		transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+		&.error{
+    	border: 1px solid $form-error-c;
+		}
+	}
+	> select > option{
+		color: $b;
+	}
+	.button{
+		display: block;
+		margin-top: 20px;
+	}
+}
+
+.form-book_car-type{
+	display: inline-block;
+  color: $w;
+  font-size: 13px;
+  > label{
+  	margin: 0 27px 0 0;
+  	> input{
+  		outline: none;
+  	}
+  }
+}

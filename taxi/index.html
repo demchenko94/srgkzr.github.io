@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+
+  <link rel="stylesheet" href="css/libs.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="fonts/font-awesome-4.6.3/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+  <title>Project name</title>
+</head>
+<body class="front-page">
+
+  <div class="page">
+		<header>
+      <div class="top-line-wrap">
+        <div class="container">
+          <div class="top-line">
+            <ul class="top-line_info">
+              <li class="phone"><a href="tel:+380502002020">+38050-200-20-20</a></li>
+              <li class="email"><a href="mailto:citytaxi@gmail.com">citytaxi@gmail.com</a></li>
+              <li class="time">Monday - Saturday 9:00 - 18:00</li>
+            </ul>
+            <ul class="top-line_socials">
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-share-square" aria-hidden="true"></i></a></li>
+            </ul>
+          </div><!-- top-line -->
+        </div><!-- container -->
+      </div><!-- top-line-wrap -->
+      <div class="container">
+        <nav class="menu-line">
+
+          <a href="#" class="logo-link">
+            <img src="img/logo.png" alt="" class="logo-img">
+          </a>
+          
+          <input id="main-menu-state" type="checkbox" />
+          <label class="main-menu-btn" for="main-menu-state">
+            <span class="main-menu-btn-icon"></span>
+          </label>
+
+          <div class="top-line-toogle"><i class="fa fa-inbox" aria-hidden="true"></i></div>
+          
+          <ul id="main-menu" class="sm sm-clean">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="single.html">Single post</a></li>
+            <li><a href="#">About us</a></li>
+            <!-- <li><a href="#">Services</a></li> -->
+            <li><a href="#">Contact</a></li>
+            <li>
+              <a href="#">Menu item</a>
+              <ul>
+                <li><a href="#">Sub menu item</a></li>
+                <li>
+                  <a href="#">Sub menu item</a>
+                  <ul>
+                    <li><a href="#">Sub sub menu item</a></li>
+                    <li><a href="#">Sub sub menu item</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul><!-- main-menu -->
+        </nav><!-- menu-line -->
+      </div><!-- container -->
+    </header>
+    <main class="page_main-content-wrapper">
+      <section class="s-baner black-out-75">
+        <div class="container">
+          <h1 class="section-heading center white">Quick and Reliable <span>Service!</span></h1>
+          <ul class="breadcrumb">
+            <li class="breadcrumb_i"><a href="index.html">Home</a></li>
+            <li class="breadcrumb_i active">Home</li>
+          </ul>
+        </div>
+      </section><!-- s-baner -->
+      <section class="s-about">
+        <div class="container">
+          <div class="about_wrap">
+            <div class="about_content">
+              <h6 class="section-hint">Who we are</h6>
+              <h2 class="section-heading"><b>About </b>us</h2>
+              <p><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus est, nemo officia quas. Sit in sint facere tenetur dolores earum.</i></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nihil non aspernatur. Eligendi quam dolore aperiam nemo! Alias temporibus sed deleniti rem iure, laboriosam velit voluptatum aperiam nobis inventore. Repellendus repellat id aspernatur quaerat dolorum facilis beatae animi unde officiis molestiae, voluptatibus veniam sit aut aperiam eligendi quia atque nesciunt.</p>
+              <a class="button button-1" href="#">Read more</a>
+            </div>
+            <div class="about_img">
+              <img src="img/about-img.png" alt="#">
+            </div>
+          </div>
+        </div>
+      </section><!-- s-about -->
+      <section class="s-booking black-out-80">
+        <div class="container">
+          <h6 class="section-hint center">CHOOSE YOUR CAR</h6>
+          <h2 class="section-heading center white"><b>BOOK TAXI </b>NOW</h2>
+          
+          <form id="form-book" class="form-book row" action="">
+
+            <div class="form-book_i col-md-6 col-lg-4">
+              <label>Phone number *</label>
+              <input type="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-book_i col-md-6 col-lg-4">
+              <label>name</label>
+              <input type="text" placeholder="Enter your name">
+            </div>
+            <div class="form-book_i col-md-6 col-lg-4">
+              <label>From</label>
+              <input type="text" placeholder="Starting place">
+            </div>
+            <div class="form-book_i col-md-6 col-lg-4">
+              <label>To</label>
+              <input type="text" placeholder="Destination">
+            </div>
+            <div class="form-book_i col-md-6 col-lg-4">
+              <label>Passenger</label>
+              <input type="number" placeholder="1">
+            </div>
+
+            <div class="form-book_i col-md-6 col-lg-4">
+              <label>Class</label>
+              <select name="class">
+                <option value="none" selected disabled hidden>Choose class</option>
+                <option value="Business">Business</option>
+                <option value="First">First</option>
+                <option value="Second">Second</option>
+                <option value="Third">Third</option>
+              </select>
+            </div>
+
+            <div class="form-book_i col-12">
+              <label>car type</label>
+              <div class="form-book_car-type">
+                <label><input name="car" value="convertible" type="checkbox"/> Convertible</label>
+                <label><input name="car" value="vans" type="checkbox"/> Vans</label>
+                <label><input name="car" value="luxury" type="checkbox"/> Luxury</label>
+              </div>
+              <button class="button button-2">BOOK YOUR TRIP</button>
+            </div>
+
+          </form><!-- form-book -->
+        </div><!-- container -->
+      </section>
+      <section class="s-choose">
+        <div class="container">
+          <h6 class="section-hint center">TOP OUR CARS</h6>
+          <h2 class="section-heading center"><b>CHOOSE YOUR</b> CAR</h2>
+          
+          <ul class="choose-tab">
+            <li class="choose-tab_i active" data-tab-target="town">town taxi</li>
+            <li class="choose-tab_i" data-tab-target="hybrid">hybrid taxi</li>
+            <li class="choose-tab_i" data-tab-target="suv">suv taxi</li>
+          </ul><!-- choose-tab -->
+
+
+          <div id="choose-content">
+
+            <div class="choose-content_i active" data-tab-name="town">
+
+              <div class='choose-nav'>
+                <img src="img/choose-1.jpg" alt="#">
+                <img src="img/choose-2.jpg" alt="#">
+                <img src="img/choose-3.jpg" alt="#">
+                <img src="img/choose-4.jpg" alt="#">
+                <img src="img/choose-5.jpg" alt="#">
+                <img src="img/choose-6.jpg" alt="#">
+                <img src="img/choose-4.jpg" alt="#">
+              </div><!-- choose-nav -->
+           
+              <div class='choose-car'>
+
+                <div>
+                  <div class="row">
+                    <div class="col-lg-7 choose-car_content">
+                      <h3>2017 HYUNDAI SANTA FE</h3>
+                      <span>Town taxi</span>
+                      <h4>$6.50<sup> /KM</sup></h4>
+                      <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ielit.</p>
+                      <div class="choose-car_content_characteristics">
+                        <span><i class="fa fa-briefcase" aria-hidden="true"></i>2 Bags</span>
+                        <span><i class="fa fa-user" aria-hidden="true"></i>3 Passengers</span>
+                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>6.5 / 100 Mpg</span>
+                      </div>
+                      <a href="#" class="button button-1">select taxi</a>
+                    </div>
+                    <div class="col-lg-5 choose-car_img-wrap">
+                      <img src="img/choose-slide-img.jpg" alt="">
+                    </div>
+                  </div><!-- row -->
+                </div><!-- choose-car item -->
+
+                <div>
+                  <div class="row">
+                    <div class="col-lg-7 choose-car_content">
+                      <h3>2017 HYUNDAI SANTA FE</h3>
+                      <span>Town taxi</span>
+                      <h4>$6.50<sup> /KM</sup></h4>
+                      <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ielit.</p>
+                      <div class="choose-car_content_characteristics">
+                        <span><i class="fa fa-briefcase" aria-hidden="true"></i>2 Bags</span>
+                        <span><i class="fa fa-user" aria-hidden="true"></i>3 Passengers</span>
+                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>6.5 / 100 Mpg</span>
+                      </div>
+                      <a href="#" class="button button-1">select taxi</a>
+                    </div>
+                    <div class="col-lg-5 choose-car_img-wrap">
+                      <img src="img/choose-slide-img1.png" alt="">
+                    </div>
+                  </div><!-- row -->
+                </div><!-- choose-car item -->
+                <div>
+                  <div class="row">
+                    <div class="col-lg-7 choose-car_content">
+                      <h3>2017 HYUNDAI SANTA FE</h3>
+                      <span>Town taxi</span>
+                      <h4>$6.50<sup> /KM</sup></h4>
+                      <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ielit.</p>
+                      <div class="choose-car_content_characteristics">
+                        <span><i class="fa fa-briefcase" aria-hidden="true"></i>2 Bags</span>
+                        <span><i class="fa fa-user" aria-hidden="true"></i>3 Passengers</span>
+                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>6.5 / 100 Mpg</span>
+                      </div>
+                      <a href="#" class="button button-1">select taxi</a>
+                    </div>
+                    <div class="col-lg-5 choose-car_img-wrap">
+                      <img src="img/choose-slide-img.jpg" alt="">
+                    </div>
+                  </div><!-- row -->
+                </div><!-- choose-car item -->
+                <div>
+                  <div class="row">
+                    <div class="col-lg-7 choose-car_content">
+                      <h3>2017 HYUNDAI SANTA FE</h3>
+                      <span>Town taxi</span>
+                      <h4>$6.50<sup> /KM</sup></h4>
+                      <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ielit.</p>
+                      <div class="choose-car_content_characteristics">
+                        <span><i class="fa fa-briefcase" aria-hidden="true"></i>2 Bags</span>
+                        <span><i class="fa fa-user" aria-hidden="true"></i>3 Passengers</span>
+                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>6.5 / 100 Mpg</span>
+                      </div>
+                      <a href="#" class="button button-1">select taxi</a>
+                    </div>
+                    <div class="col-lg-5 choose-car_img-wrap">
+                      <img src="img/choose-slide-img1.png" alt="">
+                    </div>
+                  </div><!-- row -->
+                </div><!-- choose-car item -->
+                <div>
+                  <div class="row">
+                    <div class="col-lg-7 choose-car_content">
+                      <h3>2017 HYUNDAI SANTA FE</h3>
+                      <span>Town taxi</span>
+                      <h4>$6.50<sup> /KM</sup></h4>
+                      <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ielit.</p>
+                      <div class="choose-car_content_characteristics">
+                        <span><i class="fa fa-briefcase" aria-hidden="true"></i>2 Bags</span>
+                        <span><i class="fa fa-user" aria-hidden="true"></i>3 Passengers</span>
+                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>6.5 / 100 Mpg</span>
+                      </div>
+                      <a href="#" class="button button-1">select taxi</a>
+                    </div>
+                    <div class="col-lg-5 choose-car_img-wrap">
+                      <img src="img/choose-slide-img.jpg" alt="">
+                    </div>
+                  </div><!-- row -->
+                </div><!-- choose-car item -->
+                <div>
+                  <div class="row">
+                    <div class="col-lg-7 choose-car_content">
+                      <h3>2017 HYUNDAI SANTA FE</h3>
+                      <span>Town taxi</span>
+                      <h4>$6.50<sup> /KM</sup></h4>
+                      <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ielit.</p>
+                      <div class="choose-car_content_characteristics">
+                        <span><i class="fa fa-briefcase" aria-hidden="true"></i>2 Bags</span>
+                        <span><i class="fa fa-user" aria-hidden="true"></i>3 Passengers</span>
+                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>6.5 / 100 Mpg</span>
+                      </div>
+                      <a href="#" class="button button-1">select taxi</a>
+                    </div>
+                    <div class="col-lg-5 choose-car_img-wrap">
+                      <img src="img/choose-slide-img1.png" alt="">
+                    </div>
+                  </div><!-- row -->
+                </div><!-- choose-car item -->
+                <div>
+                  <div class="row">
+                    <div class="col-lg-7 choose-car_content">
+                      <h3>2017 HYUNDAI SANTA FE</h3>
+                      <span>Town taxi</span>
+                      <h4>$6.50<sup> /KM</sup></h4>
+                      <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ielit.</p>
+                      <div class="choose-car_content_characteristics">
+                        <span><i class="fa fa-briefcase" aria-hidden="true"></i>2 Bags</span>
+                        <span><i class="fa fa-user" aria-hidden="true"></i>3 Passengers</span>
+                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>6.5 / 100 Mpg</span>
+                      </div>
+                      <a href="#" class="button button-1">select taxi</a>
+                    </div>
+                    <div class="col-lg-5 choose-car_img-wrap">
+                      <img src="img/choose-slide-img.jpg" alt="">
+                    </div>
+                  </div><!-- row -->
+                </div><!-- choose-car item -->
+
+              </div><!-- choose-car -->
+            </div><!-- TAB CONTENT ITEM choose-content_i -->
+
+            <div class="choose-content_i" data-tab-name="hybrid">
+
+              <div class='choose-nav'>
+                <img src="img/choose-1.jpg" alt="#">
+                <img src="img/choose-2.jpg" alt="#">
+                <img src="img/choose-3.jpg" alt="#">
+                <img src="img/choose-4.jpg" alt="#">
+                <img src="img/choose-5.jpg" alt="#">
+                <img src="img/choose-6.jpg" alt="#">
+                <img src="img/choose-4.jpg" alt="#">
+              </div><!-- choose-nav -->
+           
+              <div class='choose-car'>
+
+                <div>
+                  <div class="row">
+                    <div class="col-lg-7 choose-car_content">
+                      <h3>2017 HYUNDAI SANTA FE</h3>
+                      <span>Town taxi</span>
+                      <h4>$6.50<sup> /KM</sup></h4>
+                      <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ielit.</p>
+                      <div class="choose-car_content_characteristics">
+                        <span><i class="fa fa-briefcase" aria-hidden="true"></i>2 Bags</span>
+                        <span><i class="fa fa-user" aria-hidden="true"></i>3 Passengers</span>
+                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>6.5 / 100 Mpg</span>
+                      </div>
+                      <a href="#" class="button button-1">select taxi</a>
+                    </div>
+                    <div class="col-lg-5 choose-car_img-wrap">
+                      <img src="img/choose-slide-img.jpg" alt="">
+                    </div>
+                  </div><!-- row -->
+                </div><!-- choose-car item -->
+
+                <div>
+                  <div class="row">
+                    <div class="col-lg-7 choose-car_content">
+                      <h3>2017 HYUNDAI SANTA FE</h3>
+                      <span>Town taxi</span>
+                      <h4>$6.50<sup> /KM</sup></h4>
+                      <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ielit.</p>
+                      <div class="choose-car_content_characteristics">
+                        <span><i class="fa fa-briefcase" aria-hidden="true"></i>2 Bags</span>
+                        <span><i class="fa fa-user" aria-hidden="true"></i>3 Passengers</span>
+                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>6.5 / 100 Mpg</span>
+                      </div>
+                      <a href="#" class="button button-1">select taxi</a>
+                    </div>
+                    <div class="col-lg-5 choose-car_img-wrap">
+                      <img src="img/choose-slide-img1.png" alt="">
+                    </div>
+                  </div><!-- row -->
+                </div><!-- choose-car item -->
+                <div>
+                  <div class="row">
+                    <div class="col-lg-7 choose-car_content">
+                      <h3>2017 HYUNDAI SANTA FE</h3>
+                      <span>Town taxi</span>
+                      <h4>$6.50<sup> /KM</sup></h4>
+                      <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ielit.</p>
+                      <div class="choose-car_content_characteristics">
+                        <span><i class="fa fa-briefcase" aria-hidden="true"></i>2 Bags</span>
+                        <span><i class="fa fa-user" aria-hidden="true"></i>3 Passengers</span>
+                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>6.5 / 100 Mpg</span>
+                      </div>
+                      <a href="#" class="button button-1">select taxi</a>
+                    </div>
+                    <div class="col-lg-5 choose-car_img-wrap">
+                      <img src="img/choose-slide-img.jpg" alt="">
+                    </div>
+                  </div><!-- row -->
+                </div><!-- choose-car item -->
+                <div>
+                  <div class="row">
+                    <div class="col-lg-7 choose-car_content">
+                      <h3>2017 HYUNDAI SANTA FE</h3>
+                      <span>Town taxi</span>
+                      <h4>$6.50<sup> /KM</sup></h4>
+                      <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ielit.</p>
+                      <div class="choose-car_content_characteristics">
+                        <span><i class="fa fa-briefcase" aria-hidden="true"></i>2 Bags</span>
+                        <span><i class="fa fa-user" aria-hidden="true"></i>3 Passengers</span>
+                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>6.5 / 100 Mpg</span>
+                      </div>
+                      <a href="#" class="button button-1">select taxi</a>
+                    </div>
+                    <div class="col-lg-5 choose-car_img-wrap">
+                      <img src="img/choose-slide-img1.png" alt="">
+                    </div>
+                  </div><!-- row -->
+                </div><!-- choose-car item -->
+                <div>
+                  <div class="row">
+                    <div class="col-lg-7 choose-car_content">
+                      <h3>2017 HYUNDAI SANTA FE</h3>
+                      <span>Town taxi</span>
+                      <h4>$6.50<sup> /KM</sup></h4>
+                      <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ielit.</p>
+                      <div class="choose-car_content_characteristics">
+                        <span><i class="fa fa-briefcase" aria-hidden="true"></i>2 Bags</span>
+                        <span><i class="fa fa-user" aria-hidden="true"></i>3 Passengers</span>
+                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>6.5 / 100 Mpg</span>
+                      </div>
+                      <a href="#" class="button button-1">select taxi</a>
+                    </div>
+                    <div class="col-lg-5 choose-car_img-wrap">
+                      <img src="img/choose-slide-img.jpg" alt="">
+                    </div>
+                  </div><!-- row -->
+                </div><!-- choose-car item -->
+                <div>
+                  <div class="row">
+                    <div class="col-lg-7 choose-car_content">
+                      <h3>2017 HYUNDAI SANTA FE</h3>
+                      <span>Town taxi</span>
+                      <h4>$6.50<sup> /KM</sup></h4>
+                      <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ielit.</p>
+                      <div class="choose-car_content_characteristics">
+                        <span><i class="fa fa-briefcase" aria-hidden="true"></i>2 Bags</span>
+                        <span><i class="fa fa-user" aria-hidden="true"></i>3 Passengers</span>
+                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>6.5 / 100 Mpg</span>
+                      </div>
+                      <a href="#" class="button button-1">select taxi</a>
+                    </div>
+                    <div class="col-lg-5 choose-car_img-wrap">
+                      <img src="img/choose-slide-img1.png" alt="">
+                    </div>
+                  </div><!-- row -->
+                </div><!-- choose-car item -->
+                <div>
+                  <div class="row">
+                    <div class="col-lg-7 choose-car_content">
+                      <h3>2017 HYUNDAI SANTA FE</h3>
+                      <span>Town taxi</span>
+                      <h4>$6.50<sup> /KM</sup></h4>
+                      <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ielit.</p>
+                      <div class="choose-car_content_characteristics">
+                        <span><i class="fa fa-briefcase" aria-hidden="true"></i>2 Bags</span>
+                        <span><i class="fa fa-user" aria-hidden="true"></i>3 Passengers</span>
+                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>6.5 / 100 Mpg</span>
+                      </div>
+                      <a href="#" class="button button-1">select taxi</a>
+                    </div>
+                    <div class="col-lg-5 choose-car_img-wrap">
+                      <img src="img/choose-slide-img.jpg" alt="">
+                    </div>
+                  </div><!-- row -->
+                </div><!-- choose-car item -->
+
+              </div><!-- choose-car -->
+            </div><!-- TAB CONTENT ITEM choose-content_i -->
+
+            <div class="choose-content_i" data-tab-name="suv">
+
+              <div class='choose-nav'>
+                <img src="img/choose-1.jpg" alt="#">
+                <img src="img/choose-2.jpg" alt="#">
+                <img src="img/choose-3.jpg" alt="#">
+                <img src="img/choose-4.jpg" alt="#">
+                <img src="img/choose-5.jpg" alt="#">
+                <img src="img/choose-6.jpg" alt="#">
+                <img src="img/choose-4.jpg" alt="#">
+              </div><!-- choose-nav -->
+           
+              <div class='choose-car'>
+
+                <div>
+                  <div class="row">
+                    <div class="col-lg-7 choose-car_content">
+                      <h3>2017 HYUNDAI SANTA FE</h3>
+                      <span>Town taxi</span>
+                      <h4>$6.50<sup> /KM</sup></h4>
+                      <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ielit.</p>
+                      <div class="choose-car_content_characteristics">
+                        <span><i class="fa fa-briefcase" aria-hidden="true"></i>2 Bags</span>
+                        <span><i class="fa fa-user" aria-hidden="true"></i>3 Passengers</span>
+                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>6.5 / 100 Mpg</span>
+                      </div>
+                      <a href="#" class="button button-1">select taxi</a>
+                    </div>
+                    <div class="col-lg-5 choose-car_img-wrap">
+                      <img src="img/choose-slide-img.jpg" alt="">
+                    </div>
+                  </div><!-- row -->
+                </div><!-- choose-car item -->
+
+                <div>
+                  <div class="row">
+                    <div class="col-lg-7 choose-car_content">
+                      <h3>2017 HYUNDAI SANTA FE</h3>
+                      <span>Town taxi</span>
+                      <h4>$6.50<sup> /KM</sup></h4>
+                      <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ielit.</p>
+                      <div class="choose-car_content_characteristics">
+                        <span><i class="fa fa-briefcase" aria-hidden="true"></i>2 Bags</span>
+                        <span><i class="fa fa-user" aria-hidden="true"></i>3 Passengers</span>
+                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>6.5 / 100 Mpg</span>
+                      </div>
+                      <a href="#" class="button button-1">select taxi</a>
+                    </div>
+                    <div class="col-lg-5 choose-car_img-wrap">
+                      <img src="img/choose-slide-img1.png" alt="">
+                    </div>
+                  </div><!-- row -->
+                </div><!-- choose-car item -->
+                <div>
+                  <div class="row">
+                    <div class="col-lg-7 choose-car_content">
+                      <h3>2017 HYUNDAI SANTA FE</h3>
+                      <span>Town taxi</span>
+                      <h4>$6.50<sup> /KM</sup></h4>
+                      <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ielit.</p>
+                      <div class="choose-car_content_characteristics">
+                        <span><i class="fa fa-briefcase" aria-hidden="true"></i>2 Bags</span>
+                        <span><i class="fa fa-user" aria-hidden="true"></i>3 Passengers</span>
+                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>6.5 / 100 Mpg</span>
+                      </div>
+                      <a href="#" class="button button-1">select taxi</a>
+                    </div>
+                    <div class="col-lg-5 choose-car_img-wrap">
+                      <img src="img/choose-slide-img.jpg" alt="">
+                    </div>
+                  </div><!-- row -->
+                </div><!-- choose-car item -->
+                <div>
+                  <div class="row">
+                    <div class="col-lg-7 choose-car_content">
+                      <h3>2017 HYUNDAI SANTA FE</h3>
+                      <span>Town taxi</span>
+                      <h4>$6.50<sup> /KM</sup></h4>
+                      <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ielit.</p>
+                      <div class="choose-car_content_characteristics">
+                        <span><i class="fa fa-briefcase" aria-hidden="true"></i>2 Bags</span>
+                        <span><i class="fa fa-user" aria-hidden="true"></i>3 Passengers</span>
+                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>6.5 / 100 Mpg</span>
+                      </div>
+                      <a href="#" class="button button-1">select taxi</a>
+                    </div>
+                    <div class="col-lg-5 choose-car_img-wrap">
+                      <img src="img/choose-slide-img1.png" alt="">
+                    </div>
+                  </div><!-- row -->
+                </div><!-- choose-car item -->
+                <div>
+                  <div class="row">
+                    <div class="col-lg-7 choose-car_content">
+                      <h3>2017 HYUNDAI SANTA FE</h3>
+                      <span>Town taxi</span>
+                      <h4>$6.50<sup> /KM</sup></h4>
+                      <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ielit.</p>
+                      <div class="choose-car_content_characteristics">
+                        <span><i class="fa fa-briefcase" aria-hidden="true"></i>2 Bags</span>
+                        <span><i class="fa fa-user" aria-hidden="true"></i>3 Passengers</span>
+                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>6.5 / 100 Mpg</span>
+                      </div>
+                      <a href="#" class="button button-1">select taxi</a>
+                    </div>
+                    <div class="col-lg-5 choose-car_img-wrap">
+                      <img src="img/choose-slide-img.jpg" alt="">
+                    </div>
+                  </div><!-- row -->
+                </div><!-- choose-car item -->
+                <div>
+                  <div class="row">
+                    <div class="col-lg-7 choose-car_content">
+                      <h3>2017 HYUNDAI SANTA FE</h3>
+                      <span>Town taxi</span>
+                      <h4>$6.50<sup> /KM</sup></h4>
+                      <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ielit.</p>
+                      <div class="choose-car_content_characteristics">
+                        <span><i class="fa fa-briefcase" aria-hidden="true"></i>2 Bags</span>
+                        <span><i class="fa fa-user" aria-hidden="true"></i>3 Passengers</span>
+                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>6.5 / 100 Mpg</span>
+                      </div>
+                      <a href="#" class="button button-1">select taxi</a>
+                    </div>
+                    <div class="col-lg-5 choose-car_img-wrap">
+                      <img src="img/choose-slide-img1.png" alt="">
+                    </div>
+                  </div><!-- row -->
+                </div><!-- choose-car item -->
+                <div>
+                  <div class="row">
+                    <div class="col-lg-7 choose-car_content">
+                      <h3>2017 HYUNDAI SANTA FE</h3>
+                      <span>Town taxi</span>
+                      <h4>$6.50<sup> /KM</sup></h4>
+                      <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsu nec sagittis sem nibh id elit.Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ielit.</p>
+                      <div class="choose-car_content_characteristics">
+                        <span><i class="fa fa-briefcase" aria-hidden="true"></i>2 Bags</span>
+                        <span><i class="fa fa-user" aria-hidden="true"></i>3 Passengers</span>
+                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>6.5 / 100 Mpg</span>
+                      </div>
+                      <a href="#" class="button button-1">select taxi</a>
+                    </div>
+                    <div class="col-lg-5 choose-car_img-wrap">
+                      <img src="img/choose-slide-img.jpg" alt="">
+                    </div>
+                  </div><!-- row -->
+                </div><!-- choose-car item -->
+
+              </div><!-- choose-car -->
+            </div><!-- TAB CONTENT ITEM choose-content_i -->
+
+          </div><!-- choose-content -->
+        </div><!-- container -->
+      </section><!-- s-choose -->
+      <section class="s-callout black-out-85">
+        <div class="container">
+          <h2 class="section-heading center white">the great  cab offer <span>save $100</span> available now! Luxury car</h2>
+          <h6 class="section-hint center">CALL US : <a href="tel:+380502002020">+38050 200 20 20</a></h6>
+          <a href="#" class="button button-3">book now</a>
+        </div>
+      </section>
+      <section class="s-app">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 app_text">
+              <h6 class="section-hint">get our</h6>
+              <h2 class="section-heading"><b>mobile </b>app</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione blanditiis aliquam, delectus cumque asperiores nam. Nulla officiis ea eius dignissimos dolores, aut dolorum suscipit, distinctio expedita obcaecati quisquam molestiae laborum.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum dignissimos, voluptatibus nulla expedita aut, rerum incidunt perferendis nihil quo beatae aspernatur laudantium tempore adipisci! Maiores vero neque quia excepturi nisi libero quaerat laudantium!</p>
+              <h4>Download Now</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolore ad sit dolorem quibusdam.</p>
+              <a href="img/play-store.png"><img src="img/play-store.png" alt=""></a>
+              <a href=""><img src="img/app-store.png" alt=""></a>
+            </div>
+            <div class="col-md-6">
+              <div id="counters_wrapper-1" class="row app_row">
+
+                <div class="col-sm-6 app_col">
+                  <div class="app-i">
+                    <div class="app-i_img-wrap">
+                      <img src="img/counter-icon-1.png" alt="#">
+                    </div>
+                    <span class="app-i_counter counter" data-counter-number="1600">0</span>
+                    <h4 class="app-i_name">Successful Drives</h4>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 app_col">
+                  <div class="app-i">
+                    <div class="app-i_img-wrap">
+                      <img src="img/counter-icon-2.png" alt="#">
+                    </div>
+                    <span class="app-i_counter counter" data-counter-number="2000">0</span>
+                    <h4 class="app-i_name">Happy Customers</h4>
+                  </div>
+                </div>
+                <div class="col-sm-6 app_col">
+                  <div class="app-i">
+                    <div class="app-i_img-wrap">
+                      <img src="img/counter-icon-3.png" alt="#">
+                    </div>
+                    <span class="app-i_counter counter" data-counter-number="800">0</span>
+                    <h4 class="app-i_name">Long Drives</h4>
+                  </div>
+                </div>
+                <div class="col-sm-6 app_col">
+                  <div class="app-i">
+                    <div class="app-i_img-wrap">
+                      <img src="img/counter-icon-4.png" alt="#">
+                    </div>
+                    <span class="app-i_counter counter" data-counter-number="70">0</span>
+                    <h4 class="app-i_name">Cities Covered</h4>
+                  </div>
+                </div>
+
+              </div><!-- app_row -->
+            </div><!-- col-md-6 -->
+          </div>
+        </div>
+      </section>
+      <section class="s-testimonial black-out-85">
+        <div class="container">
+          <h6 class="section-hint center">Testimonials</h6>
+          <h2 class="section-heading center white"><b>Clients</b> Reviews</h2>
+          <div id='testimonial-car' class='testimonial-car'>
+
+            <div class="testimonial-car-i">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae quisquam, nobis deserunt hic aut aliquid sit doloribus quidem aliquam quos quasi vero expedita accusamus accusantium repudiandae adipisci. Nesciunt qui nihil dolores, quidem eligendi id laboriosam delectus cum veniam. Quis, rerum!</p>
+            </div>
+
+            <div class="testimonial-car-i">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi minus eos nihil unde voluptas ullam consequatur fuga, id temporibus dignissimos pariatur recusandae, explicabo repellat praesentium doloribus est cupiditate assumenda dolorem commodi ea reprehenderit vero quaerat distinctio quod! Tempore ipsam, id.</p>
+            </div>
+            <div class="testimonial-car-i">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et adipisci blanditiis ut velit debitis quod, aut voluptatem eius, laboriosam minima ullam perferendis aliquam rerum, incidunt quis. Cumque nemo ut, eius, dolores odit iste, dolorum, animi officia est earum rerum doloribus?</p>
+            </div>
+            <div class="testimonial-car-i">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet quam dignissimos magni vel harum praesentium quos tempora veritatis adipisci, hic architecto sapiente dolorem veniam atque doloribus, animi iure. Obcaecati, ad nostrum quis facere quisquam odit delectus atque, enim quam qui?</p>
+            </div>
+            <div class="testimonial-car-i">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim sit esse autem distinctio accusamus quo facere mollitia cupiditate, sunt quia voluptatibus quos praesentium doloribus, ullam alias tenetur officia impedit explicabo quaerat sed perferendis nesciunt neque. Enim, a corporis nemo eos!</p>
+            </div>
+            <div class="testimonial-car-i">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus modi quas commodi impedit minima nemo expedita consequatur eveniet obcaecati cumque vero laborum necessitatibus, voluptatum numquam natus blanditiis illo maiores unde repudiandae dicta voluptatibus doloremque quasi, quibusdam fugiat? Suscipit, incidunt, vero.</p>
+            </div>
+          </div><!-- testimonial-car -->
+          <div id='testimonial-nav' class='testimonial-nav'>
+
+            <div class="testimonial-nav-i">
+              <img src="img/testi-1.jpg" alt="">
+              <h4>john doe</h4>
+              <span>Customer</span>
+            </div>
+
+            <div class="testimonial-nav-i">
+              <img src="img/testi-2.jpg" alt="">
+              <h4>john doe</h4>
+              <span>Customer</span>
+            </div>
+            <div class="testimonial-nav-i">
+              <img src="img/testi-3.jpg" alt="">
+              <h4>john doe</h4>
+              <span>Customer</span>
+            </div>
+            <div class="testimonial-nav-i">
+              <img src="img/testi-1.jpg" alt="">
+              <h4>john doe</h4>
+              <span>Customer</span>
+            </div>
+            <div class="testimonial-nav-i">
+              <img src="img/testi-2.jpg" alt="">
+              <h4>john doe</h4>
+              <span>Customer</span>
+            </div>
+            <div class="testimonial-nav-i">
+              <img src="img/testi-3.jpg" alt="">
+              <h4>john doe</h4>
+              <span>Customer</span>
+            </div>
+          </div><!-- testimonial-nav -->
+        </div>
+      </section>
+      <section class="s-news">
+        <div class="container">
+          <h6 class="section-hint center">Our Blogs & Fags</h6>
+          <h2 class="section-heading center"><b>Latest news</b> & FAQS</h2>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="faq accordion">
+
+                <div class="faq-i">
+                  <h5 class="faq-i_header accordion_header">For long drive how much charge?</h5>
+                  <div class="accordion_content">
+                    <div class="faq-i_content">
+                      <img class="faq-i_content_img" src="img/faq-1.png" alt="">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita odit aut sed itaque? Modi et consequuntur, explicabo officiis quam debitis.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="faq-i">
+                  <h5 class="faq-i_header accordion_header">How do I book for a ride with Your Taxi?</h5>
+                  <div class="accordion_content">
+                    <div class="faq-i_content">
+                      <img class="faq-i_content_img" src="img/faq-1.png" alt="">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda commodi porro consequatur nobis incidunt asperiores, odio id odit alias voluptas.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="faq-i">
+                  <h5 class="faq-i_header accordion_header">Can I drive the vehicle out of State?</h5>
+                  <div class="accordion_content">
+                    <div class="faq-i_content">
+                      <img class="faq-i_content_img" src="img/faq-1.png" alt="">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa aspernatur, enim voluptas quaerat natus consequuntur, at quae sit porro tenetur.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="faq-i">
+                  <h5 class="faq-i_header accordion_header">Can I drive the vehicle out of State?</h5>
+                  <div class="accordion_content">
+                    <div class="faq-i_content">
+                      <img class="faq-i_content_img" src="img/faq-1.png" alt="">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque iste quam explicabo recusandae, ab ea qui aut aspernatur veritatis illum.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="faq-i">
+                  <h5 class="faq-i_header accordion_header">Can I drive the vehicle out of State?</h5>
+                  <div class="accordion_content">
+                    <div class="faq-i_content">
+                      <img class="faq-i_content_img" src="img/faq-1.png" alt="">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque iste quam explicabo recusandae, ab ea qui aut aspernatur veritatis illum.</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div><!-- faq accordion -->
+            </div><!-- col-lg-6 -->
+            <div class="col-lg-6">
+
+              <div class="l-blog-i">
+                <a href="#" class="l-blog-i_img-wrap">
+                  <img src="img/latest-blog-1.jpg" alt="">
+                </a>
+                <div class="l-blog-i_content">
+                  <h4 class="l-blog-i_title">
+                    <a href="#">a reliable way to travel</a>
+                  </h4>
+                  <p  class="l-blog-i_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, voluptates!</p>
+                  <div class="l-blog-i_data">
+                    <a href="#">Aug 24 2017</a>
+                    <a href="#">6 Comments</a>
+                    <a href="#">Adams</a>
+                  </div>
+                </div>
+              </div><!-- l-blog-i -->
+
+              <div class="l-blog-i">
+                <a href="#" class="l-blog-i_img-wrap">
+                  <img src="img/latest-blog-1.jpg" alt="">
+                </a>
+                <div class="l-blog-i_content">
+                  <h4 class="l-blog-i_title">
+                    <a href="#">a reliable way to travel</a>
+                  </h4>
+                  <p  class="l-blog-i_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, voluptates!</p>
+                  <div class="l-blog-i_data">
+                    <a href="#">Aug 24 2017</a>
+                    <a href="#">6 Comments</a>
+                    <a href="#">Adams</a>
+                  </div>
+                </div>
+              </div><!-- l-blog-i -->
+
+            </div><!-- col-lg-6 -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+
+            <div class="footer-widget-col col-md-6 col-lg-3">
+              <!-- widget widget_text -->
+              <aside class="widget widget_text">
+                <h3 class="widget-title">About</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, sunt.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, id!</p>
+              </aside><!-- widget-text  -->
+              <!--widget_sosials  -->
+              <aside class="widget widget_sosials">
+                <ul>
+                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                  <li><a href="#"><i class="fa fa-share-square" aria-hidden="true"></i></a></li>
+                </ul>
+              </aside><!--widget_sosials  -->
+            </div><!-- footer-widget-col -->
+
+            <div class="footer-widget-col col-md-6 col-lg-3">
+              <!-- widget post-custom-layout -->
+              <aside class="widget">
+                <h3 class="widget-title">Popular Posts</h3>
+                <ul class="post-custom-layout">
+
+                  <li>
+                    <a href="#"><img src="img/latest-post-wid-1.jpg" alt=""></a>
+                    <a href="#">Why should companies offer taxi?</a>
+                    <span>
+                      <a href="#">April 2, 2017</a>        
+                      <a href="#">Adams</a>
+                      <span>2 comments</span>
+                    </span>
+                  </li>
+
+                  <li>
+                    <a href="#"><img src="img/latest-post-wid-2.jpg" alt=""></a>
+                    <a href="#">Why should companies offer taxi?</a>
+                    <span>
+                      <a href="#">April 2, 2017</a>        
+                      <a href="#">Adams</a>
+                      <span>2 comments</span>
+                    </span>
+                  </li>
+                </ul>
+              </aside>
+            </div><!-- footer-widget-col -->
+
+            <div class="footer-widget-col col-md-6 col-lg-3">
+              <!-- widget_categories -->
+              <aside class="widget widget_categories">
+                <h3 class="widget-title">Our Services</h3>
+                <ul>
+                  <li class="cat-item"><a href="#">Luxury Taxi service</a></li>
+                  <li class="cat-item"><a href="#">Luxury Tour cabs</a></li>
+                  <li class="cat-item"><a href="#">Sightseeing package trips</a></li>
+                  <li class="cat-item"><a href="#">Quick and reliable service</a></li>
+                  <li class="cat-item"><a href="#">Automated Billing</a></li>
+                  <li class="cat-item"><a href="#">Luxury Tours</a></li>
+                </ul>
+              </aside>
+            </div><!-- footer-widget-col -->
+
+            <div class="footer-widget-col col-md-6 col-lg-3">
+              <!-- widget_tag_cloud -->
+              <aside class="widget widget_tag_cloud">
+                <h3 class="widget-title">Tag cloud</h3>
+                <div class="tagcloud">
+                  <a href="#" class="tag-cloud-link" style="font-size: 8pt;">Luxury Tours</a>
+                  <a href="#" class="tag-cloud-link" style="font-size: 8pt;">Reliable</a>
+                  <a href="#" class="tag-cloud-link" style="font-size: 8pt;">Automated Billing</a>
+                  <a href="#" class="tag-cloud-link" style="font-size: 8pt;">Taxi</a>
+                  <a href="#" class="tag-cloud-link" style="font-size: 8pt;">Service</a>
+                  <a href="#" class="tag-cloud-link" style="font-size: 8pt;">Tours</a>
+                  <a href="#" class="tag-cloud-link" style="font-size: 8pt;">Luxury</a>
+                  <a href="#" class="tag-cloud-link" style="font-size: 8pt;">Popular</a>
+                </div>
+              </aside>
+            </div><!-- footer-widget-col -->
+          </div>
+        </div><!-- container -->
+      </div>
+        
+    </footer>
+  </div><!-- page -->
+
+
+
+
+
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>

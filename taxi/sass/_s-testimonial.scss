@@ -1,0 +1,130 @@
+.s-testimonial{
+	padding: 90px 0;
+  background-image: url(../img/testimonial-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+.testimonial-car{
+	margin: 20px auto 10px;
+}
+.testimonial-car-i > p{
+  position: relative;
+  margin: 0 auto;
+	padding: 20px 0px;
+	max-width: 930px;
+  text-align: center;
+	font-size: 14px;
+	color: $w;
+  line-height: 2;
+  letter-spacing: 0.462px;
+	&:before{
+    content: "\f10d";
+    font-size: 24px;
+    font-family: "FontAwesome";
+    color: $accent-c;
+    text-align: left;
+    position: absolute;
+    left: 0;
+    top: -14px;
+	}
+	&:after{
+    content: "\f10e";
+    font-size: 24px;
+    font-family: "FontAwesome";
+    position: absolute;
+    right: 0;
+    bottom: -14px;
+    color: $accent-c;
+  }
+}
+
+
+.testimonial-nav{
+	margin: 0 auto;
+	max-width: 570px;
+}
+
+.testimonial-nav-i{
+	position: relative;
+	margin: 0 auto;
+	display: block !important;
+	max-width: 190px !important;
+	text-align: center;
+	>img{
+		margin: 50px 0 0;
+		width: 95px;
+		display: inline-block;
+		border-radius: 50%;
+		cursor: pointer;
+		border: 2px solid $accent-c;
+	}
+	>h4{
+		display: none;
+		color: $accent-c;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 27px;
+    margin-bottom: 0;
+	}
+	>span{
+		display: none;
+		color: $w;
+		font-weight: 400;
+    font-style: italic;
+	}
+}
+.slick-center .testimonial-nav-i{
+	>img{
+		margin: 0;
+		width: 190px;
+	}
+	>h4{
+		display: block;
+	}
+	>span{
+		display: block;
+	}
+}
+
+
+@media only screen and (max-width : 768px){
+
+	.testimonial-nav .slick-dots{
+		display: block;
+		margin: 20px auto 0;
+		text-align: center;
+		> li{
+			display: inline-block;
+			> button{
+		    font-size: 0;
+		    width: 20px;
+		    border: 0;
+		    outline: none;
+		    background: transparent;
+		    &::before{
+		    	content: '';
+					display: inline-block;
+					margin: 0 6px;
+					width: 7px;
+					height: 7px;
+					border-radius: 50%;
+					background-color: rgb(193,193,193);
+					transition: .4s;
+		    }
+			}
+		}
+		.slick-active{
+			> button{
+		    &::before{	
+					transform: scale(1.5);
+					background-color: $accent-c;
+				}
+			}
+		}
+	}
+
+}

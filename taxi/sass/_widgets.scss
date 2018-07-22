@@ -1,0 +1,410 @@
+/* 
+	reset and normalise for widgets
+*/
+
+.footer-widget-col,
+.widget-area{
+	.widget{
+		//
+		font-size: 13px;
+		// Make sure select elements fit in widgets.
+		select {
+		  max-width: 100%;
+		}
+		// margin-bottom for text in <p></p>
+		p{
+			margin-bottom: 10px;
+		}
+		ul{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+	}
+}
+
+
+
+/* 
+	widgets wrapper styles
+*/
+
+//widgets margin bottom
+.widget-area .widget{
+	margin-bottom: 40px;
+	&:last-of-type{
+		margin-bottom: 0;
+	}
+}
+.footer-widget-col .widget{
+	margin-bottom: 40px;
+}
+
+//базовый цвет в зонах виджетов
+.widget-area{
+	color: #777
+}
+.footer-widget-col{
+	color: #888
+}
+
+
+/* 
+	widgets title
+*/
+// footer widget title
+.footer-widget-col .widget-title{
+	color: #fff;
+	margin-bottom: 22px;
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: 0.528px;
+	line-height: 1.5;
+	position: relative;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	padding-bottom: 15px;
+	&::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 35px;
+    height: 3px;
+    background-color: $accent-c;
+	}
+}
+// aside widget title
+.widget-area .widget-title{
+  color: #222;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.56px;
+  line-height: 1.71;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+
+/* 
+	widgets styles
+*/
+
+//стили для списков
+
+//sub menu margin
+.footer-widget-col,
+.widget-area{
+	ul.children{
+		margin: 8px 0 0 15px;
+	}
+}
+
+//для всех виджетов списков
+.widget_nav_menu ul li,
+.widget_pages ul li,
+.widget_recent_entries ul li,
+.widget_recent_comments ul li,
+.widget_meta ul li,
+.widget_archive ul li,
+.widget_categories ul li {
+	margin-bottom: 8px;
+	line-height: 1.85;
+  letter-spacing: 0.52px;
+	>a{
+		position: relative;
+    display: inline-block;
+    padding: 1px 0 1px 18px;
+		color: #777; //цвет всех ссылок в списах
+		transition: color 0.4s;
+		&::before {
+	    content: "\f101";
+	    font-family: FontAwesome;
+			position: absolute;
+			left: 0;
+	    color: #777; //цвет стрелок возле меню
+	    margin-right: 13px;
+	    display: inline-block;
+			transition: left 0.5s;
+		}
+		&:hover{
+			color: $acc-c;
+			&::before {
+				left: 3px;
+				color: $acc-c;
+			}
+		}
+	}
+}
+//цвет стрелок в футере
+.footer-widget-col{
+	.widget_nav_menu ul li,
+	.widget_pages ul li,
+	.widget_recent_entries ul li,
+	.widget_recent_comments ul li,
+	.widget_meta ul li,
+	.widget_archive ul li,
+	.widget_categories ul li {
+		>a{
+			&::before {
+				color: $acc-c; //цвет стрелок в футере
+			}
+		}
+	}
+}
+
+//виджет - категории - осветление кол в категориях (1)
+.widget_categories{
+	li{
+		color: #aaa; //цвет - кол (1)
+	}
+}
+//виджет - Свежие записи - осветление даты, раскладка
+.widget_recent_entries{
+	.post-date{
+		display: block;
+		margin-left: 18px;
+		font-size: 12px;
+		color: #aaa; //цвет даты
+	}
+}
+//виджет - Свежие коментарии - раскладка
+.widget_recent_comments{
+	.recentcomments{
+		color: #aaa;
+	}
+	.comment-author-link{
+		color: #777;
+	}
+	ul li a{
+		display: block;
+	}
+}
+//конец стилей для спимков
+
+//другие виджеты
+
+//виджет - облако тегов
+.tagcloud{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -5px;
+}
+.tag-cloud-link{
+	padding: 0 25px;
+	border: 1px solid #e0e0e0;
+	color: #909090;
+	font-size: 13px !important;
+	letter-spacing: 0.325px;
+	line-height: 2.30;
+	margin: 5px;
+	text-decoration: none;
+	transition: all 1s ease 0s;
+	&:hover{
+    background-color: $acc-c;
+    border-color: transparent;
+    color: $w;
+	}
+}
+
+//виджет - поиск
+.search-form{
+	display: flex;
+	position: relative;
+	>label{
+		margin: 0;
+	}
+	.screen-reader-text{
+		display: none;
+	}
+	.search-field{
+		display: block;
+		width: 100%;
+		padding: 12px 20px 12px 20px;
+    letter-spacing: 1.2px;
+    color: #777;
+    background-color: transparent;
+		border-radius: 0;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: none;
+    font-size: 13.38px;
+		transition: all 0.4s ease 0s;
+    &:focus{
+    	border: 1px solid #ccc;
+    }
+	}
+	.search-submit{
+		display: block;
+		width: 90px;
+		background-color: transparent;
+    color: #777;
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-left: none;
+		transition: all 1s ease 0s;
+    &:hover{
+	    background-color: $acc-c;
+	    border-color: transparent;
+	    color: $w;
+    }
+	}
+}
+
+//виджет - календарь
+.calendar_wrap caption {
+   background: none repeat scroll 0 0 $acc-c;
+   color: #222;
+   line-height: 40px;
+   text-align: center;
+	 padding-top: 0;
+   padding-bottom: 0;
+   caption-side: top;
+   font-family: 'Playfair Display', serif;
+   font-size: 13px;
+   font-weight: bold;
+   letter-spacing: 0.56px;
+   text-transform: uppercase;
+}
+.calendar_wrap table {
+   border-collapse: collapse;
+   width: auto;
+}
+.calendar_wrap table th {
+   border: 1px solid #ccc;
+   font-weight: bold;
+   padding: 8px 0px;
+   text-align: center;
+   width: 5%
+}
+.calendar_wrap table td {
+   border: 1px solid #ccc;
+   padding: 8px 0px;
+   color: #222;
+   width: 5%;
+   text-align: center;
+   >a{
+   	color: $acc-c;
+   }
+}
+.calendar_wrap table td #prev, .calendar_wrap table td#next {
+   text-align: left;
+   padding-left: 10px;
+   padding-right: 10px;
+}
+.calendar_wrap table td #next {
+   text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+custom made layout for posts
+*/
+.post-custom-layout{
+	list-style: none;
+	>li{
+	  position: relative;
+	  padding-left: 95px;
+	  margin-bottom: 22px;
+	  min-height: 80px;
+		>a:first-of-type{
+			position: absolute;
+			top: 4px; 
+			left: 0;
+		}
+		>a:last-of-type{
+			display: block;
+			font-size: 14px;
+			font-weight: 200;
+	    letter-spacing: 0.462px;
+	    line-height: 1.71;
+	    margin-bottom: 4px;
+			color: inherit;
+			transition: color .2s ease 0s;
+			text-decoration: none;
+			&:hover{
+				color: $accent-c;
+			}	
+		}
+		>span{
+	    font-size: 12px;
+	    display: inline-block;
+	    letter-spacing: 0.3px;
+	    font-style: italic;
+	    >span{
+				display: inline-block;
+				margin-right: 5px;
+				&:last-child{
+					margin-right: 0;
+				}
+	    }
+			>a{
+				display: inline-block;
+				text-decoration: none;
+				color: $accent-c;
+				transition: color 1s ease 0s;
+				margin-right: 5px;
+				&:last-child{
+					margin-right: 0;
+				}
+				&:hover{
+					color: $w;
+					text-decoration: underline;
+				}
+			}
+		}
+	}//li
+}//custom made layout for posts
+
+
+// херня нестандартная и неправильно сверстанная
+.widget_sosials{
+	margin: -20px 0 0;
+	>ul{
+		list-style: none;
+		>li{
+			display: inline-block;
+			margin-right: 2px;
+			>a{
+				display: block;
+				width: 34px;
+				height: 34px;
+				line-height: 33px;
+				text-align: center;
+				color: $w;
+				text-decoration: none;
+				border: 1px solid $accent-c;
+				border-radius: 50%;
+				transition: all 0.2s;
+				&:hover{
+					color: $b;
+					background-color: $accent-c;
+				}
+			}
+		}
+	}
+}
+//end херня нестандартная и неправильно сверстанная

@@ -1,0 +1,278 @@
+header{
+	z-index: 100;
+	position: fixed;
+	width: 100%;
+}
+
+.top-line-wrap{
+	background-color: $backg-c-b;
+	transition: margin 0.7s, height 0.4s;
+}
+.top-line{
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	color: $w;
+}
+
+.top-line_info{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style: none;
+	>li{
+		position: relative;
+		font-size: 13px;
+		letter-spacing: 0.52px;
+		>a{
+			text-decoration: none;
+			color: $w;
+			transition: color 0.2s;
+			&:hover{
+				color: $accent-c;
+			}
+		}
+	}
+	>li.phone,
+	>li.email,
+	>li.time{
+		padding: 0 0 0 25px;
+		&::before{
+			display: block;
+			position: absolute;
+			top: -4px;
+			left: 0;
+			font-family: FontAwesome;
+			font-size: 17px;
+	    vertical-align: middle;
+	    color: $accent-c;
+	    font-style: normal;
+	    font-weight: normal;
+	    text-decoration: inherit;
+	  	transition: transform 0.2s;
+	  }
+	}
+	>li.phone{
+		&::before{
+			content: "\f095";
+		}
+	}
+	>li.email{
+		&::before{
+			content: "\f0e0";
+		}
+	}
+	>li.time{
+		&::before{
+			content: "\f017";
+		}
+	}
+}
+
+.top-line_socials{
+	display: flex;
+	justify-content: center;
+	margin: -1px 0 10px;
+	list-style: none;
+	>li >a{
+		display: block;
+		margin: 0 0 0 10px;
+		text-decoration: none;
+		font-size: 14px;
+		color: $w;
+		&:hover{
+			color: $accent-c;
+	  	transition: color 0.2s;
+		}
+	}
+}
+
+
+.menu-line{
+	position: relative;
+	min-height: 120px;
+	background-color: $accent-c;
+	transition: min-height 0.4s;
+}
+.logo-link{
+	float: left;
+	display: block;
+	margin: 3px;
+	height: 114px;
+	line-height: 114px;
+	text-align: center;
+	padding: 0 20px 0 0;
+	min-width: 160px;
+	background-image: url(../img/logo-bg.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: cover;
+	transition: 0.4s;
+}
+.logo-img{
+	display: inline-block;
+	height: 67px;
+	transition: 0.4s;
+}
+.top-line-toogle{
+	float: right;
+  margin: 38px 0 0;
+	font-size: 29px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+#main-menu{
+	>li{
+		a{
+			transition: padding 0.4s;
+			font-weight: 900;
+			font-size: 14px;
+			text-transform: uppercase;
+			line-height: 14px;
+			font-family: 'Playfair Display', serif;
+		}
+	}
+	ul a{
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: 600;
+	}
+	a{
+		transition: color 0.3s;
+		&:hover{
+			transition: color 0.3s;
+		}
+	}
+}
+
+//stickyHeader
+header{
+	&.active{
+		.top-line-wrap{
+			margin: 0;
+			height: 0;
+		}
+		.top-line{
+			display: none;
+			height: 0;
+		}
+		.menu-line{
+			min-height: 60px;
+		}
+		.logo-link{
+			height: 54px;
+			line-height: 54px;
+		}
+		.logo-img{
+			height: 43px;
+			transition: 0.4s;
+		}
+		.top-line-toogle{
+			margin: 8px 0 0;
+		}
+		.main-menu-btn {
+		  margin: 13px 30px 0 20px;
+		}
+	}
+}//stickyHeader
+
+
+
+////////// styles from plagin docs
+#main-menu {
+  clear: both;
+}
+@media (min-width: 992px) {
+  #main-menu {
+    float: right;
+    clear: none;
+  }
+}
+
+/* Mobile menu toggle button */
+.main-menu-btn {
+  float: right;
+  margin: 42px 30px 0 20px;
+  position: relative;
+  display: inline-block;
+  width: 29px;
+  height: 29px;
+  text-indent: 29px;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	transition: 0.3s;
+}
+/* hamburger icon */
+.main-menu-btn-icon,
+.main-menu-btn-icon:before,
+.main-menu-btn-icon:after {
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  height: 3px;
+  width: 30px;
+  background: #000;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.main-menu-btn-icon:before {
+  content: '';
+  top: -9px;
+  left: 0;
+}
+.main-menu-btn-icon:after {
+  content: '';
+  top: 9px;
+  left: 0;
+}
+
+/* x icon */
+#main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon {
+  height: 0;
+  background: transparent;
+}
+#main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon:before {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+#main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon:after {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* hide menu state checkbox (keep it visible to screen readers) */
+#main-menu-state {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* hide the menu in mobile view */
+#main-menu-state:not(:checked) ~ #main-menu {
+  display: none;
+}
+
+#main-menu-state:checked ~ #main-menu {
+  display: block;
+}
+
+@media (min-width: 992px) {
+  /* hide the button in desktop view */
+  .main-menu-btn {
+    position: absolute;
+    top: -99999px;
+  }
+  /* always show the menu in desktop view */
+  #main-menu-state:not(:checked) ~ #main-menu {
+    display: block;
+  }
+
+}
