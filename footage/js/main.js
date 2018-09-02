@@ -87,21 +87,37 @@
 					lat: 50.005375,
 					lng: 36.321587,
 					name: "Объект 1",
-					address:"Адрес 1"
+					address:"Адрес 1",
+					type: "type1"
 				},
 				{
 					lat: 49.995395,
 					lng: 36.321879,
 					name: "Объект 2",
-					address:"Адрес 2"
+					address:"Адрес 2",
+					type: "type2"
 				},
 				{
 					lat: 50.010850,
 					lng: 36.342411,
 					name: "Объект 3",
-					address:"Адрес 3"
+					address:"Адрес 3",
+					type: "type3"
 				}
 			];
+
+      var icons = {
+        type1: {
+          icon: 'img/1.png'
+        },
+        type2: {
+          icon: 'img/2.png'
+        },
+        type3: {
+          icon: 'img/3.png'
+        }
+      };
+
 
 			var element = document.getElementById('content-map');
 			var options = {
@@ -122,15 +138,18 @@
 	      var latLng = new google.maps.LatLng(markersData[i].lat, markersData[i].lng);
 	      var name = markersData[i].name;
 	      var address = markersData[i].address;
+
+	      var type = markersData[i].type;
 	        
-	      addMarker(latLng, name, address);
+	      addMarker(latLng, name, address, type);
 	    }
 
 
-			function addMarker(latLng, name, address) {
+			function addMarker(latLng, name, address, type) {
 			  var marker = new google.maps.Marker({
 			    position: latLng,
 			    map: map,
+			    icon: icons[type].icon,
 			    title: name
 			  });
 
