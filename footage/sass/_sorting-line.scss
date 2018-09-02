@@ -1,0 +1,49 @@
+.sorting{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 22px 0;
+	width: 100%;
+	color: $gray-c;
+	font-size: 13px;
+}
+
+.sorting_i{
+	padding: 0 4px 8px 4px;
+}
+.orting_info{
+	font-weight: 600;
+}
+
+.sorting_i_select-wrap{
+	position: relative;
+	display: inline-block;
+	padding: 0 20px 0 0;
+	&::before{
+		content: "\f078";
+		font-family: 'FontAwesome';
+		font-size: 8px;
+		display: block;
+		position: absolute;
+		top: 4px;
+		right: 7px;
+		color: $accent-c;
+	}
+}
+
+.sorting_i_select{
+	font-weight: 600;
+	color: $accent-c;
+	border: none;
+	outline: none;
+	appearance: none;
+	cursor: pointer;
+	background: transparent;
+	>option{
+		font-weight: 600;
+		color: $gray-c;
+	}
+	&::-ms-expand {
+    display: none;
+	}
+}

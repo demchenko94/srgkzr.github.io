@@ -1,0 +1,157 @@
+.primary{
+	position: relative;
+}
+
+
+// content_map
+.content-map-wrap{
+	display: none;
+}
+
+.primary.list-map-view{
+	.content-map-wrap{
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 420px;
+		z-index: 1;
+	}
+	.content-map{
+		width: 100%;
+		height: 100%;
+	}
+	.content_big-col{
+		padding-top: 440px;
+	}
+	.content-map-serach-info{
+		display: none;
+	}
+	.content-map-serach-info.active{
+		// z-index: 1;
+		display: block;
+		position: absolute;
+		margin: 0 20px 0 20px;
+		padding: 10px 15px;
+		top: 60px;
+		right: 0;
+		max-width: 300px;
+		background-color: rgba(37, 131, 180, 0.8);
+		color: #fff;
+		font-size: 15px;
+		border-radius: 10px;
+	}
+}
+//END content_map
+
+.house{
+	margin: 0 auto 20px;
+	max-width: 280px;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0 0 0 1px $border-grey-c;
+	&:hover{
+		box-shadow: 0 0 0 2px $border-menu-c;
+	}
+	transition: box-shadow 0.2s;
+}
+
+//image box
+.house_img-wrap{
+	position: relative;
+}
+.house_link{
+	display: block;
+	margin: 0 auto;
+	max-height: 177px;
+	max-width: 100%;
+	overflow: hidden;
+	>img{
+		max-width: 100%;
+	}
+}
+.house_ad-type{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	padding: 3px 12px;
+	background-color: $form-button-bg;
+	border-radius: 20px;
+	text-transform: uppercase;
+	font-size: 12px;
+	color: #fff;
+	letter-spacing: 1.3px;
+}
+.house_number-photos{
+	position: absolute;
+	top: 10px;
+	right: 30px;
+	text-transform: uppercase;
+	font-size: 13px;
+	color: #fff;
+	&::after{
+		content: "\f030";
+		font-family: 'FontAwesome';
+		font-size: 8px;
+		display: block;
+		position: absolute;
+		top: 0;
+		right: -20px;
+		font-size: 15px;
+	}
+}
+//END image box
+
+//content box
+
+//for all types
+.house_content-wrap{
+	overflow: hidden;
+	font-size: 12px;
+}
+.house_date,
+.house_region{
+	color: $gray-c;
+}
+
+.house_price{
+	font-weight: 900;
+}
+//END for all types
+
+//house small
+.house_content-wrap{
+	padding: 7px 20px 15px 20px;
+	max-height: 160px;
+	min-height: 160px;
+}
+.house_date,
+.house_adress,
+.house_region,
+.house_price,
+.house_sizes{
+	margin-bottom: 6px;
+}
+.house_adress{
+	font-size: 13px;
+	font-weight: 400;
+	>a{
+		color: inherit;
+		text-decoration: none;
+		&:hover{
+			color: $accent-c;
+		}
+	}
+}
+.house_price{
+	font-size: 16px;
+}
+
+.house_description{
+	height: 30px;
+	overflow: hidden;
+}
+//END house small
+
+//END content box
