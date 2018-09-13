@@ -1,4 +1,5 @@
-@import "parts/fonts";
+@import "tools/fonts";
+
 @import "tools/variables";
 @import "tools/reset_and_basic-classes";
 
@@ -7,24 +8,91 @@
 //main tags & classes
 html{}
 body{
+	min-width: 320px;
 	position: relative;
 	font: 14px 'ProximaNova';
 	color: $main-c;
 	background-color: #fff;
 }
-.page{}
-main{}
+.page{
+	overflow: hidden;
+}
+main{
+	// padding: 50px 0;
+	// height: 20px;
+	// box-shadow: 0px 1px 1px 0 rgba(0,0,0,0.1);
+}
 
-footer{
-	height: 100px;
+//sticky footer IE11-
+.page.sticky-footer{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+	.main{
+	  flex: 1;
+	}
+}
+//END sticky footer IE11-
+
+// other main styles
+.page-single-content{
+	padding: 38px 0 50px;
 }
 
 
-// @import "parts/";
+.button{
+	display: inline-block;
+	padding: 0 30px;
+	height: 50px;
+	line-height: 50px;
+	color: #fff;
+	// box-shadow: none !important;
+	border: none !important;
+	outline: none !important;
+	background-color: $form-button-bg;
+	border-radius: 4px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
 
+
+//END other main styles
+
+
+/*Центр по вспомогательной оси*/
+  // align-items: center;
+//bg
+	// background-image: url('../img/icon-menu.svg');background-position:0 0;background-repeat:no-repeat;
+//hover sibling
+	// .search_field:hover ~ .search_drop{display:block;}
+
+
+
+//first styles
 @import "header";
 @import "header-media";
-@import "sorting-line";
-@import "sorting-line-media";
-@import "main-content";
-@import "main-content-media";
+@import "parts/logos";
+@import "parts/logos-media";
+@import "parts/search";
+@import "parts/search-media";
+
+//middle styles
+@import "parts/page-section_title";
+@import "parts/page-section_title-media";
+
+
+@import "footer";
+@import "footer-media";
+//last styles
+
+
+@import "parts/mobile-menu";
+@import "parts/mobile-menu-media";
+
+//pages
+@import "pages/pages-main";
+@import "pages/pages-main-media";
+
+@import "pages/news";
+@import "pages/news-media";
+

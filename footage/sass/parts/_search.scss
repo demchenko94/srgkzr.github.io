@@ -1,0 +1,522 @@
+
+.search_form{
+	position: relative;
+	margin: 0 -5px 0 -10px;
+}
+
+.search_list{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 80px;
+	list-style: none;
+	box-shadow: inset 0 0 0 1px rgba(220, 220, 220, 0);
+}
+.search_list_i{
+	padding: 10px;
+	position: relative;
+	display: block;
+	border-radius: 4px;
+	font-weight: 400;
+	&::before{
+		z-index: 2;
+		transition: all 0s 0.1s;
+		opacity: 0;
+		height: 0;
+		z-index: 1;
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		background-color: #fff;
+	}
+	&.active{//при клике, активное, выбран вариант
+		box-shadow: inset 0 0 0 1px rgba(220, 220, 220, 1);
+		&::before{//Костыль) против бордера
+			z-index: 2;
+			height: 2px;
+			opacity: 1;
+			transition: 0s;
+			border-left: 1px solid #dcdcdc;
+			border-right: 1px solid #dcdcdc;
+		}
+		>.search_field{
+			border: 1px solid $border-menu-c;
+			box-shadow: 0 0 0 1px $border-menu-c;
+			color: $menu-gray-c;
+			&::before{
+				display: none;
+			}
+			&::after{
+				display: block;
+			}
+		}
+
+	}
+	&.activated{//если выбран один из вариантов
+		>.search_field{
+			position: relative;
+			padding: 14px 25px 14px 10px;
+			&::before{
+				right: 10px;
+			}
+
+			&::after{
+				right: 10px;
+			}
+		}
+		>.search_field .search_field_placeholder{
+			display: none;
+		}
+		>.search_field .search_field_text{
+			display: block;
+			color: $menu-gray-c;
+		}
+	}
+}//search_list_i
+
+.search_field{
+	position: relative;
+	padding: 14px 50px 14px 20px;
+	height: 50px;
+	border-radius: 4px;
+	border: 1px solid #dcdcdc;
+	font-size: 16px;
+	color: $search-gray-c;
+	cursor: pointer;
+	transition: 0.2s;
+	&::before{
+		content: "\e80f";
+		font-family: 'fontello';
+		font-size: 18px;
+		display: block;
+		position: absolute;
+		top: 16px;
+		right: 20px;
+		color: $search-arrow-gray-c;
+		transition: 0.2s;
+	}
+	&::after{
+		content: "\e802";
+		font-family: 'fontello';
+		font-size: 17px;
+		display: none;
+		position: absolute;
+		top: 17px;
+		right: 20px;
+		color: $menu-gray-c;
+		transition: 0.2s;
+	}
+	&:hover{
+		color: $menu-gray-c;
+		border: 1px solid $search-gray-c;
+		&::before{
+			color: $menu-gray-c;
+		}
+	}
+}//search_field
+
+//Стили для разных типов полей  меню
+.search_list_i-action{
+	width: 162px;
+}
+.search_list_i-property{
+	width: 232px;
+}
+.search_list_i-adress{
+	width: 332px;
+}
+	//sub fields
+.search_list_i-district{
+	width: 23%;
+}
+.search_list_i-street,
+.search_list_i-subway{
+	width: 35%;
+}
+
+
+
+
+//END Стили для разных типов полей  меню
+.search_field_placeholder,
+.search_field_text{
+	white-space: nowrap;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.search_field_text{
+	display: none;
+	&::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255, 0.2), rgba(255,255,255, 1) 100%);
+	}
+	>span{
+		&::before{
+			content: ", ";
+			display: inline;
+		}
+		&:first-of-type{
+			&::before{
+				content: ""
+			}
+		}
+	}
+}
+
+//search_drop
+.search_drop{
+	z-index: 1;
+	display: none;
+	position: absolute;
+	top: 69px;
+	left: 0;
+	padding: 20px 25px 20px 20px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+	border: 1px solid #dcdcdc;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	background-color: #ffffff;
+	min-width: 100%;
+}
+
+
+.search_drop{
+	color: #93a4af;
+	font-size: 15px;
+	font-weight: 600;
+	letter-spacing: 0.54px;
+	ul{
+		list-style: none;
+	}
+}
+//END search_drop
+
+//Стили для инпутов и радио кнопок
+.search_input-i,
+.search_radio-i{
+	display: none;
+}
+.search_input-l,
+.search_radio-l{
+	position: relative;
+	display: inline-block;
+	margin: 0 0 0 0;
+	padding: 7px 0 5px 25px;
+	line-height: 16px;
+	cursor: pointer;
+	&::before {
+	  content: "";
+	  position: absolute;
+	  top: 10px;
+	  left: 0;
+	  display: block;
+	  border-radius: 50%;
+	  border: 2px solid #dcdcdc;
+	  line-height: 16px;
+	  margin: -5px 5px 0 0;
+	  height: 18px;
+	  width: 18px;
+	  text-align: center;
+	  vertical-align: middle;
+	  font-size: 0;    
+	  transition: border 0.2s;
+		box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 1);
+		background: #fff;
+	}
+}
+.search_input-i:checked + .search_input-l,
+.search_radio-i:checked + .search_radio-l{
+	color: #50ade6;
+	&::before{
+	  font-size: 16px;  
+ 	  border: 2px solid #41afe5;//lighten(#5171EA, 30%);
+    background: linear-gradient(180deg, #279dc4 0%, #18709f 100%);
+	}
+}
+.search_input-i[value="Квартира"]:checked + .search_input-l{
+	&::before{
+  	background: #5171EA;
+	  border: 2px solid lighten(#5171EA, 20%);
+	}
+}
+.search_input-i[value="Дом"]:checked + .search_input-l{
+	&::before{
+  	background: #F24343;
+	  border: 2px solid lighten(#F24343, 20%);
+	}
+}
+.search_input-i[value="Участок"]:checked + .search_input-l{
+	&::before{
+  	background: #F0DE18;
+	  border: 2px solid lighten(#F0DE18, 20%);
+	}
+}
+.search_input-i[value="Коммерческая недвижимость"]:checked + .search_input-l{
+	&::before{
+  	background: #28AE3B;
+	  border: 2px solid lighten(#28AE3B, 20%);
+	}
+}
+//END Стили для инпутов и радио кнопок
+
+
+
+//Стили для поли поиска по АДРЕСУ search_list_i-adress
+.search_list_i.search_list_i-adress{
+	position: static;
+	&::before{
+		display: none;
+	}
+}
+.search_drop.search_drop-adress{
+	margin: 0 -10px;
+	padding: 0;
+	top: 0;
+	bottom: auto;
+	left: 10px;
+	width: 100%;
+	box-shadow: none;
+	border: none;
+}
+
+//END Стили для поли поиска по АДРЕСУ search_list_i-adress
+
+
+	//subway
+
+.search_list_i-subway{
+	.search_drop{
+		left: -25%;
+	}
+}
+.search_subway-wrap{
+	display: flex;
+	justify-content: space-between;
+	width: 603px;//593px
+}
+.search_input-subway-l{
+	padding: 7px 0 5px 30px;
+	&::before{
+		padding: 0;
+		top: 14px;
+		left: 8px;
+		width: 12px;
+		height: 12px;
+    // background: linear-gradient(180deg, #279dc4 0%, #18709f 100%);
+	}
+	&::after{
+		content: "";
+		display: block;
+		position: absolute;
+    top: 19px;
+    left: 13px;
+    height: 19px;
+		width: 2px;
+	}
+}
+.search_input-subway-i:checked + .search_input-subway-l{
+	&::before{
+		box-shadow: none;
+	}
+}
+.search_list-subway{
+	>li:last-of-type{
+		.search_input-subway-l{
+			&::after{
+				display: none;
+			}
+		}
+	}
+	&-r{
+		.search_input-subway-l{
+			&::before{
+	 			border: 3px solid $subway-bg-r;
+			}
+			&::after{
+				background: $subway-bg-r;
+			}
+		}
+		.search_input-subway-i:checked + .search_input-subway-l{
+			&::before{
+		 		border: 3px solid $subway-bg-r;
+				background: $subway-bg-r;
+			}
+		}
+	}
+	&-b{
+		.search_input-subway-l{
+			&::before{
+	 			border: 3px solid $subway-bg-b;
+			}
+			&::after{
+				background: $subway-bg-b;
+			}
+		}
+		.search_input-subway-i:checked + .search_input-subway-l{
+			&::before{
+		 		border: 3px solid $subway-bg-b;
+				background: $subway-bg-b;
+			}
+		}
+	}
+	&-g{
+		.search_input-subway-l{
+			&::before{
+	 			border: 3px solid $subway-bg-g;
+			}
+			&::after{
+				background: $subway-bg-g;
+			}
+		}
+		.search_input-subway-i:checked + .search_input-subway-l{
+			&::before{
+		 		border: 3px solid $subway-bg-g;
+				background: $subway-bg-g;
+			}
+		}
+	}
+}
+	//end subway
+
+	//street
+.search_list_i-street{
+	&.active{
+		&::before{
+			display: none;	
+		}
+		#locationField{
+		  &::before{
+			  display: none;
+		  }
+		  &::after{
+			  display: block;
+		  }
+		}
+	}
+	&.activated{
+		.search_input-street{
+			padding: 14px 25px 14px 10px;
+			color: $menu-gray-c;
+		}
+		#locationField{
+		  &::before{
+			  right: 10px;
+		  }
+		  &::after{
+			  right: 10px;
+		  }
+		}
+	}
+}
+#locationField{
+	position: relative;
+	padding: 0;
+	border: none !important;
+	box-shadow: none !important;
+	&::before{
+		z-index: 	1;
+		content: "\e80f";
+		font-family: 'fontello';
+		font-size: 18px;
+		display: block;
+		position: absolute;
+		top: 16px;
+		right: 20px;
+		color: $search-arrow-gray-c;
+		transition: 0.2s;
+	}
+	&::after{
+		z-index: 	1;
+		content: "\e802";
+		font-family: 'fontello';
+		font-size: 17px;
+		display: none;
+		position: absolute;
+		top: 17px;
+		right: 20px;
+		color: $menu-gray-c;
+		transition: 0.2s;
+	}
+}
+.search_input-street{
+	display: block;
+	width: 100%;
+	height: 100%;
+	outline: none !important;
+	border: none;
+	border: 1px solid #dcdcdc;
+	border-radius: 4px;
+  position: relative;
+  padding: 14px 50px 14px 20px;
+  font-size: 16px;
+  color: inherit;
+  &::placeholder{
+  	font-weight: 200;
+  	color: #93a4af;;
+  }
+	&:focus{
+		border: 1px solid $border-menu-c;
+		box-shadow: 0 0 0 1px $border-menu-c;
+	}
+}
+.pac-container{
+	margin: 9px 0 0 1px;
+	padding: 20px 25px 20px 20px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+	border: 1px solid #dcdcdc;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border-top: none;
+	background-color: #ffffff;
+	color: #93a4af;
+	font-size: 15px;
+	font-weight: 600;
+	letter-spacing: 0.54px;
+	&::before{
+		content: "";
+		z-index: 	100;
+		display: block;	
+		position: absolute;
+		top: -3px;
+		left: 0;
+		width: 100%;
+		height: 5px;
+		background-color: #fff;
+	}
+	&::after{
+		display: none;
+	}
+	.pac-item{
+		border: none;
+    cursor: pointer;
+	}
+	.pac-item-query{
+		font-size: 14px;
+		color: $main-c;
+	}
+	.pac-icon-marker{
+		display: none;
+	}
+}
+	//END street
+
+
+
+
+
+
+.search_button-ok{
+	padding: 0 25px;
+}

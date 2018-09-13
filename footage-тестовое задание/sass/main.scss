@@ -1,0 +1,30 @@
+@import "parts/fonts";
+@import "tools/variables";
+@import "tools/reset_and_basic-classes";
+
+@import "media";
+
+//main tags & classes
+html{}
+body{
+	position: relative;
+	font: 14px 'ProximaNova';
+	color: $main-c;
+	background-color: #fff;
+}
+.page{}
+main{}
+
+footer{
+	height: 100px;
+}
+
+
+// @import "parts/";
+
+@import "header";
+@import "header-media";
+@import "sorting-line";
+@import "sorting-line-media";
+@import "main-content";
+@import "main-content-media";

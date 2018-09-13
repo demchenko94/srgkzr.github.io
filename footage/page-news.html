@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+
+  <link rel="stylesheet" href="css/libs.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <title>Метраж</title>
+</head>
+<body class="page-news">
+
+  <div id="page-wrapper" class="page">
+		<header>
+      <div class="header-menu-line">
+        <div class="container">
+          
+          <nav class="menu-line">
+
+            <div class="icon_menu m-slide-panel-toogle"></div>
+
+            <a href="front-page.html" class="logo">
+              <div class="logo_img">
+                <img src="img/logo.svg" alt="Логотип">
+              </div>
+              <div class="logo_text">
+                <h1 class="logo_title">Метраж</h1>
+                <h3 class="logo_sub-title">Агентство недвижимости</h3>
+              </div>
+            </a>
+            
+            <div id="icon-search" class="icon_search"></div>
+
+            <ul id="main-menu" class="main-menu">
+              <li><a class="current_page_item" href="index.html">Продажа</a></li>
+              <li><a href="#">Аренда</a></li>
+              <li><a href="#">Наши риэлторы</a></li>
+              <li><a href="#">Владельцам</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+            
+          </nav><!-- menu-line -->
+
+        </div>
+      </div>
+      <div class="header-search-line">
+        <div class="container">
+          
+          <form action="#" id="search_form" class="search_form search_wrap">
+            <ul class="search_list">
+
+              <li class="search_list_i search_list_i-action">
+                <div class="search_field search_field-action">
+                  <p class="search_field_placeholder">Действие</p>
+                  <p class="search_field_text"></p>
+                </div>
+                <div class="search_drop search_drop-action">
+
+                  <ul>
+                    <li>
+                      <input class="search_input-i search_input-property-i" type="checkbox" id="action1" name="action[]" value="Купить"/>
+                      <label class="search_input-l search_input-property-l" for="action1">Купить</label>
+                    </li>
+                    <li>
+                      <input class="search_input-i search_input-property-i" type="checkbox" id="action2" name="action[]" value="Продать"/>
+                      <label class="search_input-l search_input-property-l" for="action2">Продать</label>
+                    </li>
+                    <li>
+                      <input class="search_input-i search_input-property-i" type="checkbox" id="action3" name="action[]" value="Арендовать"/>
+                      <label class="search_input-l search_input-property-l" for="action3">Арендовать</label>
+                    </li>
+                  </ul>
+
+                </div>
+              </li><!-- Действие -->
+
+              <li class="search_list_i search_list_i-property">
+                <div class="search_field search_field-property">
+                  <p class="search_field_placeholder">Вид недвижимости</p>
+                  <p class="search_field_text"></p>
+                </div>
+                <div class="search_drop">
+                  <ul>
+                    <li>
+                      <input class="search_input-i search_input-property-i" type="checkbox" id="property1" name="property[]" value="Квартира"/>
+                      <label class="search_input-l search_input-property-l" for="property1">Квартира</label>
+                    </li>
+                    <li>
+                      <input class="search_input-i search_input-property-i" type="checkbox" id="property2" name="property[]" value="Дом"/>
+                      <label class="search_input-l search_input-property-l" for="property2">Дом</label>
+                    </li>
+                    <li>
+                      <input class="search_input-i search_input-property-i" type="checkbox" id="property3" name="property[]" value="Участок"/>
+                      <label class="search_input-l search_input-property-l" for="property3">Участок</label>
+                    </li>
+                    <li>
+                      <input class="search_input-i search_input-property-i" type="checkbox" id="property4" name="property[]" value="Коммерческая недвижимость"/>
+                      <label class="search_input-l search_input-property-l" for="property4">Коммерческая недвижимость</label>
+                    </li>
+                  </ul>
+                </div>
+              </li><!-- Вид недвижимости -->
+
+              <li class="search_list_i search_list_i-adress">
+                <div class="search_field search_field-adress">
+                  <p class="search_field_placeholder">Район, Станция метро или адрес</p>
+                  <p class="search_field_text"></p>
+                </div>
+                <div class="search_drop search_drop-adress">
+
+                  <ul class="search_list search_list-sub search_list_adress">
+                    
+                    <li class="search_list_i search_list_i-sub search_list_i-district">
+                      <div class="search_field search_field-district">
+                        <p class="search_field_placeholder">Без привязки к району</p>
+                        <p class="search_field_text"></p>
+                      </div>
+                      <div class="search_drop">
+
+                        <ul>
+
+                          <li>
+                            <input class="search_input-i search_input-property-i" type="checkbox" id="district1" name="district[]" value="Индустриальный"/>
+                            <label class="search_input-l search_input-property-l" for="district1">Индустриальный</label>
+                          </li>
+
+                          <li>
+                            <input class="search_input-i search_input-property-i" type="checkbox" id="district2" name="district[]" value="Жовтневый"/>
+                            <label class="search_input-l search_input-property-l" for="district2">Жовтневый</label>
+                          </li>
+                          <li>
+                            <input class="search_input-i search_input-property-i" type="checkbox" id="district3" name="district[]" value="Киевский"/>
+                            <label class="search_input-l search_input-property-l" for="district3">Киевский</label>
+                          </li>
+                          <li>
+                            <input class="search_input-i search_input-property-i" type="checkbox" id="district4" name="district[]" value="Коминтерновый"/>
+                            <label class="search_input-l search_input-property-l" for="district4">Коминтерновый</label>
+                          </li>
+
+                        </ul>
+
+                      </div>
+                    </li><!-- Без привязки к району -->
+
+                    <li class="search_list_i search_list_i-sub search_list_i-subway">
+                      <div class="search_field search_field-subway">
+                        <p class="search_field_placeholder">Без привязки метро</p>
+                        <p class="search_field_text"></p>
+                      </div>
+                      <div class="search_drop">
+                        <div class="search_subway-wrap">
+                          
+                          <ul class="search_list-subway search_list-subway-r">
+
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-r-1" name="subway[]" value="Холодная гора"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-r-1">Холодная гора</label>
+                            </li>
+
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-r-2" name="subway[]" value="Южный вокзал"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-r-2">Южный вокзал</label>
+                            </li>
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-r-3" name="subway[]" value="Центральный рынок"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-r-3">Центральный рынок</label>
+                            </li>
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-r-4" name="subway[]" value="Южный вокзал"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-r-4">Южный вокзал</label>
+                            </li>
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-r-5" name="subway[]" value="пл. Конституции"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-r-5">пл. Конституции</label>
+                            </li>
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-r-6" name="subway[]" value="прос. Гагарина"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-r-6">прос. Гагарина</label>
+                            </li>
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-r-7" name="subway[]" value="Спортивная"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-r-7">Спортивная</label>
+                            </li>
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-r-8" name="subway[]" value="Завод им. Малышева"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-r-8">Завод им. Малышева</label>
+                            </li>
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-r-9" name="subway[]" value="Московский проспект"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-r-9">Московский проспект</label>
+                            </li>
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-r-10" name="subway[]" value="Дворец Спорта"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-r-10">Дворец Спорта</label>
+                            </li>
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-r-1" name="subway[]" value="Армейская"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-r-1">Армейская</label>
+                            </li>
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-r-12" name="subway[]" value="им. О.С. Марсельского"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-r-12">им. О.С. Марсельского</label>
+                            </li>
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-r-13" name="subway[]" value="Тракторный завод"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-r-13">Тракторный завод</label>
+                            </li>
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-r-14" name="subway[]" value="Индустриальная"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-r-14">Индустриальная</label>
+                            </li>
+
+                          </ul><!-- search_list-subway-1 -->
+
+                          <ul class="search_list-subway search_list-subway-b">
+
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-b-1" name="subway[]" value="Победа"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-b-1">Победа</label>
+                            </li>
+
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-b-2" name="subway[]" value="Алексеевская"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-b-2">Алексеевская</label>
+                            </li>
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-b-3" name="subway[]" value="23 Августа"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-b-3">23 Августа</label>
+                            </li>
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-b-4" name="subway[]" value="Ботанический сад"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-b-4">Ботанический сад</label>
+                            </li>
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-b-5" name="subway[]" value="Научная"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-b-5">Научная</label>
+                            </li>
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-b-6" name="subway[]" value="Роспром"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-b-6">Роспром</label>
+                            </li>
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-b-7" name="subway[]" value="Арх. Бекетова"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-b-7">Арх. Бекетова</label>
+                            </li>
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-b-8" name="subway[]" value="Защитников Украины"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-b-8">Защитников Украины</label>
+                            </li>
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-b-9" name="subway[]" value="Метростроителей"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-b-9">Метростроителей</label>
+                            </li>
+
+                          </ul><!-- search_list-subway-2 -->
+
+                          <ul class="search_list-subway search_list-subway-g">
+
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-g-1" name="subway[]" value="Исторический музей"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-g-1">Исторический музей</label>
+                            </li>
+
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-g-2" name="subway[]" value="Университет"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-g-2">Университет</label>
+                            </li>
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-g-3" name="subway[]" value="Пушкинская"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-g-3">Пушкинская</label>
+                            </li>
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-g-4" name="subway[]" value="Киевкая"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-g-4">Киевкая</label>
+                            </li>
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-g-5" name="subway[]" value="Ак. Барабашева"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-g-5">Ак. Барабашева</label>
+                            </li>
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-g-6" name="subway[]" value="Ак. Павлова"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-g-6">Ак. Павлова</label>
+                            </li>
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-g-7" name="subway[]" value="Студенческая"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-g-7">Студенческая</label>
+                            </li>
+                            <li>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-g-8" name="subway[]" value="Героев труда"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-g-8">Героев труда</label>
+                            </li>
+
+
+
+
+
+
+                          </ul><!-- search_list-subway-3 -->
+
+                        </div>
+                      </div><!-- drop -->
+                    </li><!-- Без привязки метро -->
+
+                    <li class="search_list_i search_list_i-sub search_list_i-street">
+
+                      <div id="locationField" class="">
+                        <input id="autocomplete" class="search_input-street" placeholder="Введите адрес дома" type="text"></input>
+                      </div>
+
+                    </li><!-- street -->
+
+                    <li class="search_list_i-button">
+                      <span id="search_sub-button" class="button search_button-ok">Ok</span>
+                    </li><!-- Кнопка OK -->
+
+
+                  </ul><!-- search_list_adress -->
+
+                </div>
+              </li><!-- Район, Станция метро или адрес -->
+
+              <li class="search_list_i search_list_i-price">
+                <div class="search_field search_field-price">
+                  <p class="search_field_placeholder">Цена</p>
+                  <p class="search_field_text"></p>
+                </div>
+                <div class="search_drop search_drop-price"></div><!-- search_drop -->
+              </li><!-- search_list_i-price -->
+
+              <li class="search_list_i search_list_i-extra">
+                <div class="search_field search_field-extra">
+                  <p class="search_field_placeholder">Дополнительно</p>
+                  <p class="search_field_text"></p>
+                </div>
+                <div class="search_drop search_drop-extra"></div><!-- search_drop -->
+              </li><!-- search_list_i-extra -->
+
+              <li class="search_list_i-button">
+                <button class="search_button button">Поиск</button>
+              </li><!-- search_list_i-button -->
+
+            </ul><!-- search_list -->
+          </form>
+
+        </div><!-- container -->
+      </div><!-- header-search-line -->
+    </header>
+    <main class="main">
+
+      <div class="page-content">
+
+        <section class="sec-news">
+
+          <div class="container">
+            <div class="sec-header">
+              <h2 class="sec-title">Новости</h2>
+
+  <!--             <div class="sec-more">
+                <a href="#" class="sec-more_l">Все новости</a>
+              </div> --><!-- Для главной -->
+
+              <form action="#" method="post" class="news_sorting">
+                <span class="news_sorting_wrap">
+                  <select class="news_sorting_select" name="name">
+                    <option value="0" selected>За все время</option>
+                    <option value="1">За месяц</option>
+                    <option value="2">За 6 месяцев</option>
+                    <option value="3">3а год</option>
+                  </select>
+                </span>
+              </form>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+
+              <div class="col-12 col-lg-6">
+                <div class="news">
+                  <a href="#" class="news_img">
+                    <img src="img/news/news-1.jpg" alt="news">
+                  </a>
+                  <div class="news_content-wrap">
+                    <div class="news_content">
+                      <span class="news_date">22.05.2017</span>
+                      <h2 class="news_title"><a class="news_title-l" href="#">Что ждет рынок недвижимости в ближайшем будущем</a></h2>
+                      <div class="news_text">
+                        <p>В последние две недели</p>
+                        <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свое, ручеек всеми буквенных семантика, проектах большого эта взобравшись маленький.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- news -->
+              </div><!-- item news -->
+
+              <div class="col-12 col-lg-6">
+                <div class="news">
+                  <a href="#" class="news_img">
+                    <img src="img/news/news-1.jpg" alt="news">
+                  </a>
+                  <div class="news_content-wrap">
+                    <div class="news_content">
+                      <span class="news_date">22.05.2017</span>
+                      <h2 class="news_title"><a class="news_title-l" href="#">Что ждет рынок</a></h2>
+                      <div class="news_text">
+                        <p>В последние две недели</p>
+                        <p>Далеко-далеко за словесными горами в стране.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- news -->
+              </div><!-- item news -->
+              <div class="col-12 col-lg-6">
+                <div class="news">
+                  <a href="#" class="news_img">
+                    <img src="img/news/news-1.jpg" alt="news">
+                  </a>
+                  <div class="news_content-wrap">
+                    <div class="news_content">
+                      <span class="news_date">22.05.2017</span>
+                      <h2 class="news_title"><a class="news_title-l" href="#">Что ждет рынок недвижимости в ближайшем будущем</a></h2>
+                      <div class="news_text">
+                        <p>В последние две недели</p>
+                        <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свое, ручеек всеми буквенных семантика, проектах большого эта взобравшись маленький.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- news -->
+              </div><!-- item news -->
+              <div class="col-12 col-lg-6">
+                <div class="news">
+                  <a href="#" class="news_img">
+                    <img src="img/news/news-1.jpg" alt="news">
+                  </a>
+                  <div class="news_content-wrap">
+                    <div class="news_content">
+                      <span class="news_date">22.05.2017</span>
+                      <h2 class="news_title"><a class="news_title-l" href="#">Что ждет рынок недвижимости в ближайшем будущем</a></h2>
+                      <div class="news_text">
+                        <p>В последние две недели</p>
+                        <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свое, ручеек всеми буквенных семантика, проектах большого эта взобравшись маленький.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- news -->
+              </div><!-- item news -->
+
+            </div><!-- row -->
+          </div>
+        </section><!-- sec-news -->
+
+      </div><!-- page-single-content -->
+
+    </main>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-5 offset-md-1 col-lg-3 offset-lg-0 col-xl-2 footer_menu-col">
+
+            <div class="widget">
+              <h3 class="widget-title">Компания</h3>
+              <ul>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Каталог услуг</a></li>
+                <li><a href="#">Наши реэлторы</a></li>
+                <li><a href="#">Отзывы клиентов</a></li>
+                <li><a href="#">Вакансии</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </div>
+
+          </div>
+          <div class="col-12 col-sm-6 col-md-5 offset-md-1 col-lg-3 offset-lg-0 col-xl-3 footer_menu-col">
+
+            <div class="widget">
+              <h3 class="widget-title">Жилая недвижимость</h3>
+              <ul>
+                <li><a href="#">Новостройки</a></li>
+                <li><a href="#">Вторичка</a></li>
+                <li><a href="#">Элитная недвижимость</a></li>
+              </ul>
+            </div>
+
+            <div class="widget">
+              <h3 class="widget-title">Коммерческая недвижимость</h3>
+              <ul>
+                <li><a href="#">Офисы</a></li>
+                <li><a href="#">Торговые площадки</a></li>
+              </ul>
+            </div>
+
+          </div>
+          <div class="col-12 col-sm-6 col-md-5 offset-md-1 col-lg-3 offset-lg-0 col-xl-3 footer_menu-col">
+
+            <div class="widget">
+              <h3 class="widget-title">Земля</h3>
+              <ul>
+                <li><a href="#">Жилая (ИЖС)</a></li>
+                <li><a href="#">Сельхоз назначение</a></li>
+                <li><a href="#">Промышленного назначения</a></li>
+              </ul>
+            </div>
+
+            <div class="widget">
+              <h3 class="widget-title">Производства и помещения</h3>
+              <ul>
+                <li><a href="#">Производство</a></li>
+                <li><a href="#">Склады, гаражи, прочее</a></li>
+              </ul>
+            </div>
+
+          </div>
+          <div class="col-12 col-sm-6 col-md-5 offset-md-1 col-lg-3 offset-lg-0 col-xl-3 offset-xl-1">
+            <div class="widget widget_about">
+              <div class="footer_logo-wrap">
+                <a href="front-page.html" class="logo">
+                  <div class="logo_img">
+                    <img src="img/logo.svg" alt="Логотип">
+                  </div>
+                  <div class="logo_text">
+                    <span class="logo_title">Метраж</span>
+                    <span class="logo_sub-title">Агентство недвижимости</span>
+                  </div>
+                </a>
+              </div>
+              <div class="footer_social-buttons">
+                <ul class="social-buttons">
+                  <li><a href="#"><i class="icon-facebook"></i></a></li>
+                  <li><a href="#"><i class="icon-instagram-1"></i></a></li>
+                  <li><a href="#"><i class="icon-youtube-play"></i></a></li>
+                  <li><a href="#"><i class="icon-vkontakte"></i></a></li>
+                </ul>
+              </div>
+              <div class="footer_creators">
+                <p>АН «МЕТРАЖ» 2015-2017 (с)</p>
+                <p>Дизайн: Sergey Tomkovich</p>
+                <p>Разработка: IT GO Solutions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+<!-- page -->
+
+
+<!-- m-slide-panel -->
+  <div id="m-slide-panel" class="m-slide-panel">
+    <div class="m-nav">
+      <div class="m-nav_header">
+        <div class="m-nav_arrow m-slide-panel-toogle"></div>
+        <a class="m-nav_logo"><img src="img/logo.svg" alt="логотип"></a>
+      </div>
+      <div class="m-nav_menu-wrap">
+        <ul class="m-nav_menu">
+          <li><a class="current_page_item" href="index.html">Продажа</a></li>
+          <li><a href="#">Аренда</a></li>
+          <li><a href="#">Наши риэлторы</a></li>
+          <li><a href="#">Владельцам</a></li>
+          <li><a href="#">Новости</a></li>
+        </ul>
+      </div>
+      <div class="m-nav_phones-wrap">
+        <h3>Наши контакты:</h3>
+        <ul class="m-nav_phones">
+          <li><a href="tel:+99999999999"><small>(099)</small>999 99 99</a></li>
+          <li><a href="tel:+99999999999"><small>(099)</small>999 99 99</a></li>
+          <li><a href="tel:+99999999999"><small>(099)</small>999 99 99</a></li>
+        </ul>
+      </div>
+      <div class="m-nav_adress-wrap">
+        <ul class="m-nav_adress">
+          <li><a href="mailto:metragkharkov@gmail.com">metragkharkov@gmail.com</a></li>
+          <li>пр-т Московский, 39</li>
+          <li>пр-т Маршала Жукова, 14</li>
+        </ul>
+      </div>
+    </div>
+    <div class="m-slide-panel_dark-layer m-slide-panel-toogle"></div>
+  </div>
+<!-- m-slide-panel -->
+
+
+
+
+<!-- scripts -->
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.js"></script>
+  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9c1skkMB8UkmUZGSu0EkB5RTMzQOW5L0" type="text/javascript"></script> -->
+
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9c1skkMB8UkmUZGSu0EkB5RTMzQOW5L0&libraries=places&callback=initAutocomplete" async defer></script>
+
+    <script>
+      var autocomplete;
+
+      function initAutocomplete() {
+
+      var cityBounds = new google.maps.LatLngBounds(
+        new google.maps.LatLng(50.098372, 36.115343),
+        new google.maps.LatLng(49.902965, 36.451859));
+
+        autocomplete = new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+            {
+              bounds: cityBounds,
+              // strictBounds: true,
+              types: ['address'],
+              componentRestrictions: {country: 'ua'}
+            });
+        // autocomplete.addListener('place_changed', functionName);
+      }
+
+    </script>
+
+
+
+</body>
+</html>

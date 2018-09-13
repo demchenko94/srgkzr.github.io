@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+
+  <link rel="stylesheet" href="fonts/font-awesome-4.6.3/css/font-awesome.min.css">
+
+
+  <link rel="stylesheet" href="css/libs.css">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- <link rel="stylesheet" href="fonts/font-awesome-5/css/font-awesome.min.css"> -->
+
+  <title>Метраж</title>
+</head>
+<body class="">
+
+  <div class="page">
+		<header>
+      <div class="header-top">
+        <div class="container">
+          
+          <nav class="menu-line clear-a">
+
+            <a href="#" class="logo-link">
+              <img src="" alt="#" class="logo-img">
+            </a>
+            
+            <input id="main-menu-state" type="checkbox" />
+            <label class="main-menu-btn" for="main-menu-state">
+              <span class="main-menu-btn-icon"></span>
+            </label>
+
+            <div class="bottom-line-toogle"><i class="fa fa-inbox" aria-hidden="true"></i></div>
+            
+            <ul id="main-menu" class="sm sm-clean">
+              <li><a href="index.html">Продажа</a></li>
+              <li><a href="#">Аренда</a></li>
+              <li><a href="#">Наши риэлторы</a></li>
+              <li>
+                <a href="#">Владельцам</a>
+                <ul>
+                  <li><a href="#">Menu sub menu item</a></li>
+                  <li>
+                    <a href="#">Menu sub menu item</a>
+                    <ul>
+                      <li><a href="#">Menu sub sub menu item</a></li>
+                      <li><a href="#">Menu sub sub menu item</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Контакты</a></li>
+
+            </ul><!-- main-menu -->
+          </nav><!-- menu-line -->
+
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="container">
+          <form action="#" method="post" id="form-choice" class="form-choice">
+
+            <div class="form-choice_i form-choice_i_has-select">
+              <select name="type">
+                <option value="0" selected disabled hidden>Купить квартиру</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+
+            <div class="form-choice_i">
+              <input type="text" name="adress" placeholder="Район,станция метро или адрес">
+            </div>
+
+            <div class="form-choice_i form-choice_i_has-select">
+              <select name="number-of-rooms">
+                <option value="0" selected disabled hidden>Комнат</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+
+            <div class="form-choice_i form-choice_i_has-select">
+              <select name="price">
+                <option value="0" selected disabled hidden>Цена</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+
+            <div class="form-choice_i form-choice_i_has-select">
+              <select name="additionally">
+                <option value="0" selected disabled hidden>Дополнительно</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+
+            <div class="form-choice_i">
+              <button class="button button-form-choice">Поиск</button>
+            </div>
+
+          </form>
+        </div>
+      </div> 
+    </header>
+    <main>
+      <div class="sorting-line">
+        <div class="container">
+          <div class="sorting">
+
+            <form  action="#" method="post" class="sorting_i sorting_i-1 form-sorting">
+              <span class="sorting_info">2156 обьявлений</span>
+              <span class="sorting_i_select-wrap">
+                <select class="sorting_i_select" name="name">
+                  <option value="0" selected>По дате добавления</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </span>
+            </form>
+
+            <div class="sorting_i sorting_i-2">
+              <span class="sorting_info">Вид:</span>
+              <span class="sorting_i_select-wrap">
+                <select id="sorting_view-select" class="sorting_i_select" name="name">
+                  <option value="map" selected>Список и карта</option>
+                  <option value="list">Список</option>
+                </select>
+              </span>
+            </div>
+
+            <form action="#" method="post" class="sorting_i sorting_i-3 form-sorting">
+              <span class="sorting_info">2156 обьявлений</span>
+              <span class="sorting_i_select-wrap">
+                <select class="sorting_i_select" name="name">
+                  <option value="0" selected>По дате добавления</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </span>
+            </form>
+
+            <form action="#" method="post" class="sorting_i sorting_i-4 form-sorting">
+              <span class="sorting_info">2156 обьявлений</span>
+              <span class="sorting_i_select-wrap">
+                <select class="sorting_i_select" name="name">
+                  <option value="0" selected>По дате добавления</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </span>
+            </form>
+
+          </div>
+        </div>
+      </div><!-- sorting-line -->
+
+      <div class="main">
+        <div id="primary" class="primary list-map-view">
+          <div class="content-map-wrap">
+            <div id="content-map" class="content-map"></div>
+            <span class="content-map-serach-info active">Объектов с данным местоположением/ориентиром нет. Пожалуйта выберите другое название</span>
+          </div>
+          <div class="content">
+            <div class="container">
+              <div class="row">
+
+                <div class="col-12 col-sm-12 col-lg-8 col-xl-6 content_big-col">
+                  <div class="row">
+
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-12">
+                      <div class="house house-big">
+                        <div class="house_img-wrap">
+                          <a href="#" class="house_link">
+                            <img src="img/300x300.jpg" alt="alt">
+                          </a>
+                          <span class="house_ad-type">Премиум</span>
+                          <span class="house_number-photos">24</span>
+                        </div>
+                        <div class="house_content-wrap">
+                          <p class="house_date">сегодня в 14:14</p>
+                          <h3 class="house_adress"><a href="#">улица Энтузиастов, 21</a></h3>
+                          <p class="house_region">Ленинский район</p>
+                          <p class="house_price">27 000 гр</p>
+                          <p class="house_sizes">1 комнатная (27 / 13 /5 м<sup><small>2</small></sup>)</p>
+                          <p class="house_description">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свой строчка вопроса пунктуация, буквенных, там маленькая страну алфавит первую пустился языком своего напоивший переписали великий не оксмокс безопасную. Запятой взгляд коварных свое, несколько букв пояс заманивший речью его агенство.</p>
+                        </div>
+                      </div>
+                    </div><!-- item -->
+
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-12">
+                      <div class="house house-big">
+                        <div class="house_img-wrap">
+                          <a href="#" class="house_link">
+                            <img src="img/300x300.jpg" alt="alt">
+                          </a>
+                          <span class="house_ad-type">Премиум</span>
+                          <span class="house_number-photos">24</span>
+                        </div>
+                        <div class="house_content-wrap">
+                          <p class="house_date">сегодня в 14:14</p>
+                          <h3 class="house_adress"><a href="#">улица Энтузиастов, 22</a></h3>
+                          <p class="house_region">Ленинский район</p>
+                          <p class="house_price">27 000 гр</p>
+                          <p class="house_sizes">1 комнатная (27 / 13 /5 м<sup><small>2</small></sup>)</p>
+                          <p class="house_description">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свой строчка вопроса пунктуация, буквенных, там маленькая страну алфавит первую пустился языком своего напоивший переписали великий не оксмокс безопасную. Запятой взгляд коварных свое, несколько букв пояс заманивший речью его агенство.</p>
+                        </div>
+                      </div>
+                    </div><!-- item -->
+
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-12">
+                      <div class="house house-big">
+                        <div class="house_img-wrap">
+                          <a href="#" class="house_link">
+                            <img src="img/300x300.jpg" alt="alt">
+                          </a>
+                          <span class="house_ad-type">Премиум</span>
+                          <span class="house_number-photos">24</span>
+                        </div>
+                        <div class="house_content-wrap">
+                          <p class="house_date">сегодня в 14:14</p>
+                          <h3 class="house_adress"><a href="#">улица Энтузиастов, 23</a></h3>
+                          <p class="house_region">Ленинский район</p>
+                          <p class="house_price">27 000 гр</p>
+                          <p class="house_sizes">1 комнатная (27 / 13 /5 м<sup><small>2</small></sup>)</p>
+                          <p class="house_description">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свой строчка вопроса пунктуация, буквенных, там маленькая страну алфавит первую пустился языком своего напоивший переписали великий не оксмокс безопасную. Запятой взгляд коварных свое, несколько букв пояс заманивший речью его агенство.</p>
+                        </div>
+                      </div>
+                    </div><!-- item -->
+
+                  </div><!-- row -->
+                </div><!-- content_big-col -->
+
+                <div class="col-12 col-md-12 col-lg-4 col-xl-6 content_small-col">
+                  <div class="row">
+
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-12 col-xl-6">
+                      <div class="house">
+                        <div class="house_img-wrap">
+                          <a href="#" class="house_link">
+                            <img src="img/300x300.jpg" alt="alt">
+                          </a>
+                          <span class="house_ad-type">Топ</span>
+                          <span class="house_number-photos">24</span>
+                        </div>
+                        <div class="house_content-wrap">
+                          <p class="house_date">сегодня в 14:14</p>
+                          <h3 class="house_adress"><a href="#">улица Энтузиастов, 24</a></h3>
+                          <p class="house_region">Ленинский район</p>
+                          <p class="house_price">27 000 гр</p>
+                          <p class="house_sizes">1 комнатная (27 / 13 /5 м<sup><small>2</small></sup>)</p>
+                          <p class="house_description">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свой строчка вопроса пунктуация, буквенных, там маленькая страну алфавит первую пустился языком своего напоивший переписали великий не оксмокс безопасную. Запятой взгляд коварных свое, несколько букв пояс заманивший речью его агенство.</p>
+                        </div>
+                      </div>
+                    </div><!-- item -->
+
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-12 col-xl-6">
+                      <div class="house">
+                        <div class="house_img-wrap">
+                          <a href="#" class="house_link">
+                            <img src="img/300x300.jpg" alt="alt">
+                          </a>
+                          <span class="house_ad-type">Топ</span>
+                          <span class="house_number-photos">24</span>
+                        </div>
+                        <div class="house_content-wrap">
+                          <p class="house_date">сегодня в 14:14</p>
+                          <h3 class="house_adress"><a href="#">улица Энтузиастов, 25</a></h3>
+                          <p class="house_region">Ленинский район</p>
+                          <p class="house_price">27 000 гр</p>
+                          <p class="house_sizes">1 комнатная (27 / 13 /5 м<sup><small>2</small></sup>)</p>
+                          <p class="house_description">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свой строчка вопроса пунктуация, буквенных, там маленькая страну алфавит первую пустился языком своего напоивший переписали великий не оксмокс безопасную. Запятой взгляд коварных свое, несколько букв пояс заманивший речью его агенство.</p>
+                        </div>
+                      </div>
+                    </div><!-- item -->
+
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-12 col-xl-6">
+                      <div class="house">
+                        <div class="house_img-wrap">
+                          <a href="#" class="house_link">
+                            <img src="img/300x300.jpg" alt="alt">
+                          </a>
+                          <span class="house_ad-type">Топ</span>
+                          <span class="house_number-photos">24</span>
+                        </div>
+                        <div class="house_content-wrap">
+                          <p class="house_date">сегодня в 14:14</p>
+                          <h3 class="house_adress"><a href="#">улица Энтузиастов, 26</a></h3>
+                          <p class="house_region">Ленинский район</p>
+                          <p class="house_price">27 000 гр</p>
+                          <p class="house_sizes">1 комнатная (27 / 13 /5 м<sup><small>2</small></sup>)</p>
+                          <p class="house_description">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свой строчка вопроса пунктуация, буквенных, там маленькая страну алфавит первую пустился языком своего напоивший переписали великий не оксмокс безопасную. Запятой взгляд коварных свое, несколько букв пояс заманивший речью его агенство.</p>
+                        </div>
+                      </div>
+                    </div><!-- item -->
+
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-12 col-xl-6">
+                      <div class="house">
+                        <div class="house_img-wrap">
+                          <a href="#" class="house_link">
+                            <img src="img/300x300.jpg" alt="alt">
+                          </a>
+                          <span class="house_ad-type">Топ</span>
+                          <span class="house_number-photos">24</span>
+                        </div>
+                        <div class="house_content-wrap">
+                          <p class="house_date">сегодня в 14:14</p>
+                          <h3 class="house_adress"><a href="#">улица Энтузиастов, 27</a></h3>
+                          <p class="house_region">Ленинский район</p>
+                          <p class="house_price">27 000 гр</p>
+                          <p class="house_sizes">1 комнатная (27 / 13 /5 м<sup><small>2</small></sup>)</p>
+                          <p class="house_description">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свой строчка вопроса пунктуация, буквенных, там маленькая страну алфавит первую пустился языком своего напоивший переписали великий не оксмокс безопасную. Запятой взгляд коварных свое, несколько букв пояс заманивший речью его агенство.</p>
+                        </div>
+                      </div>
+                    </div><!-- item -->
+
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-12 col-xl-6">
+                      <div class="house">
+                        <div class="house_img-wrap">
+                          <a href="#" class="house_link">
+                            <img src="img/300x300.jpg" alt="alt">
+                          </a>
+                          <span class="house_ad-type">Топ</span>
+                          <span class="house_number-photos">24</span>
+                        </div>
+                        <div class="house_content-wrap">
+                          <p class="house_date">сегодня в 14:14</p>
+                          <h3 class="house_adress"><a href="#">улица Энтузиастов, 28</a></h3>
+                          <p class="house_region">Ленинский район</p>
+                          <p class="house_price">27 000 гр</p>
+                          <p class="house_sizes">1 комнатная (27 / 13 /5 м<sup><small>2</small></sup>)</p>
+                          <p class="house_description">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свой строчка вопроса пунктуация, буквенных, там маленькая страну алфавит первую пустился языком своего напоивший переписали великий не оксмокс безопасную. Запятой взгляд коварных свое, несколько букв пояс заманивший речью его агенство.</p>
+                        </div>
+                      </div>
+                    </div><!-- item -->
+
+                  </div><!-- row -->
+                </div><!-- content_small-col -->
+              </div><!-- row -->
+            </div>
+          </div>
+
+        </div><!-- primary -->
+      </div><!-- main -->
+    </main>
+    <footer></footer>
+  </div><!-- page -->
+
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9c1skkMB8UkmUZGSu0EkB5RTMzQOW5L0" type="text/javascript"></script>
+
+</body>
+</html>

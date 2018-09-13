@@ -1,0 +1,56 @@
+@media only screen and (min-width : 320px){
+}
+
+
+@media only screen and (min-width : 480px){
+
+.widget_about{
+	margin-top: 25px;
+}
+
+}//
+
+
+@media only screen and (min-width : 768px){
+
+
+}//
+
+@media only screen and (min-width : 992px){
+
+footer{
+	padding: 20px 0 30px;
+}
+
+.widget_about{
+	margin-top: 20px;
+	text-align: right;
+}
+
+.footer_logo-wrap{
+	justify-content: flex-end;//
+	margin-bottom: 41px;	
+	.logo{
+		margin-right: -2px;	//
+	}
+}
+.footer_social-buttons{
+	margin-bottom: 40px;
+}
+.social-buttons{
+	justify-content: flex-end;
+	>li{
+		margin: 0 0 0 20px;
+		&:first-of-type{
+			margin-left: 0;
+		}
+	}
+}
+
+}//
+@media only screen and (min-width : 1200px){
+
+
+
+}//
+

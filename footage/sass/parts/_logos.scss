@@ -1,0 +1,31 @@
+.logo{
+	height: 30px;
+	display: flex;
+	text-decoration: none !important;
+}
+.logo_img{
+	height: 100%;
+	>img{
+		height: 100%;
+	}
+}
+
+.logo_text{
+	display: none;
+	margin-left: 10px;
+}
+.logo_title{
+	color: #4d6675;
+	font-size: 34px;
+	line-height: 35px;
+	font-weight: 200;
+	letter-spacing: 3.58px;
+	text-transform: uppercase;
+}
+.logo_sub-title{
+	margin-left: 3px;
+	color: $main-gray-c;
+	font-size: 12px;
+	font-weight: 400;
+	letter-spacing: 0.43px;
+}

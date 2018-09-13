@@ -1,232 +1,148 @@
 header{
-	box-shadow: 0px 1px 16px 0px rgba(0, 0, 0, 0.08);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 .menu-line{
-	padding: 25px 0 17px;
-	min-height: 93px;
+	height: 60px;
+  display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
-//header top line
-.logo-link{
-	display: block;
-	float: left;
-	height: 55px;
-}
-.logo-img{
-	height: 100%;
-}
 
-#main-menu{
-	padding: 25px 0 10px;
-	clear: both;
+
+.main-menu{
+	display: none;
+	font-size: 14px;
+	line-height: 14px;
+	letter-spacing: 1.2px;
+	letter-spacing: 0.88px;
+	font-weight: 600;
 	text-transform: uppercase;
+	list-style: none;
+	justify-content: space-between;
 	>li{
-		a{
+		padding: 0 0 0 25px;
+		&:first-of-type{
+			padding: 0 !important;
+		}
+		>a{
+			position: relative;
+			padding: 8px 0;
 			transition: padding 0.4s;
-			font-weight: 600;
-			font-size: 14px;
-			line-height: 14px;
-			letter-spacing: 1.2px;
+			color: inherit;
+			text-decoration: none;
+			&:before{
+			  background-color: #50ADE6;
+			  content: "";
+			  position: absolute;
+			  left: 0;
+			  width: 0;
+			  height: 2px;
+			  bottom: 0;
+			  transition: all 0.5s ease 0s;
+			}
+			&:hover{
+				&:before{
+   			  width: 100%;
+				}
+			}
 		}
-	}
-	ul a{
-		font-weight: 600;
-	}
-	a{
-		transition: color 0.3s;
-		&:hover{
-			transition: color 0.3s;
-		}
-	}
-}
-
-////////// styles from plagin docs
-
-/* Mobile menu toggle button */
-.main-menu-btn {
-  float: right;
-  margin: 15px 15px 0 15px;
-  position: relative;
-  display: inline-block;
-  width: 29px;
-  height: 29px;
-  text-indent: 29px;
-  white-space: nowrap;
-  overflow: hidden;
-  cursor: pointer;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	transition: 0.3s;
-}
-/* hamburger icon */
-.main-menu-btn-icon,
-.main-menu-btn-icon:before,
-.main-menu-btn-icon:after {
-  position: absolute;
-  top: 50%;
-  left: 3px;
-  height: 3px;
-  width: 30px;
-  background: #000;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-}
-.main-menu-btn-icon:before {
-  content: '';
-  top: -9px;
-  left: 0;
-}
-.main-menu-btn-icon:after {
-  content: '';
-  top: 9px;
-  left: 0;
-}
-
-/* x icon */
-#main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon {
-  height: 0;
-  background: transparent;
-}
-#main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon:before {
-  top: 0;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-#main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon:after {
-  top: 0;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-/* hide menu state checkbox (keep it visible to screen readers) */
-#main-menu-state {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-/* hide the menu in mobile view */
-#main-menu-state:not(:checked) ~ #main-menu {
-  display: none;
-}
-
-#main-menu-state:checked ~ #main-menu {
-  display: block;
-}
-
-@media (min-width: 992px) {
-  /* hide the button in desktop view */
-  .main-menu-btn {
-    position: absolute;
-    top: -99999px;
-  }
-  /* always show the menu in desktop view */
-  #main-menu-state:not(:checked) ~ #main-menu {
-    display: block;
-  }
-
-}
-//END header top line
-
-//header-bottom
-.header-bottom{
-	overflow: hidden;
-	height: 0;
-}
-
-.form-choice{
-	padding: 15px 0 8px;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
-
-.form-choice_i{
-	width: 100%;
-	padding: 7px 0;
-}
-
-.form-choice{
-	select,
-	input,
-	button{
-		width: 100%;
-		border-radius: 5px;
-		height: 50px;
-		outline:none;
-		&:focus{
-			outline: none;
-		}
-	}
-	select,
-	input{
-		font-size: 16px;
-		border: 1px solid $border-grey-c;
-		background: transparent;
-		&:focus{
-			border: 1px solid $border-menu-c;
-			box-shadow: 0 0 0 1px $border-menu-c;
-		}
-	}
-	select{
-		padding: 0 50px 0 20px;
-		appearance: none;
-		color: $gray-c;
-		>option{
-			color: $main-c;
-		}
-		&:focus{
-			color: $main-c;
-		}
-	}
-	select::-ms-expand {
-    display: none;
-	}
-	input{
-		min-width: 300px;
-		padding: 0 15px;
-		&:focus{
+		.current_page_item{
+			&:before{
+   		  width: 100%;
+			}
 		}
 	}
 }
 
-.button-form-choice{
-	min-width: 160px;
-	text-align: center;
-	padding: 0 15px;
-	text-transform: uppercase;
-	border: none;
-	cursor: pointer;
-	background-color: $form-button-bg;
-	color: #fff;
-	font-size: 15px;
+
+
+//icon-menu icon-search
+@media only screen and (max-width: 992px) {
+	.menu-line{
+		.icon_menu{
+			width: 40px;
+			height: 40px;
+			background-image: url('../img/icon-menu.svg');background-position:50% 50%;background-repeat:no-repeat;
+			cursor: pointer;
+		}
+		.icon_search{
+			width: 40px;
+			height: 40px;
+			background-image: url('../img/icon-search.svg');background-position:50% 50%;background-repeat:no-repeat;
+			cursor: pointer;
+		}
+	}
 }
-.form-choice_i_has-select{
-	position: relative;
-	&::before{
-		content: "\f078";
-		font-family: 'FontAwesome';
-		font-size: 11px;
-		display: block;
+//END icon-menu icon-search
+
+//header-front-page-menu-line
+.front-page{
+	header{
+		z-index: 1;
 		position: absolute;
-		top: 27px;
-		right: 15px;
-		color: $gray-c;
+		top: 0;
+		left: 0;
+		width: 100%;
+		box-shadow: none !important;
+		background-color: rgba(0,0,0,0.1);
 	}
 }
-
-
-
-
-
-.bottom-line-toogle{
-	margin: 14px 10px 0 0;
-	float: right;
-	font-size: 30px;
-	color: #000;
-	cursor: pointer;
+.front-page-menu-line{
+	height: 60px;
+  display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #fff;
+	.icon_menu{
+		width: 40px;
+		height: 40px;
+		background-image: url('../img/icon-menu-white.svg');background-position:50% 50%;background-repeat:no-repeat;
+		cursor: pointer;
+	}
+	.icon-phone{
+		&:before{
+			position: absolute;
+			top: -13px;
+			left: -50px;
+			padding: 10px 20px;
+			font-size: 23px;
+			text-align: center;
+			width: 54px;
+			height: 50px;
+		}
+	}
 }
+.front-page-menu-line_owner,
+.front-page-menu-line_contact{
+	position: relative;
+	text-transform: uppercase;
+	text-decoration: none !important;
+}
+.front-page-menu-line_contact{
+	>span{
+		font-size: 0;
+	}
+}
+.front-page-menu-line_owner{
+	font-size: 0;
+}
+.front-page-menu-line_owner,
+.front-page-menu-line_contact{
+	color: inherit;
+	transition: color 0.2s;
+	&:hover{
+		color: $main-c;
+	}
+}
+//END header-front-page-menu-line
+
+// header-search-line
+.header-search-line{
+	// display: none;
+	z-index: 1;
+	padding: 10px 0;
+	border-top: 1px solid $border-grey-c;
+	background-color: #fff;
+}
+//END header-search-line
