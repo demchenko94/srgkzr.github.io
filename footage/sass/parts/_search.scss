@@ -229,7 +229,7 @@
 	  width: 18px;
 	  text-align: center;
 	  vertical-align: middle;
-	  font-size: 0;    
+	  font-size: 0;
 	  transition: border 0.2s;
 		box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 1);
 		background: #fff;
@@ -244,30 +244,7 @@
     background: linear-gradient(180deg, #279dc4 0%, #18709f 100%);
 	}
 }
-.search_input-i[value="Квартира"]:checked + .search_input-l{
-	&::before{
-  	background: #5171EA;
-	  border: 2px solid lighten(#5171EA, 20%);
-	}
-}
-.search_input-i[value="Дом"]:checked + .search_input-l{
-	&::before{
-  	background: #F24343;
-	  border: 2px solid lighten(#F24343, 20%);
-	}
-}
-.search_input-i[value="Участок"]:checked + .search_input-l{
-	&::before{
-  	background: #F0DE18;
-	  border: 2px solid lighten(#F0DE18, 20%);
-	}
-}
-.search_input-i[value="Коммерческая недвижимость"]:checked + .search_input-l{
-	&::before{
-  	background: #28AE3B;
-	  border: 2px solid lighten(#28AE3B, 20%);
-	}
-}
+
 //END Стили для инпутов и радио кнопок
 
 
@@ -513,6 +490,15 @@
 	//END street
 
 
+
+	//price drop box
+.search_drop-price{
+	width: 230px;
+	
+
+}
+
+	//END price drop box
 
 
 

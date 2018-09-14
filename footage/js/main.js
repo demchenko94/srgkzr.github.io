@@ -132,6 +132,32 @@
 					$form_list_item.addClass("activated");//скрыть placeholder
 					$drop_box.siblings(".search_field").find(".search_field_text").html($form_items_html);
 				}else {
+					if ( !$this.parents(".search_drop-adress").length === 0 ){
+
+					}else {
+
+						$form_list_item.removeClass("activated");
+					}
+				}
+
+			});
+			//END Изменяем информацию в элементе формы
+
+			//Изменяем информацию в элементе формы
+			form.find(".search_radio-i").change(function(){
+				$this = $(this);
+				$form_items_html = "";
+				$drop_box = $this.parents(".search_drop");//выпадающий элемент
+				$form_list_item = $drop_box.parent();//элемент списка меню формы
+
+				$($drop_box[0]).find(".search_radio-i:checked").each(function(){//набиваем строку в цикле из checked инпутов
+					$form_items_html += "<span>" + this.value + "</span>";
+				})
+
+				if ( $form_items_html ){//были ли checked инпуты
+					$form_list_item.addClass("activated");//скрыть placeholder
+					$drop_box.siblings(".search_field").find(".search_field_text").html($form_items_html);
+				}else {
 					$form_list_item.removeClass("activated");
 				}
 
@@ -148,24 +174,113 @@
 
 			autocomplete_input.focusout(function() {
 			  autocomplete_input.parents(".search_list_i-street").removeClass("active");
+				input = this;
+				$drop_box = $(input).parents(".search_drop");//выпадающий элемент
 
-				$drop_box = $(this).parents(".search_drop");//выпадающий элемент
-				$form_items_html = this.value;
-				
-					if ( $form_items_html ){// добавляем текст родительскому элементу формы
-						
-						setTimeout(function($form_items_html){//время чтоб в инпуте появился выбор
-							$form_items_html = this.value;
-						}, 200);
+				setTimeout(function($form_items_html){//время чтоб в инпуте появился выбор
+					$form_items_html = input.value;
+					
+					if ( $form_items_html.length > 10 ){// добавляем текст родительскому элементу формы
+							
+							$form_items_html = input.value;
+							$drop_box.siblings(".search_field").find(".search_field_text").html($form_items_html);
+							console.log($form_items_html)
 
-						$drop_box.siblings(".search_field").find(".search_field_text").html($form_items_html);
-						$drop_box.parent().addClass("activated");//скрыть placeholder
-						$(this).parent().parent().addClass("activated");
+							$drop_box.parent().addClass("activated");//скрыть placeholder
+							$(input).parent().parent().addClass("activated");
 					}else{
-						$(this).parent().parent().removeClass("activated");
-					}
+							$(input).val("");
+							$(input).parent().parent().removeClass("activated");
+						}
+					}, 200);
 			});
 			//END autocomplete input
+
+
+			//Слайдер выбора цены
+			var slider_el = $("#price_slider");
+			var price = slider_el.parents(".price");//Родитель
+
+			var currency_inputs = price.find(".currency_radio-i");
+			var currency_uah = price.find(".currency_radio-i[value='ГРН']");
+			var currency_usd = price.find(".currency_radio-i[value='USD']");
+
+			var price_slider_min;//min-max позиции слайдера
+			var price_slider_max;//min-max позиции слайдера
+			setCurrency();//установка числа и вида валюты для price_slider_min, price_slider_max
+
+			var slider_from = price.find("#price_from");//позиции бегунка(число)
+			var slider_to = price.find("#price_to");//позиции бегунка(число)
+
+			$("#price_slider").ionRangeSlider({
+		    type: "double",
+		    hide_min_max: true,
+		    hide_from_to: true,
+		    min: price_slider_min,
+		    max: price_slider_max,
+		    from: slider_from.val(),
+		    to: slider_to.val(),
+		    onChange: function (data) {
+		    	console.log(slider_from)
+		    	slider_from.val(data.from);
+		    	slider_to.val(data.to);
+		    },
+			});
+			var price_slider = $("#price_slider").data("ionRangeSlider");//Опции в переменную
+			
+			slider_from.change(function(){
+				price_slider.update({
+			    from: slider_from.val(),
+				});
+			});
+			slider_to.change(function(){
+				price_slider.update({
+			    to: slider_to.val(),
+				});
+			});
+
+			currency_inputs.change(function(){
+				console.log(slider_from);
+		    if (this.value == 'ГРН') {
+					price_slider_min = slider_el.attr("data-min-uah");
+					price_slider_max = slider_el.attr("data-max-uah");
+		    	slider_from.val(slider_el.attr("data-min-uah"));
+		    	slider_to.val(slider_el.attr("data-max-uah"));
+		    }
+		    else if (this.value == 'USD') {
+					price_slider_min = slider_el.attr("data-min-usd");
+					price_slider_max = slider_el.attr("data-max-usd");
+		    	slider_from.val(slider_el.attr("data-min-usd"));
+		    	slider_to.val(slider_el.attr("data-max-usd"));
+		    }
+				// console.log(this.value);
+				// console.log(price_slider_min);
+				// console.log(price_slider_max);
+				price_slider.update({
+		    	min: price_slider_min,
+		    	max: price_slider_max,
+		  	  from: slider_from.val(),
+		  	  to: slider_to.val(),
+			    // onChange: function (data) {
+			    // 	console.log(this)
+			    // 	slider_from.val(data.from);
+			    // 	slider_to.val(data.to);
+			    // },
+
+				});
+			});
+
+			function setCurrency(){
+				if ( currency_uah.attr("checked") == 'checked' ){
+					price_slider_min = slider_el.attr("data-min-uah");
+					price_slider_max = slider_el.attr("data-max-uah");
+				}else if( currency_usd.attr("checked") == 'checked' ){
+					price_slider_min = slider_el.attr("data-min-usd");
+					price_slider_max = slider_el.attr("data-max-usd");
+				}
+			}
+			//END Слайдер выбора цены
+
 
 		}//if
 	}//END searchFormAnimation

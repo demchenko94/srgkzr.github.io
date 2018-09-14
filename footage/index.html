@@ -63,16 +63,16 @@
 
                   <ul>
                     <li>
-                      <input class="search_input-i search_input-property-i" type="checkbox" id="action1" name="action[]" value="Купить"/>
-                      <label class="search_input-l search_input-property-l" for="action1">Купить</label>
+                      <input class="search_radio-i" type="radio" id="action1" name="action[]" value="Купить">
+                      <label class="search_radio-l" for="action1">Купить</label>
                     </li>
                     <li>
-                      <input class="search_input-i search_input-property-i" type="checkbox" id="action2" name="action[]" value="Продать"/>
-                      <label class="search_input-l search_input-property-l" for="action2">Продать</label>
+                      <input class="search_radio-i" type="radio" id="action2" name="action[]" value="Продать">
+                      <label class="search_radio-l" for="action2">Продать</label>
                     </li>
                     <li>
-                      <input class="search_input-i search_input-property-i" type="checkbox" id="action3" name="action[]" value="Арендовать"/>
-                      <label class="search_input-l search_input-property-l" for="action3">Арендовать</label>
+                      <input class="search_radio-i" type="radio" id="action3" name="action[]" value="Арендовать">
+                      <label class="search_radio-l" for="action3">Арендовать</label>
                     </li>
                   </ul>
 
@@ -85,24 +85,27 @@
                   <p class="search_field_text"></p>
                 </div>
                 <div class="search_drop">
+
                   <ul>
                     <li>
-                      <input class="search_input-i search_input-property-i" type="checkbox" id="property1" name="property[]" value="Квартира"/>
-                      <label class="search_input-l search_input-property-l" for="property1">Квартира</label>
+                      <input class="search_radio-i" type="radio" id="property1" name="property[]" value="Квартира">
+                      <label class="search_radio-l" for="property1">Квартира</label>
                     </li>
                     <li>
-                      <input class="search_input-i search_input-property-i" type="checkbox" id="property2" name="property[]" value="Дом"/>
-                      <label class="search_input-l search_input-property-l" for="property2">Дом</label>
+                      <input class="search_radio-i" type="radio" id="property2" name="property[]" value="Дом">
+                      <label class="search_radio-l" for="property2">Дом</label>
                     </li>
                     <li>
-                      <input class="search_input-i search_input-property-i" type="checkbox" id="property3" name="property[]" value="Участок"/>
-                      <label class="search_input-l search_input-property-l" for="property3">Участок</label>
+                      <input class="search_radio-i" type="radio" id="property3" name="property[]" value="Участок">
+                      <label class="search_radio-l" for="property3">Участок</label>
                     </li>
                     <li>
-                      <input class="search_input-i search_input-property-i" type="checkbox" id="property4" name="property[]" value="Коммерческая недвижимость"/>
-                      <label class="search_input-l search_input-property-l" for="property4">Коммерческая недвижимость</label>
+                      <input class="search_radio-i" type="radio" id="property4" name="property[]" value="Коммерческая недвижимость">
+                      <label class="search_radio-l" for="property4">Коммерческая недвижимость</label>
                     </li>
+
                   </ul>
+
                 </div>
               </li><!-- Вид недвижимости -->
 
@@ -199,8 +202,8 @@
                               <label class="search_input-l search_input-subway-l" for="subway-r-10">Дворец Спорта</label>
                             </li>
                             <li>
-                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-r-1" name="subway[]" value="Армейская"/>
-                              <label class="search_input-l search_input-subway-l" for="subway-r-1">Армейская</label>
+                              <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-r-11" name="subway[]" value="Армейская"/>
+                              <label class="search_input-l search_input-subway-l" for="subway-r-11">Армейская</label>
                             </li>
                             <li>
                               <input class="search_input-i search_input-subway-i" type="checkbox" id="subway-r-12" name="subway[]" value="им. О.С. Марсельского"/>
@@ -295,11 +298,6 @@
                               <label class="search_input-l search_input-subway-l" for="subway-g-8">Героев труда</label>
                             </li>
 
-
-
-
-
-
                           </ul><!-- search_list-subway-3 -->
 
                         </div>
@@ -329,7 +327,26 @@
                   <p class="search_field_placeholder">Цена</p>
                   <p class="search_field_text"></p>
                 </div>
-                <div class="search_drop search_drop-price"></div><!-- search_drop -->
+                <div class="search_drop search_drop-price">
+
+                  <div class="price">
+                    <div class="price_inputs">
+                      <input id="price_from" type="text" name="price_slider_from" value="0">
+                      <input id="price_to" type="text" name="price_slider_to" value="1000000">
+                    </div>
+                    <div class="price_slider-wrap">
+                      <input data-min-uah="1000" data-max-uah="1000000" data-min-usd="10" data-max-usd="1000" id="price_slider" class="price_slider" name="example_name" value="" type="text"/>
+                    </div>
+                    <div class="price_currency">
+                      <span class="price_currency-text">Валюта:</span>
+                      <input class="currency_radio-i" type="radio" id="currency1" name="currency[]" value="ГРН" checked>
+                      <label class="currency_radio-l" for="currency1">ГРН</label>
+                      <input class="currency_radio-i" type="radio" id="currency2" name="currency[]" value="USD">
+                      <label class="currency_radio-l" for="currency2">USD</label>
+                    </div>
+                  </div><!-- price -->
+
+                </div><!-- search_drop-price -->
               </li><!-- search_list_i-price -->
 
               <li class="search_list_i search_list_i-extra">
@@ -351,6 +368,22 @@
       </div><!-- header-search-line -->
     </header>
     <main class="main">
+
+<!--                   <ul>
+                    <li>
+                      <input class="search_input-i search_input-property-i" type="checkbox" id="action1" name="action[]" value="Купить"/>
+                      <label class="search_input-l search_input-property-l" for="action1">Купить</label>
+                    </li>
+                    <li>
+                      <input class="search_input-i search_input-property-i" type="checkbox" id="action2" name="action[]" value="Продать"/>
+                      <label class="search_input-l search_input-property-l" for="action2">Продать</label>
+                    </li>
+                    <li>
+                      <input class="search_input-i search_input-property-i" type="checkbox" id="action3" name="action[]" value="Арендовать"/>
+                      <label class="search_input-l search_input-property-l" for="action3">Арендовать</label>
+                    </li>
+                  </ul> -->
+
 
 
 

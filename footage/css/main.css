@@ -877,26 +877,6 @@ header {
   background: linear-gradient(180deg, #279dc4 0%, #18709f 100%);
 }
 
-.search_input-i[value="Квартира"]:checked + .search_input-l::before {
-  background: #5171EA;
-  border: 2px solid #acbbf5;
-}
-
-.search_input-i[value="Дом"]:checked + .search_input-l::before {
-  background: #F24343;
-  border: 2px solid #f9a2a2;
-}
-
-.search_input-i[value="Участок"]:checked + .search_input-l::before {
-  background: #F0DE18;
-  border: 2px solid #f6ec78;
-}
-
-.search_input-i[value="Коммерческая недвижимость"]:checked + .search_input-l::before {
-  background: #28AE3B;
-  border: 2px solid #61db72;
-}
-
 .search_list_i.search_list_i-adress {
   position: static;
 }
@@ -1160,6 +1140,10 @@ header {
 
 .pac-container .pac-icon-marker {
   display: none;
+}
+
+.search_drop-price {
+  width: 230px;
 }
 
 .search_button-ok {
