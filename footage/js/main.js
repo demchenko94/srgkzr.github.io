@@ -164,7 +164,7 @@
 			});
 			//END Изменяем информацию в элементе формы
 
-			//autocomplete input
+		/*-- autocomplete input --*/
 			var autocomplete_input = $("#autocomplete");
 			autocomplete_input.on("click", function (){
 					if ( autocomplete_input.is( ":focus" ) ){
@@ -194,20 +194,25 @@
 						}
 					}, 200);
 			});
-			//END autocomplete input
+			
+		/*-- END autocomplete input --*/
 
-
-			//Слайдер выбора цены
+		/*--Слайдер выбора цены--*/
 			var slider_el = $("#price_slider");
 			var price = slider_el.parents(".price");//Родитель
+			var search_list_price = slider_el.parents(".search_list_i-price");//Родитель элемент меню
 
 			var currency_inputs = price.find(".currency_radio-i");
 			var currency_uah = price.find(".currency_radio-i[value='ГРН']");
 			var currency_usd = price.find(".currency_radio-i[value='USD']");
 
-			var price_slider_min;//min-max позиции слайдера
-			var price_slider_max;//min-max позиции слайдера
-			setCurrency();//установка числа и вида валюты для price_slider_min, price_slider_max
+			if ( currency_uah.attr("checked") == 'checked' ){
+				var price_slider_min = slider_el.attr("data-min-uah");
+				var price_slider_max = slider_el.attr("data-max-uah");
+			}else if( currency_usd.attr("checked") == 'checked' ){
+				var price_slider_min = slider_el.attr("data-min-usd");
+				var price_slider_max = slider_el.attr("data-max-usd");
+			}
 
 			var slider_from = price.find("#price_from");//позиции бегунка(число)
 			var slider_to = price.find("#price_to");//позиции бегунка(число)
@@ -221,9 +226,9 @@
 		    from: slider_from.val(),
 		    to: slider_to.val(),
 		    onChange: function (data) {
-		    	console.log(slider_from)
 		    	slider_from.val(data.from);
 		    	slider_to.val(data.to);
+					priceParentActivated();
 		    },
 			});
 			var price_slider = $("#price_slider").data("ionRangeSlider");//Опции в переменную
@@ -232,15 +237,17 @@
 				price_slider.update({
 			    from: slider_from.val(),
 				});
+				priceParentActivated();
 			});
 			slider_to.change(function(){
 				price_slider.update({
 			    to: slider_to.val(),
 				});
+				priceParentActivated();
 			});
 
 			currency_inputs.change(function(){
-				console.log(slider_from);
+
 		    if (this.value == 'ГРН') {
 					price_slider_min = slider_el.attr("data-min-uah");
 					price_slider_max = slider_el.attr("data-max-uah");
@@ -253,33 +260,24 @@
 		    	slider_from.val(slider_el.attr("data-min-usd"));
 		    	slider_to.val(slider_el.attr("data-max-usd"));
 		    }
-				// console.log(this.value);
-				// console.log(price_slider_min);
-				// console.log(price_slider_max);
+
 				price_slider.update({
 		    	min: price_slider_min,
 		    	max: price_slider_max,
 		  	  from: slider_from.val(),
 		  	  to: slider_to.val(),
-			    // onChange: function (data) {
-			    // 	console.log(this)
-			    // 	slider_from.val(data.from);
-			    // 	slider_to.val(data.to);
-			    // },
-
 				});
+
+				priceParentActivated();
+
 			});
 
-			function setCurrency(){
-				if ( currency_uah.attr("checked") == 'checked' ){
-					price_slider_min = slider_el.attr("data-min-uah");
-					price_slider_max = slider_el.attr("data-max-uah");
-				}else if( currency_usd.attr("checked") == 'checked' ){
-					price_slider_min = slider_el.attr("data-min-usd");
-					price_slider_max = slider_el.attr("data-max-usd");
-				}
+			function priceParentActivated() {
+				search_list_price.addClass("activated");
+				search_list_price.find(".search_field_text").html(slider_from.val() + " - " + slider_to.val());
 			}
-			//END Слайдер выбора цены
+
+		/*-- END Слайдер выбора цены--*/
 
 
 		}//if

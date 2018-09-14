@@ -6,10 +6,10 @@
 
 .search_list{
 	display: flex;
-	justify-content: space-between;
+	flex-wrap: wrap;
+	justify-content: space-around;
 	align-items: center;
 	width: 100%;
-	height: 80px;
 	list-style: none;
 	box-shadow: inset 0 0 0 1px rgba(220, 220, 220, 0);
 }
@@ -37,7 +37,7 @@
 		box-shadow: inset 0 0 0 1px rgba(220, 220, 220, 1);
 		&::before{//Костыль) против бордера
 			z-index: 2;
-			height: 2px;
+			height: 4px;
 			opacity: 1;
 			transition: 0s;
 			border-left: 1px solid #dcdcdc;
@@ -119,7 +119,7 @@
 	}
 }//search_field
 
-//Стили для разных типов полей  меню
+//Стили (ШИРИНА) для разных типов полей  меню
 .search_list_i-action{
 	width: 162px;
 }
@@ -127,7 +127,7 @@
 	width: 232px;
 }
 .search_list_i-adress{
-	width: 332px;
+	width: 300px; //332px;
 }
 	//sub fields
 .search_list_i-district{
@@ -137,11 +137,15 @@
 .search_list_i-subway{
 	width: 35%;
 }
+	//END sub fields
+.search_list_i-price{
+	width: 130px;
+}
+.search_list_i-extra{
+	width: 208px;
+}
+//END Стили (ШИРИНА) для разных типов полей  меню
 
-
-
-
-//END Стили для разных типов полей  меню
 .search_field_placeholder,
 .search_field_text{
 	white-space: nowrap;
@@ -493,13 +497,255 @@
 
 	//price drop box
 .search_drop-price{
-	width: 230px;
-	
+	width: 280px;
+	// left: -70px;
+}
+.price_inputs{
+	display: flex;
+	justify-content: space-between;
+}
+.price_inputs_i{
+	width: 110px;
+	letter-spacing: 0.5px;
+	font-weight: 200;
+	#price_from,
+	#price_to{
+		display: inline-block;
+		margin-left: 8px;
+		width: 83px;
+		height: 40px;
+		padding: 4px 6px 0;
+		letter-spacing: 0.5px;
+		border-radius: 4px;
+		border: 1px solid $border-grey-c;
 
+	}
 }
 
+.price_slider-wrap{
+	margin: -2px 0 14px;
+}
+.irs-slider{
+	width: 14px;
+	height: 24px;
+	border-radius: 4px;
+	background: #fff;
+	&:hover{
+		background: linear-gradient(rgb(255, 255, 255) 0%, rgb(220, 220, 220) 20%, rgb(255, 255, 255) 100%);
+	}
+}
+.irs-line{
+	background: #4d6675;
+}
+.irs-bar{
+	background-image: linear-gradient(180deg, #33aed8 0%, #247eb0 100%);
+}
+
+.price_currency{
+}
+.price_currency-text{
+	font-weight: 200;
+}
+.currency_radio-i{
+	display: none;
+	&:checked + .currency_radio-l{
+		color: $accent-c;
+	}
+}
+.currency_radio-l{
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 0 0 5px;
+}
 	//END price drop box
 
+	//extra drop box
+.search_drop-extra{
+	padding: 20px 15px;	
+	width: 300px;
+	left: 0;
+	.search_field_placeholder,
+	.search_field_text{
+		padding-top: 1px;
+		font-size: 14px;
+		letter-spacing: 0.3px;
+	}
+	.search_field{
+		padding-top: 4px;
+		padding-bottom: 4px;
+		height: 30px;
+		&::before,
+		&::after{
+			top: 6px;
+		}
+	}
+	.search_list_i{
+		padding: 7.5px;
+		&.active{
+			.search_drop{
+				top: 43px;
+			}
+		}
+		&.activated{
+			>.search_field{
+				padding-top: 4px;
+				padding-bottom: 4px;
+			}
+		}
+	}
+
+}//search_drop-extra
+
+	//rooms drop extra
+.search_field-rooms{
+	.search_field_text{
+		&::before{
+			content: "Комнат:";
+			display: inline;
+			padding: 0 7px 0 0;
+		}
+	}
+}
+
+.search_field-baths{
+		.search_field_text{
+		&::before{
+			content: "Кол-во сан узлов:";
+			display: inline;
+			padding: 0 7px 0 0;
+		}
+	}
+}
+.search_field-commercial,
+.search_field-stead{
+		.search_field_text{
+		&::before{
+			content: "Тип:";
+			display: inline;
+			padding: 0 7px 0 0;
+		}
+	}
+}
+
+	//search_condition
+.search_condition,
+.search_area{
+	position: relative;
+	margin: 0 7.5px 0;
+	&::before{
+		content: "";
+		width: 109%;
+		position: absolute;
+		top: 0;
+		left: -24px;
+		border-top: 1px solid #ededed;
+
+	}
+}
+.search_condition{
+	margin-top: 10px;
+	padding: 10px 0 0;
+}
+.search_area{
+	margin-top: 10px;
+	padding: 15px 0;
+}
+.search_condition{
+	.search_radio-l{
+		font-weight: 400;
+		color: $main-c;
+	}
+}
+	//END search_condition
+
+	//area drop box
+.search_area_wrap{
+	display: flex;
+	justify-content: space-between;
+}
+.search_area_desc{
+	width: 24%;
+	line-height: 40px;
+	display: inline-block;
+	padding-top: 2px;
+}
+.search_area_itm{
+	width: 38%;
+}
+
+.search_area_desc,
+.search_area_text{
+	font-size: 12px;
+	color: $main-c;
+}
+.search_area_itm{
+	letter-spacing: 0.5px;
+	font-weight: 200;
+
+}
+.search_area_i{
+	display: inline-block;
+	margin-left: 5px;
+	width: 75px;
+	height: 40px;
+	padding: 0 6px 0;
+	letter-spacing: 0.5px;
+	border-radius: 4px;
+	border: 1px solid $border-grey-c;
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+  	/* display: none; <- Crashes Chrome on hover */
+  	-webkit-appearance: none;
+  	margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+	}
+}
+
+	//END area drop box
+
+//search_days
+.search_field-days{
+	.search_field_text{
+		&::before{
+			content: "Дней после размещения:";
+			display: inline;
+			padding: 0 7px 0 0;
+		}
+	}
+}
+//END search_days
+
+
+	//search_words
+.search_words{
+
+}
+.key-words-wrap{
+	position: relative;
+}
+.key-words-area{
+	padding: 10px;
+	width: 100%;
+	background-color: transparent;
+	border: none;
+	resize: none;
+	border-radius: 4px;
+	border: 1px solid #dcdcdc;
+	&::-webkit-input-placeholder{
+		color: $search-gray-c;
+	}
+	&:-moz-placeholder{
+		color: $search-gray-c;
+	}
+	&::-moz-placeholder{
+		color: $search-gray-c;
+	}
+	&:-ms-input-placeholder{
+		color: $search-gray-c;
+	}
+}
+	//END search_words
+
+	//END extra drop box
 
 
 

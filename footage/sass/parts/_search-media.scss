@@ -14,7 +14,13 @@
 
 @media only screen and (min-width : 992px){
 
+.search_list{
+	flex-wrap: nowrap;
+}
 
+.search_list{
+	height: 80px;
+}
 
 }//
 @media only screen and (min-width : 1200px){

@@ -111,7 +111,7 @@
 
               <li class="search_list_i search_list_i-adress">
                 <div class="search_field search_field-adress">
-                  <p class="search_field_placeholder">Район, Станция метро или адрес</p>
+                  <p class="search_field_placeholder">Район, метро или адрес</p>
                   <p class="search_field_text"></p>
                 </div>
                 <div class="search_drop search_drop-adress">
@@ -331,11 +331,11 @@
 
                   <div class="price">
                     <div class="price_inputs">
-                      <input id="price_from" type="text" name="price_slider_from" value="0">
-                      <input id="price_to" type="text" name="price_slider_to" value="1000000">
+                      <span class="price_inputs_i"><span class="price_inputs_i_text">от</span><input id="price_from" name="price_from" value="1000" type="text"></span><!-- Значения бегунка от. При изменении валюты эти значения устанавливаются в data-min-uah или data-min-usd -->
+                      <span class="price_inputs_i"><span class="price_inputs_i_text">до</span><input id="price_to" name="price_to" value="1000000" type="text"></span><!-- Значения бегунка до. При изменении валюты эти значения устанавливаются в data-max-uah data-max-usd -->
                     </div>
                     <div class="price_slider-wrap">
-                      <input data-min-uah="1000" data-max-uah="1000000" data-min-usd="10" data-max-usd="1000" id="price_slider" class="price_slider" name="example_name" value="" type="text"/>
+                      <input data-min-uah="1000" data-max-uah="1000000" data-min-usd="10" data-max-usd="1000" id="price_slider" class="price_slider" name="example_name" value="" type="text"/><!-- data значения - мин и макс для двух валют слайдера -->
                     </div>
                     <div class="price_currency">
                       <span class="price_currency-text">Валюта:</span>
@@ -354,8 +354,244 @@
                   <p class="search_field_placeholder">Дополнительно</p>
                   <p class="search_field_text"></p>
                 </div>
-                <div class="search_drop search_drop-extra"></div><!-- search_drop -->
-              </li><!-- search_list_i-extra -->
+                <div class="search_drop search_drop-extra">
+                  <ul id="extra" class="extra">
+
+                    <li class="search_list_i search_rooms">
+                      <div class="search_field search_field-rooms">
+                        <p class="search_field_placeholder">Кол-во комнат</p>
+                        <p class="search_field_text"></p>
+                      </div>
+                      <div class="search_drop">
+
+                        <ul>
+
+                          <li>
+                            <input class="search_input-i" type="checkbox" id="rooms1" name="rooms[]" value="1"/>
+                            <label class="search_input-l" for="rooms1">1</label>
+                          </li>
+
+                          <li>
+                            <input class="search_input-i" type="checkbox" id="rooms2" name="rooms[]" value="2"/>
+                            <label class="search_input-l" for="rooms2">2</label>
+                          </li>
+                          <li>
+                            <input class="search_input-i" type="checkbox" id="rooms3" name="rooms[]" value="3"/>
+                            <label class="search_input-l" for="rooms3">3</label>
+                          </li>
+                          <li>
+                            <input class="search_input-i" type="checkbox" id="rooms4" name="rooms[]" value="4"/>
+                            <label class="search_input-l" for="rooms4">4</label>
+                          </li>
+                          <li>
+                            <input class="search_input-i" type="checkbox" id="rooms5" name="rooms[]" value="5+"/>
+                            <label class="search_input-l" for="rooms5">5+</label>
+                          </li>
+                        </ul>
+
+                      </div>
+                    </li><!-- Кол-во комнат -->
+
+                    <li class="search_list_i search_baths">
+                      <div class="search_field search_field-baths">
+                        <p class="search_field_placeholder">Кол-во сан узлов</p>
+                        <p class="search_field_text"></p>
+                      </div>
+                      <div class="search_drop">
+
+                        <ul>
+
+                          <li>
+                            <input class="search_input-i" type="checkbox" id="baths1" name="baths[]" value="1"/>
+                            <label class="search_input-l" for="baths1">1</label>
+                          </li>
+
+                          <li>
+                            <input class="search_input-i" type="checkbox" id="baths2" name="baths[]" value="2"/>
+                            <label class="search_input-l" for="baths2">2</label>
+                          </li>
+                          <li>
+                            <input class="search_input-i" type="checkbox" id="baths3" name="baths[]" value="3"/>
+                            <label class="search_input-l" for="baths3">3</label>
+                          </li>
+                          <li>
+                            <input class="search_input-i" type="checkbox" id="baths4" name="baths[]" value="4"/>
+                            <label class="search_input-l" for="baths4">4</label>
+                          </li>
+                          <li>
+                            <input class="search_input-i" type="checkbox" id="baths5" name="baths[]" value="5+"/>
+                            <label class="search_input-l" for="baths5">5+</label>
+                          </li>
+                        </ul>
+
+                      </div>
+                    </li><!-- Кол-во сан узлов -->
+
+                    <li class="search_list_i search_commercial">
+                      <div class="search_field search_field-commercial">
+                        <p class="search_field_placeholder">Тип недвижимости</p>
+                        <p class="search_field_text"></p>
+                      </div>
+                      <div class="search_drop">
+
+                        <ul>
+
+                          <li>
+                            <input class="search_input-i" type="checkbox" id="commercial1" name="commercial[]" value="Офис"/>
+                            <label class="search_input-l" for="commercial1">Офис</label>
+                          </li>
+
+                          <li>
+                            <input class="search_input-i" type="checkbox" id="commercial2" name="commercial[]" value="Торговая площадь"/>
+                            <label class="search_input-l" for="commercial2">Торговая площадь</label>
+                          </li>
+                          <li>
+                            <input class="search_input-i" type="checkbox" id="commercial3" name="commercial[]" value="Производство"/>
+                            <label class="search_input-l" for="commercial3">Производство</label>
+                          </li>
+                          <li>
+                            <input class="search_input-i" type="checkbox" id="commercial4" name="commercial[]" value="Склад"/>
+                            <label class="search_input-l" for="commercial4">Склад</label>
+                          </li>
+                          <li>
+                            <input class="search_input-i" type="checkbox" id="commercial5" name="commercial[]" value="Гараж"/>
+                            <label class="search_input-l" for="commercial5">Гараж</label>
+                          </li>
+                          <li>
+                            <input class="search_input-i" type="checkbox" id="commercial5" name="commercial[]" value="Прочее"/>
+                            <label class="search_input-l" for="commercial5">Прочее</label>
+                          </li>
+
+                        </ul>
+
+                      </div>
+                    </li><!-- Тип недвижимости КОММЕРЧЕСКАЯ -->
+
+                    <li class="search_list_i search_stead">
+                      <div class="search_field search_field-stead">
+                        <p class="search_field_placeholder">Тип недвижимости</p>
+                        <p class="search_field_text"></p>
+                      </div>
+                      <div class="search_drop">
+
+                        <ul>
+
+                          <li>
+                            <input class="search_input-i" type="checkbox" id="stead1" name="stead[]" value="Земля жилая (ИЖС)"/>
+                            <label class="search_input-l" for="stead1">Земля жилая (ИЖС)</label>
+                          </li>
+
+                          <li>
+                            <input class="search_input-i" type="checkbox" id="stead2" name="stead[]" value="Земля сельхоз назначение"/>
+                            <label class="search_input-l" for="stead2">Земля сельхоз назначение</label>
+                          </li>
+                          <li>
+                            <input class="search_input-i" type="checkbox" id="stead3" name="stead[]" value="Земля промышленного назначения"/>
+                            <label class="search_input-l" for="stead3">Земля промышленного назначения</label>
+                          </li>
+                          <li>
+                            <input class="search_input-i" type="checkbox" id="stead4" name="stead[]" value="Прочее"/>
+                            <label class="search_input-l" for="stead4">Прочее</label>
+                          </li>
+
+                        </ul>
+
+                      </div>
+                    </li><!-- Тип недвижимости УЧАСТОК -->
+
+                    <li class="search_condition">
+                      <ul>
+                        <li>
+                          <input class="search_radio-i" type="radio" id="condition1" name="condition[]" value="Новостройка">
+                          <label class="search_radio-l" for="condition1">Новостройка</label>
+                        </li>
+                        <li>
+                          <input class="search_radio-i" type="radio" id="condition2" name="condition[]" value="Вторичка">
+                          <label class="search_radio-l" for="condition2">Вторичка</label>
+                        </li>
+                        <li>
+                          <input class="search_radio-i" type="radio" id="condition3" name="condition[]" value="Элитная недвижимость">
+                          <label class="search_radio-l" for="condition3">Элитная недвижимость</label>
+                        </li>
+                      </ul>
+                    </li><!-- search_condition -->
+
+                    <li class="search_area">
+                      <div class="search_area_wrap">
+                        <span class="search_area_desc">Площадь</span>
+                        <span class="search_area_itm"><span class="search_area_text">от</span><input class="search_area_i" name="area_min" value="0" type="number"></span>
+                        <span class="search_area_itm"><span class="search_area_text">до</span><input class="search_area_i" name="area_max" value="100000" type="number"></span>
+                      </div>
+                    </li><!-- search_area -->
+
+                    <li class="search_list_i search_year">
+                      <div class="search_field search_field-year">
+                        <p class="search_field_placeholder">Год постройки</p>
+                        <p class="search_field_text"></p>
+                      </div>
+                      <div class="search_drop">
+
+                        <ul>
+
+                          <li>
+                            <input class="search_input-i" type="checkbox" id="year1" name="year[]" value="до 1955"/>
+                            <label class="search_input-l" for="year1">до 1955</label>
+                          </li>
+
+                          <li>
+                            <input class="search_input-i" type="checkbox" id="year2" name="year[]" value="1955 - 1970"/>
+                            <label class="search_input-l" for="year2">1955 - 1970</label>
+                          </li>
+                          <li>
+                            <input class="search_input-i" type="checkbox" id="year3" name="year[]" value="1970 - 1990"/>
+                            <label class="search_input-l" for="year3">1970 - 1990</label>
+                          </li>
+                          <li>
+                            <input class="search_input-i" type="checkbox" id="year3" name="year[]" value="1990+"/>
+                            <label class="search_input-l" for="year3">1990+</label>
+                          </li>
+
+
+                        </ul>
+
+                      </div>
+                    </li><!-- Год постройки -->
+
+                    <li class="search_list_i search_days">
+                      <div class="search_field search_field-days">
+                        <p class="search_field_placeholder">Дней после размещения</p>
+                        <p class="search_field_text"></p>
+                      </div>
+                      <div class="search_drop">
+
+                        <ul>
+                          <li>
+                            <input class="search_radio-i" type="radio" id="days1" name="days[]" value="1">
+                            <label class="search_radio-l" for="days1">1</label>
+                          </li>
+                          <li>
+                            <input class="search_radio-i" type="radio" id="days2" name="days[]" value="7">
+                            <label class="search_radio-l" for="days2">7</label>
+                          </li>
+                          <li>
+                            <input class="search_radio-i" type="radio" id="days3" name="days[]" value="14">
+                            <label class="search_radio-l" for="days3">14</label>
+                          </li>
+                        </ul>
+
+                      </div>
+                    </li><!-- Кол-во дней после размещения -->
+
+                    <li class="search_list_i search_words">
+                      <div class="key-words-wrap">
+                        <textarea class="key-words-area" name="key_words" id="" cols="30" rows="4" placeholder="Ключевые слова"></textarea>
+                      </div>
+                    </li><!-- words -->
+
+
+                  </ul><!-- extra -->
+                </div><!-- search_drop-extra -->
+              </li><!-- search_list_i-extra Дополнительно -->
 
               <li class="search_list_i-button">
                 <button class="search_button button">Поиск</button>

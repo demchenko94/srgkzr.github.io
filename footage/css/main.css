@@ -254,6 +254,10 @@ body {
   overflow: hidden;
 }
 
+main {
+  height: 500px;
+}
+
 .page.sticky-footer {
   display: -webkit-box;
   display: -webkit-flex;
@@ -590,16 +594,17 @@ header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: 80px;
   list-style: none;
   -webkit-box-shadow: inset 0 0 0 1px rgba(220, 220, 220, 0);
           box-shadow: inset 0 0 0 1px rgba(220, 220, 220, 0);
@@ -638,7 +643,7 @@ header {
 
 .search_list_i.active::before {
   z-index: 2;
-  height: 2px;
+  height: 4px;
   opacity: 1;
   -webkit-transition: 0s;
   -o-transition: 0s;
@@ -745,7 +750,7 @@ header {
 }
 
 .search_list_i-adress {
-  width: 332px;
+  width: 300px;
 }
 
 .search_list_i-district {
@@ -755,6 +760,14 @@ header {
 .search_list_i-street,
 .search_list_i-subway {
   width: 35%;
+}
+
+.search_list_i-price {
+  width: 130px;
+}
+
+.search_list_i-extra {
+  width: 208px;
 }
 
 .search_field_placeholder,
@@ -1143,11 +1156,275 @@ header {
 }
 
 .search_drop-price {
-  width: 230px;
+  width: 280px;
+}
+
+.price_inputs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.price_inputs_i {
+  width: 110px;
+  letter-spacing: 0.5px;
+  font-weight: 200;
+}
+
+.price_inputs_i #price_from,
+.price_inputs_i #price_to {
+  display: inline-block;
+  margin-left: 8px;
+  width: 83px;
+  height: 40px;
+  padding: 4px 6px 0;
+  letter-spacing: 0.5px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  border: 1px solid #dcdcdc;
+}
+
+.price_slider-wrap {
+  margin: -2px 0 14px;
+}
+
+.irs-slider {
+  width: 14px;
+  height: 24px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  background: #fff;
+}
+
+.irs-slider:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(20%, gainsboro), to(white));
+  background: -webkit-linear-gradient(white 0%, gainsboro 20%, white 100%);
+  background: -o-linear-gradient(white 0%, gainsboro 20%, white 100%);
+  background: linear-gradient(white 0%, gainsboro 20%, white 100%);
+}
+
+.irs-line {
+  background: #4d6675;
+}
+
+.irs-bar {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#33aed8), to(#247eb0));
+  background-image: -webkit-linear-gradient(top, #33aed8 0%, #247eb0 100%);
+  background-image: -o-linear-gradient(top, #33aed8 0%, #247eb0 100%);
+  background-image: linear-gradient(180deg, #33aed8 0%, #247eb0 100%);
+}
+
+.price_currency-text {
+  font-weight: 200;
+}
+
+.currency_radio-i {
+  display: none;
+}
+
+.currency_radio-i:checked + .currency_radio-l {
+  color: #50ade6;
+}
+
+.currency_radio-l {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 0 0 5px;
+}
+
+.search_drop-extra {
+  padding: 20px 15px;
+  width: 300px;
+  left: 0;
+}
+
+.search_drop-extra .search_field_placeholder,
+.search_drop-extra .search_field_text {
+  padding-top: 1px;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+}
+
+.search_drop-extra .search_field {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  height: 30px;
+}
+
+.search_drop-extra .search_field::before, .search_drop-extra .search_field::after {
+  top: 6px;
+}
+
+.search_drop-extra .search_list_i {
+  padding: 7.5px;
+}
+
+.search_drop-extra .search_list_i.active .search_drop {
+  top: 43px;
+}
+
+.search_drop-extra .search_list_i.activated > .search_field {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.search_field-rooms .search_field_text::before {
+  content: "Комнат:";
+  display: inline;
+  padding: 0 7px 0 0;
+}
+
+.search_field-baths .search_field_text::before {
+  content: "Кол-во сан узлов:";
+  display: inline;
+  padding: 0 7px 0 0;
+}
+
+.search_field-commercial .search_field_text::before,
+.search_field-stead .search_field_text::before {
+  content: "Тип:";
+  display: inline;
+  padding: 0 7px 0 0;
+}
+
+.search_condition,
+.search_area {
+  position: relative;
+  margin: 0 7.5px 0;
+}
+
+.search_condition::before,
+.search_area::before {
+  content: "";
+  width: 109%;
+  position: absolute;
+  top: 0;
+  left: -24px;
+  border-top: 1px solid #ededed;
+}
+
+.search_condition {
+  margin-top: 10px;
+  padding: 10px 0 0;
+}
+
+.search_area {
+  margin-top: 10px;
+  padding: 15px 0;
+}
+
+.search_condition .search_radio-l {
+  font-weight: 400;
+  color: #4d6675;
+}
+
+.search_area_wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.search_area_desc {
+  width: 24%;
+  line-height: 40px;
+  display: inline-block;
+  padding-top: 2px;
+}
+
+.search_area_itm {
+  width: 38%;
+}
+
+.search_area_desc,
+.search_area_text {
+  font-size: 12px;
+  color: #4d6675;
+}
+
+.search_area_itm {
+  letter-spacing: 0.5px;
+  font-weight: 200;
+}
+
+.search_area_i {
+  display: inline-block;
+  margin-left: 5px;
+  width: 75px;
+  height: 40px;
+  padding: 0 6px 0;
+  letter-spacing: 0.5px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  border: 1px solid #dcdcdc;
+}
+
+.search_area_i::-webkit-outer-spin-button, .search_area_i::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.search_field-days .search_field_text::before {
+  content: "Дней после размещения:";
+  display: inline;
+  padding: 0 7px 0 0;
+}
+
+.key-words-wrap {
+  position: relative;
+}
+
+.key-words-area {
+  padding: 10px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  resize: none;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  border: 1px solid #dcdcdc;
+}
+
+.key-words-area::-webkit-input-placeholder {
+  color: rgba(74, 74, 74, 0.5);
+}
+
+.key-words-area:-moz-placeholder {
+  color: rgba(74, 74, 74, 0.5);
+}
+
+.key-words-area::-moz-placeholder {
+  color: rgba(74, 74, 74, 0.5);
+}
+
+.key-words-area:-ms-input-placeholder {
+  color: rgba(74, 74, 74, 0.5);
 }
 
 .search_button-ok {
   padding: 0 25px;
+}
+
+@media only screen and (min-width: 992px) {
+  .search_list {
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+  }
+  .search_list {
+    height: 80px;
+  }
 }
 
 .sec-header {
