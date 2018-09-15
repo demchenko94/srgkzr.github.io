@@ -9,18 +9,22 @@
 
 		/*--toogle slide panel--*/
 		if ($("#m-slide-panel").length){
-		
 			$(".m-slide-panel-toogle").on("click", function (){
 				$("#m-slide-panel").toggleClass("active");
 			});
-
 		}
-
-
+		/*--toogle search form mobile--*/
+		if ($("#icon-search").length){
+			$("#icon-search").on("click", function (){
+				$("#header-search-line").slideToggle(400);
+			});
+		}
 		/*--добавление липкого футера, если не IE--*/
 		if (!isIE()){
 			$("#page-wrapper").addClass("sticky-footer");
 		}
+
+
 
 	};//END basicScript
 
@@ -45,6 +49,7 @@
 
 			var form = $("#search_form");
 			var items = form.find(".search_list_i");
+			var item_extra = form.find(".search_list_i-extra");
 			var items_sub = form.find(".search_list_i-sub");
 
 			var search_form_open = false; //открыто ли подменю
@@ -55,35 +60,38 @@
 				if ( !$this.parent().hasClass("active") ){//если закрыто - открываем
 					
 					$this.parent().addClass("active");
-					$this.siblings().slideToggle(100);
 
-					search_form_open = true;
-
-					if ($this.hasClass("search_field-adress")){//если открыли подменю
+					if ( !$this.hasClass("search_field-adress") ){//если открыли подменю
+						$this.siblings().slideToggle(200);
+						search_form_open = true;
+					}else{
+						$this.siblings().slideToggle(0);
 						search_form_open = false;
 					}
 
-				}else {//если открыто - закрываем
+				}else {//если открыто - закрываем //
 
 					$this.parent().removeClass("active");
-					$this.siblings().fadeOut(100);
+					$this.siblings().fadeOut(0);
 
-					if ( items.filter(".active").length ){//если под меню, то оставляем search_form_open = true; чтоб закрылось основное
-						search_form_open = true;
-					}else {
+					if ( $this.parents(".search_drop-adress").length === 1 ){//если закрали дочерний АДРЕСА
+						search_form_open = false;
+					}else if ( $this.parents(".search_drop-extra").length === 1 ){//если закрали дочерний ДОПОЛНИТЕЛЬНО
+						console.log("2" + $this.parents(".search_list_i-extra"))
+					}else{
 						search_form_open = false;
 					}
 
-				}//search_drop
+				}
 
 			});
-			//END клик по элементу списка//.is( ":focus" )
+			//END клик по элементу списка//
 
 			//клик по кнопке ок в sub menu
 			$(".search_button-ok").on("click", function (){
 					items.filter(".active").each(function(){
 						$(this).removeClass("active");
-						$(this).find(".search_drop").fadeOut(100);
+						$(this).find(".search_drop").fadeOut(0);
 					});
 			});
 
@@ -99,15 +107,20 @@
 
 							if ( !items_sub.hasClass("active") ){
 								$(this).removeClass("active");
-								$(this).find(".search_drop").fadeOut(100);
+								$(this).find(".search_drop").fadeOut(0);
 							}else{
 								items_sub.each(function(){
 									$(this).removeClass("active");
-									$(this).find(".search_drop").fadeOut(100);
+									$(this).find(".search_drop").fadeOut(0);
 								})
 							}
 
-							search_form_open = false;
+							if ( item_extra.hasClass("active") ){//Если открыто меню дополнительно и клик при открытом подменю пришелся по нему
+								search_form_open = true;
+							}else {
+								search_form_open = false;
+							}
+
 						}//if target
 
 					})
@@ -168,6 +181,7 @@
 			var autocomplete_input = $("#autocomplete");
 			autocomplete_input.on("click", function (){
 					if ( autocomplete_input.is( ":focus" ) ){
+						$(this).val("Харьков, ")//ПОДСТАВЛЯЕМ ГОРОД В INPUT, потому что поик по всей уркаине
 						autocomplete_input.parents(".search_list_i-street").addClass("active");
 					}
 			});
@@ -184,7 +198,6 @@
 							
 							$form_items_html = input.value;
 							$drop_box.siblings(".search_field").find(".search_field_text").html($form_items_html);
-							console.log($form_items_html)
 
 							$drop_box.parent().addClass("activated");//скрыть placeholder
 							$(input).parent().parent().addClass("activated");
@@ -261,7 +274,7 @@
 		    	slider_to.val(slider_el.attr("data-max-usd"));
 		    }
 
-				price_slider.update({
+				price_slider.update({//обновляем данные в слайдере
 		    	min: price_slider_min,
 		    	max: price_slider_max,
 		  	  from: slider_from.val(),
@@ -276,7 +289,6 @@
 				search_list_price.addClass("activated");
 				search_list_price.find(".search_field_text").html(slider_from.val() + " - " + slider_to.val());
 			}
-
 		/*-- END Слайдер выбора цены--*/
 
 

@@ -48,7 +48,7 @@
 
         </div>
       </div>
-      <div class="header-search-line">
+      <div id="header-search-line" class="header-search-line">
         <div class="container">
           
           <form action="#" id="search_form" class="search_form search_wrap">
@@ -111,7 +111,7 @@
 
               <li class="search_list_i search_list_i-adress">
                 <div class="search_field search_field-adress">
-                  <p class="search_field_placeholder">Район, метро или адрес</p>
+                  <p class="search_field_placeholder">Район, метро или адрес (00)</p>
                   <p class="search_field_text"></p>
                 </div>
                 <div class="search_drop search_drop-adress">
@@ -331,6 +331,7 @@
 
                   <div class="price">
                     <div class="price_inputs">
+                      <!-- <span class="price_title">Цена</span> -->
                       <span class="price_inputs_i"><span class="price_inputs_i_text">от</span><input id="price_from" name="price_from" value="1000" type="text"></span><!-- Значения бегунка от. При изменении валюты эти значения устанавливаются в data-min-uah или data-min-usd -->
                       <span class="price_inputs_i"><span class="price_inputs_i_text">до</span><input id="price_to" name="price_to" value="1000000" type="text"></span><!-- Значения бегунка до. При изменении валюты эти значения устанавливаются в data-max-uah data-max-usd -->
                     </div>
@@ -351,7 +352,7 @@
 
               <li class="search_list_i search_list_i-extra">
                 <div class="search_field search_field-extra">
-                  <p class="search_field_placeholder">Дополнительно</p>
+                  <p class="search_field_placeholder">Дополнительно (00)</p>
                   <p class="search_field_text"></p>
                 </div>
                 <div class="search_drop search_drop-extra">
@@ -593,7 +594,7 @@
                 </div><!-- search_drop-extra -->
               </li><!-- search_list_i-extra Дополнительно -->
 
-              <li class="search_list_i-button">
+              <li class="search_list_i-button search_list_i-search">
                 <button class="search_button button">Поиск</button>
               </li><!-- search_list_i-button -->
 

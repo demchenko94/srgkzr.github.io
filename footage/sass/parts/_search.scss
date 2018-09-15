@@ -1,13 +1,15 @@
-
+.header-search-line{
+	display: none;
+}
 .search_form{
 	position: relative;
-	margin: 0 -5px 0 -10px;
+	margin: 0;
 }
 
 .search_list{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
 	width: 100%;
 	list-style: none;
@@ -36,8 +38,8 @@
 	&.active{//при клике, активное, выбран вариант
 		box-shadow: inset 0 0 0 1px rgba(220, 220, 220, 1);
 		&::before{//Костыль) против бордера
-			z-index: 2;
-			height: 4px;
+			z-index: 3;
+			height: 2px;
 			opacity: 1;
 			transition: 0s;
 			border-left: 1px solid #dcdcdc;
@@ -121,29 +123,51 @@
 
 //Стили (ШИРИНА) для разных типов полей  меню
 .search_list_i-action{
-	width: 162px;
+	width: 100%;
 }
 .search_list_i-property{
-	width: 232px;
+	width: 100%;
 }
 .search_list_i-adress{
-	width: 300px; //332px;
+	width: 100%;
+}
+@media (max-width: 767px){//перемещаем в конец на мобильных
+	.search_list_i-adress{
+		order: 1;
+	}
+	.search_list_i-button{
+		order: 2;
+	}
 }
 	//sub fields
 .search_list_i-district{
-	width: 23%;
+	width: 100%;
 }
-.search_list_i-street,
+.search_list_i-street{
+	width: 100%;
+}
 .search_list_i-subway{
-	width: 35%;
+	width: 100%;
 }
 	//END sub fields
 .search_list_i-price{
-	width: 130px;
+	width: 100%;
 }
 .search_list_i-extra{
-	width: 208px;
+	width: 100%;
 }
+	//кнопки
+.search_list_i-button{
+	width: 100%;
+	padding: 10px 10px;
+}
+
+.search_list-sub .search_list_i-button{
+	display: none;
+}
+
+
+
 //END Стили (ШИРИНА) для разных типов полей  меню
 
 .search_field_placeholder,
@@ -179,7 +203,7 @@
 
 //search_drop
 .search_drop{
-	z-index: 1;
+	z-index: 2;
 	display: none;
 	position: absolute;
 	top: 69px;
@@ -261,30 +285,32 @@
 	}
 }
 .search_drop.search_drop-adress{
-	margin: 0 -10px;
-	padding: 0;
-	top: 0;
+	z-index: 0;
+	position: relative;
+	top: 4px;
+	left: 0;
+	margin: 0;
+	padding: 0 5px;
+
 	bottom: auto;
-	left: 10px;
 	width: 100%;
 	box-shadow: none;
 	border: none;
 }
-
+.search_list-sub{
+	height: 100%;
+}
 //END Стили для поли поиска по АДРЕСУ search_list_i-adress
 
 
 	//subway
 
-.search_list_i-subway{
-	.search_drop{
-		left: -25%;
-	}
-}
 .search_subway-wrap{
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
-	width: 603px;//593px
+	height: 300px;
+	overflow-y: scroll;
 }
 .search_input-subway-l{
 	padding: 7px 0 5px 30px;
@@ -443,8 +469,8 @@
   font-size: 16px;
   color: inherit;
   &::placeholder{
-  	font-weight: 200;
-  	color: #93a4af;;
+  	font-weight: 400;
+  	color: $search-gray-c;
   }
 	&:focus{
 		border: 1px solid $border-menu-c;
@@ -498,11 +524,50 @@
 	//price drop box
 .search_drop-price{
 	width: 280px;
-	// left: -70px;
 }
+		//price mobile open(bags)
+.search_list_i-price{
+	margin: 0 10px;
+	padding: 0;
+}
+
+@media (max-width: 767px) {
+	.search_drop-price{
+		z-index: 0 !important;
+		top: 0 !important;
+		box-shadow: none !important;
+		border: none !important;
+		position: relative !important;
+		display: block !important;
+	}
+}
+.search_field-price{
+	display: none;
+}
+		//END price mobile open(bags)
+
 .price_inputs{
 	display: flex;
-	justify-content: space-between;
+	// justify-content: space-around;
+}
+@media (max-width: 767px){
+	.price_inputs{
+		position: relative;
+		margin: 0 -20px;
+		&::before{
+			content: "Цена";
+			display: block;
+			padding: 12px 0 0 3px;
+			width: 55px;
+			height: 40px;
+			position: relative;
+			top: 0;
+			left: 0;
+			font-size: 16px;
+			font-weight: 200;
+			// color: $main-c;
+		}
+	}
 }
 .price_inputs_i{
 	width: 110px;
@@ -518,7 +583,11 @@
 		letter-spacing: 0.5px;
 		border-radius: 4px;
 		border: 1px solid $border-grey-c;
-
+		outline: none;
+		&:focus{
+			border: 1px solid $accent-c;
+			box-shadow: inset 0 0 0 1px $accent-c;
+		}
 	}
 }
 
@@ -566,7 +635,7 @@
 	left: 0;
 	.search_field_placeholder,
 	.search_field_text{
-		padding-top: 1px;
+		padding-top: 2px;
 		font-size: 14px;
 		letter-spacing: 0.3px;
 	}
@@ -574,6 +643,7 @@
 		padding-top: 4px;
 		padding-bottom: 4px;
 		height: 30px;
+		width: 100%;	
 		&::before,
 		&::after{
 			top: 6px;
@@ -692,6 +762,11 @@
 	letter-spacing: 0.5px;
 	border-radius: 4px;
 	border: 1px solid $border-grey-c;
+	outline: none;
+	&:focus{
+		border: 1px solid $accent-c;
+		box-shadow: inset 0 0 0 1px $accent-c;
+	}
 	&::-webkit-outer-spin-button,
 	&::-webkit-inner-spin-button {
   	/* display: none; <- Crashes Chrome on hover */
@@ -730,6 +805,11 @@
 	resize: none;
 	border-radius: 4px;
 	border: 1px solid #dcdcdc;
+	outline: none;
+	&:focus{
+		border: 1px solid $accent-c;
+		box-shadow: inset 0 0 0 1px $accent-c;
+	}
 	&::-webkit-input-placeholder{
 		color: $search-gray-c;
 	}
@@ -747,8 +827,10 @@
 
 	//END extra drop box
 
-
-
+//buttons
 .search_button-ok{
-	padding: 0 25px;
+	width: 100%;
+}
+.search_button{
+	width: 100%;
 }

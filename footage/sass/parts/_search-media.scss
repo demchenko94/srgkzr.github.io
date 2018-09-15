@@ -1,30 +1,178 @@
-@media only screen and (min-width : 320px){
+@media only screen and (min-width : 768px){
+
+.search_list_i-action{
+	width: 50%;
+}
+.search_list_i-property{
+	width: 50%;
+}
+.search_list_i-adress{
+	width: 50%;
+}
+	//sub fields
+.search_list_i-district{
+	width: 100%;
+}
+.search_list_i-street{
+	width: 50%;
+}
+.search_list_i-subway{
+	width: 100%;
+}
+	//END sub fields
+.search_list_i-price{
+	margin: 0;
+	padding: 10px;
+	width: 50%;
+}
+.search_list_i-extra{
+	width: 50%;
+}
+.search_list_i-button{
+	width: 50%;
+}
+.search_drop.search_drop-adress{
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	padding: 0 0;
+}
+.search_list-sub .search_list_i-button{
+	display: block;
+	padding: 0 10px;
+	width: 50%;
+}
+
+//price
+.search_field-price{
+	display: block;
+}
+
+	//subway
+.search_subway-wrap{
+	flex-direction: row;
+	width: 603px;//593px
+	height: auto;
+	overflow-y: auto;
+}
+	//END subway
+
+}//
+@media only screen and (min-width : 992px){
+.header-search-line{
+	display: block !important;
 }
 
 
-@media only screen and (min-width : 480px){
+.search_list_i-action{
+	width: 33.3%;
+}
+.search_list_i-property{
+	width: 33.3%;
+}
+.search_list_i-adress{
+	width: 33.3%;
+}
+	//sub fields
+.search_list_i-district{
+	width: 50%;
+}
+.search_list_i-street{
+	width: 50%;
+}
+.search_list_i-subway{
+	width: 50%;
+}
+
+	//END sub fields
+.search_list_i-price{
+	width: 33.3%;
+}
+.search_list_i-extra{
+	width: 33.3%;
+}
+.search_list_i-search{
+	width: 33.3%;
+	//кнопки
+}
+//subway
+.search_list_i-subway{
+	.search_drop{
+		left: auto;
+		right: 0;
+	}
+}
+//END subway
+
 }//
+@media only screen and (min-width : 1200px){
 
-
-@media only screen and (min-width : 768px){
-
-
-
-}//
-
-@media only screen and (min-width : 992px){
+.search_form{
+	position: relative;
+	margin: 0 -10px;
+}
 
 .search_list{
 	flex-wrap: nowrap;
+	justify-content: space-between;
 }
 
 .search_list{
 	height: 80px;
 }
 
-}//
-@media only screen and (min-width : 1200px){
+.search_list_i-action{
+	width: 162px;
+}
+.search_list_i-property{
+	width: 232px;
+}
+.search_list_i-adress{
+	width: 300px;;
+}
+	//sub fields
+.search_list_i-district{
+	width: 30%;
+}
+.search_list_i-street{
+	width: 30%;
+}
+.search_list_i-subway{
+	width: 30%;
+}
+	//END sub fields
+.search_list_i-price{
+	width: 130px;
+}
+.search_list_i-extra{
+	width: 215px;
+}
 
+.search_list_i-button{
+	width: auto;
+	padding: 0;
+}
+
+.search_list-sub .search_list_i-button{
+	width: 10%;
+}
+
+.search_button-ok{
+	margin: 0;	
+	padding: 0 20px;
+}
+.search_button{
+	padding: 0 40px;
+}
+
+//subway
+.search_list_i-subway{
+	.search_drop{
+		left: 0;
+		right: auto;
+	}
+}
+//END subway
 
 }//
 
