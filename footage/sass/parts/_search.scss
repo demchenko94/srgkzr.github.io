@@ -1,6 +1,4 @@
-.header-search-line{
-	display: none;
-}
+
 .search_form{
 	position: relative;
 	margin: 0;
@@ -162,7 +160,7 @@
 	padding: 10px 10px;
 }
 
-.search_list-sub .search_list_i-button{
+.search_list_adress .search_list_i-button{
 	display: none;
 }
 
@@ -297,7 +295,7 @@
 	box-shadow: none;
 	border: none;
 }
-.search_list-sub{
+.search_list_adress{
 	height: 100%;
 }
 //END Стили для поли поиска по АДРЕСУ search_list_i-adress

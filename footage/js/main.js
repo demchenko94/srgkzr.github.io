@@ -54,7 +54,7 @@
 
 			var search_form_open = false; //открыто ли подменю
 
-			//клик по элементу списка
+		/*-- клик по элементу списка --*/
 			form.find(".search_field").on("click", function (){
 				$this = $(this);
 				if ( !$this.parent().hasClass("active") ){//если закрыто - открываем
@@ -77,7 +77,7 @@
 					if ( $this.parents(".search_drop-adress").length === 1 ){//если закрали дочерний АДРЕСА
 						search_form_open = false;
 					}else if ( $this.parents(".search_drop-extra").length === 1 ){//если закрали дочерний ДОПОЛНИТЕЛЬНО
-						console.log("2" + $this.parents(".search_list_i-extra"))
+						search_form_open = true;
 					}else{
 						search_form_open = false;
 					}
@@ -85,17 +85,18 @@
 				}
 
 			});
-			//END клик по элементу списка//
+		/*-- END клик по элементу списка --*/
 
-			//клик по кнопке ок в sub menu
+		/*-- клик по кнопке ок в sub menu --*/
 			$(".search_button-ok").on("click", function (){
 					items.filter(".active").each(function(){
 						$(this).removeClass("active");
 						$(this).find(".search_drop").fadeOut(0);
 					});
 			});
+		/*-- END клик по кнопке ок в sub menu --*/
 
-			//клик по документу и закрытие открытых
+		/*-- клик по документу и закрытие открытых --*/
 			$(document).mouseup(function (e){ // событие клика по веб-документу
 
 				if ( search_form_open ){ //если открыто выпадающее меню
@@ -128,60 +129,13 @@
 				}//if
 
 			});
-			//END клик по документу и закрытие открытых
-
-			//Изменяем информацию в элементе формы
-			form.find(".search_input-i").change(function(){
-				$this = $(this);
-				$form_items_html = "";
-				$drop_box = $this.parents(".search_drop");//выпадающий элемент
-				$form_list_item = $drop_box.parent();//элемент списка меню формы
-
-				$($drop_box[0]).find(".search_input-i:checked").each(function(){//набиваем строку в цикле из checked инпутов
-					$form_items_html += "<span>" + this.value + "</span>";
-				})
-
-				if ( $form_items_html ){//были ли checked инпуты
-					$form_list_item.addClass("activated");//скрыть placeholder
-					$drop_box.siblings(".search_field").find(".search_field_text").html($form_items_html);
-				}else {
-					if ( !$this.parents(".search_drop-adress").length === 0 ){
-
-					}else {
-
-						$form_list_item.removeClass("activated");
-					}
-				}
-
-			});
-			//END Изменяем информацию в элементе формы
-
-			//Изменяем информацию в элементе формы
-			form.find(".search_radio-i").change(function(){
-				$this = $(this);
-				$form_items_html = "";
-				$drop_box = $this.parents(".search_drop");//выпадающий элемент
-				$form_list_item = $drop_box.parent();//элемент списка меню формы
-
-				$($drop_box[0]).find(".search_radio-i:checked").each(function(){//набиваем строку в цикле из checked инпутов
-					$form_items_html += "<span>" + this.value + "</span>";
-				})
-
-				if ( $form_items_html ){//были ли checked инпуты
-					$form_list_item.addClass("activated");//скрыть placeholder
-					$drop_box.siblings(".search_field").find(".search_field_text").html($form_items_html);
-				}else {
-					$form_list_item.removeClass("activated");
-				}
-
-			});
-			//END Изменяем информацию в элементе формы
+		/*-- END клик по документу и закрытие открытых --*/
 
 		/*-- autocomplete input --*/
 			var autocomplete_input = $("#autocomplete");
 			autocomplete_input.on("click", function (){
 					if ( autocomplete_input.is( ":focus" ) ){
-						$(this).val("Харьков, ")//ПОДСТАВЛЯЕМ ГОРОД В INPUT, потому что поик по всей уркаине
+						$(this).val("Харьков, ")//ПОДСТАВЛЯЕМ ГОРОД В INPUT, потому что поиск по всей уркаине
 						autocomplete_input.parents(".search_list_i-street").addClass("active");
 					}
 			});
@@ -189,24 +143,26 @@
 			autocomplete_input.focusout(function() {
 			  autocomplete_input.parents(".search_list_i-street").removeClass("active");
 				input = this;
+				$this = $(this);
+
 				$drop_box = $(input).parents(".search_drop");//выпадающий элемент
 
 				setTimeout(function($form_items_html){//время чтоб в инпуте появился выбор
-					$form_items_html = input.value;
 					
-					if ( $form_items_html.length > 10 ){// добавляем текст родительскому элементу формы
-							
-							$form_items_html = input.value;
-							$drop_box.siblings(".search_field").find(".search_field_text").html($form_items_html);
+					if ( input.value.length > 10 ){// добавляем текст родительскому элементу формы
 
-							$drop_box.parent().addClass("activated");//скрыть placeholder
 							$(input).parent().parent().addClass("activated");
+							formItemText_secondItem($this);
+
 					}else{
-							$(input).val("");
+
+							$(input).val("");//Удаляем значение если не выбранно
 							$(input).parent().parent().removeClass("activated");
+							formItemText_secondItem($this);
+
 						}
-					}, 200);
-			});
+					}, 200);//setTimeout
+			});//focusout
 			
 		/*-- END autocomplete input --*/
 
@@ -291,9 +247,202 @@
 			}
 		/*-- END Слайдер выбора цены--*/
 
+		/*-- Вызов записывающих функций --*/
+			function formItemText(){
+				var form = $("#search_form");
+
+				form.find(".search_input-i").change(function(){
+					$this = $(this);
+					formItemText_firstItem($this);
+					formItemText_secondItem($this);
+				});
+				form.find(".search_radio-i").change(function(){
+					$this = $(this);
+					formItemText_firstItem($this);
+					formItemText_secondItem($this);
+					formShowExtraItems(form, $this);
+
+
+				});
+
+			};//END formItemText
+			formItemText();
+		/*-- END Вызов записывающих функций при клике по --*/
+
+		/*-- Вызов функции упривления extra меню элементами --*/
+			formShowExtraItems(form);
+		/*-- END Вызов функции упривления extra меню элементами --*/
+
+		/*-- Вызов записывающей функции при старте --*/
+			formOnReadyText(form);
+		/*-- END Вызов записывающей функции при старте --*/
 
 		}//if
 	}//END searchFormAnimation
+
+	/*************************
+	  formItemText_firstItem - //Добавляет колличество выбранных пунктов в родительский меню элемент
+	*************************/
+	function formItemText_firstItem($this){
+
+		if ( $this.parents(".search_condition").length == 1  ){return}//если это не радиокнопки без родительского пункта
+
+		var $form_items_html = "";
+		$drop_box = $($this.parents(".search_drop")[0]);//выпадающий элемент
+		$form_list_item = $drop_box.parent();//элемент списка меню формы
+
+		$drop_box.find("input:checked").each(function(){//набиваем строку в цикле из checked инпутов
+			$form_items_html += "<span>" + this.value + "</span>";
+		})
+
+		if ( $form_items_html ){//были ли checked инпуты
+			$form_list_item.addClass("activated");//скрыть placeholder и показать текст
+			$drop_box.siblings(".search_field").find(".search_field_text").html($form_items_html);
+		}else {
+			$form_list_item.removeClass("activated");
+		}
+
+	}//END formItemText_firstItem
+
+	/*************************
+	  formItemText_secondItem - //Добавляет колличество выбранных пунктов в родителя родительского меню элемена
+	*************************/
+	function formItemText_secondItem($this){
+		var parent_element;
+		var options_number = 0;
+
+		if ($this){//если вызов после события
+
+			if ( $this.parents(".search_list-sub").length ){//если элемент дочернний дочернего списка
+
+				parent_element = $this.parents(".search_list-sub").parents(".search_list_i");
+
+				options_number = parent_element.find("input:checked").length;
+
+				if ( parent_element.find("input:text").val() ){
+					options_number += 1;
+				};
+				if ( parent_element.find("textarea").val() ){
+					options_number += 1;
+				};
+
+				if ( options_number ){//если были выбранны варианты дочернего списка
+					parent_element.addClass("activated");
+
+					parent_element.children(".search_field").find(".search_field_text").html(
+							parent_element.children(".search_field").find(".search_field_placeholder").html()
+							+ " (" + options_number + ")"
+							);
+
+				}else {
+					parent_element.removeClass("activated");
+				}
+				
+			}
+
+		}//if
+	}//END formItemText_secondItem
+
+	/*************************
+	  formOnReadyText - вызывается после инициализации всего меню - при вызове записывает все чекнутые и введенные в родителей(form items) и их родителей
+	*************************/
+	function formOnReadyText(form){
+
+		form.find(".search_input-i, .search_radio-i").each(function () {
+			$this = $(this);
+			formItemText_firstItem($this);
+		})
+
+		parent_element = form.find(".search_list-sub").parents(".search_list_i");
+
+		parent_element.each(function () {
+			parent_element = $(this);
+			options_number = parent_element.find("input:checked").length;
+
+			if ( parent_element.find("input:text").val() ){
+				options_number += 1;
+			};
+			if ( parent_element.find("textarea").val() ){
+				options_number += 1;
+			};
+
+			if ( options_number ){//если были выбранны варианты дочернего списка
+				parent_element.addClass("activated");
+
+			parent_element.children(".search_field").find(".search_field_text").html(
+					parent_element.children(".search_field").find(".search_field_placeholder").html()
+					+ " (" + options_number + ")"
+					);
+
+			}else {
+				parent_element.removeClass("activated");
+				}
+		})
+	}
+
+	/*************************
+	  formShowExtraItems - при выборе квартира, дом, участок - меняет дополнительные варианты в дополнительно
+	*************************/
+	function formShowExtraItems(form, $this) {
+		var extra_items = form.find(".search_rooms, .search_baths, .search_commercial, .search_stead");
+
+		if (!$this){//вызов document on ready, $this не передан
+			$this = form.find(".search_list_i-property").find(".search_radio-i:checked");
+		}//else
+
+		if ( $this.val() == "Квартира" ){
+
+			extra_items.each(function (){
+				$this = $(this);
+				if ( $this.hasClass("search_rooms") || $this.hasClass("search_baths") ){
+					$this.show(0);
+				}else{
+					$this.hide().find(".search_input-i:checked").click();
+				}
+			})
+
+		}else if ( $this.val() == "Дом" ){
+
+			extra_items.each(function (){
+				$this = $(this);
+				if ( $this.hasClass("search_rooms") || $this.hasClass("search_baths") ){
+					$this.show(0);
+				}else{
+					$this.hide().find(".search_input-i:checked").click();
+				}
+			})
+
+		}else if ( $this.val() == "Участок" ){
+
+			extra_items.each(function (){
+				$this = $(this);
+				if ( $this.hasClass("search_stead") ){
+					$this.show(0);
+				}else{
+					$this.hide().find(".search_input-i:checked").click();
+				}
+			})
+
+		}else if ( $this.val() == "Коммерческая недвижимость" ){
+
+			extra_items.each(function (){
+				$this = $(this);
+				if ( $this.hasClass("search_commercial") ){
+					$this.show(0);
+				}else{
+					$this.hide().find(".search_input-i:checked").click();
+				}
+			})
+
+		}
+
+	}//END formShowExtraItems
+
+
+
+//-/*******************************/-//
+//-/ END FORM ANIMATIONS FUNCTIONS /-//
+//-/*******************************/-//
 
 
 	/*************************
