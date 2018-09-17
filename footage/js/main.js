@@ -20,7 +20,7 @@
 			});
 		}
 		/*--добавление липкого футера, если не IE--*/
-		if (!isIE()){
+		if ( !isIE() && !$("body").hasClass("page-search") ){
 			$("#page-wrapper").addClass("sticky-footer");
 		}
 

@@ -1,0 +1,154 @@
+
+//header-fp-menu-line
+.front-page{
+	header{
+		z-index: 1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		box-shadow: none !important;
+	}
+}
+.fp-menu-line{
+	height: 60px;
+  display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #fff;
+	.icon_menu{
+		width: 40px;
+		height: 40px;
+		background-image: url('../img/icon-menu-white.svg');background-position:50% 50%;background-repeat:no-repeat;
+		cursor: pointer;
+	}
+	.icon-phone{
+		&:before{
+			position: absolute;
+			top: -13px;
+			left: -50px;
+			padding: 10px 20px;
+			font-size: 23px;
+			text-align: center;
+			width: 54px;
+			height: 50px;
+		}
+	}
+}
+.fp-menu-line_owner,
+.fp-menu-line_contact{
+	position: relative;
+	text-transform: uppercase;
+	text-decoration: none !important;
+}
+.fp-menu-line_contact{
+	>span{
+		font-size: 0;
+	}
+}
+.fp-menu-line_owner{
+	font-size: 0;
+}
+.fp-menu-line_owner,
+.fp-menu-line_contact{
+	color: inherit;
+	transition: color 0.2s;
+	&:hover{
+		color: #efefef;
+		opacity: 0.9;
+	}
+}
+//END header-fp-menu-line
+
+//fp-logo-line
+.fp-logo-line{
+	display: flex;
+	justify-content: center;
+	margin: 30px 0 0;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+}
+.fp-logo_img{
+	margin: 0 auto;
+	width: 120px;
+	>img{
+		width: 100%;
+	}
+}
+.fp-logo_text{
+	margin: 0 -2px 0 0;
+}
+.fp-logo_title{
+	margin: 20px 0 -4px;
+	font-size: 32px;
+	font-weight: 200;
+	text-transform: uppercase;
+	letter-spacing: 3.37px;
+}
+.fp-logo_sub-title{
+	font-weight: 400;
+	font-size: 12px;
+	letter-spacing: 0.43px;
+}
+
+
+
+//fp-search-line
+.fp-search-line{
+	margin: 57px auto 0;
+	color: #fff;
+}
+
+@media (max-width: 767px){//прозрачность и тд
+	.fp-search-line{
+		.search_list_i-price{
+			display: none !important;
+		}
+	}
+}
+@media (max-width: 991px){//прозрачность и тд
+
+	.fp-search-line{
+
+		.search_list{
+			flex-direction: column;
+		}
+
+		.search_list_i-adress,
+		.search_list_i-extra{
+			display: none !important;
+		}
+
+		.search_list_i{
+			margin-bottom: -5px;
+			&:before{
+				display: none;
+			}
+		}
+		.search_field{
+			border: 1px solid #dcdcdc;
+			&:after,
+			&:before{
+				color: #fff;
+			}
+			.search_field_text,
+			.search_field_placeholder{
+				color: #fff !important;
+			}
+			.search_field_text{
+				&::after{
+					display: none;
+				}
+			}
+
+		}
+
+	.search_drop{
+		top: 68px;
+	}
+
+
+
+	}//fp-search-line
+}//767

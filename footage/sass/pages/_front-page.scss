@@ -1,0 +1,77 @@
+@import "pages/pages-parts/front-page-header";
+@import "pages/pages-parts/front-page-header-media";
+
+.s-homescreen{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	width: 100%;
+	padding: 0 0 12px;
+	height: 900px;
+	background: url(../img/s-bg-homescreen.jpg);//изменить background-position-x
+  background-position-x: 49.3%;//по центру ЭТОГО ИЗОБРАЖЕНИЯ для мобильных
+  background-position-y: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #fff;
+}
+.homescreen_wrap{
+	width: 100%;
+}
+
+.homescreen_i{
+	position: relative;
+	display: block;
+	margin: 0 auto 10px;
+	max-width: 348px;
+	border-radius: 8px;
+	color: inherit;
+	overflow: hidden;
+	&:hover{
+		color: inherit;
+		opacity: 1;
+		>img{
+			opacity: 1;
+		}
+	}
+	>img{
+		width: 100%;
+		opacity: 0.92;
+		transition: opacity 0.2s;
+	}
+}
+
+.homescreen_i_content{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 17px 0 0 30px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+}
+@media (max-width: 370px){//прозрачность и тд
+	.homescreen_i_content{
+		padding: 17px 0 0 10px;
+	}
+}
+.homescreen_i_title{
+	margin: 0 0 20px 0;
+	width: 400px;
+	font-size: 30px;
+	line-height: 32px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	&::after{
+		margin: 15px 0 0 0;
+		content: "";
+		display: block;
+		position: relative;
+		width: 40px;
+		height: 2px;
+		background-color: #fff;
+	}
+}

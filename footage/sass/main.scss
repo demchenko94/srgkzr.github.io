@@ -13,17 +13,20 @@ body{
 	font: 14px 'ProximaNova';
 	color: $main-c;
 	background-color: #fff;
+	letter-spacing: 0.5px;
 }
 .page{
 	overflow: hidden;
 }
 main{
-	height: 500px;
+	// height: 500px;
 	// padding: 50px 0;
 	// height: 20px;
 	// box-shadow: 0px 1px 1px 0 rgba(0,0,0,0.1);
 }
-
+h1,h2,h3,h4,h5,h6{
+	font-weight: 200;
+}
 //sticky footer IE11-
 .page.sticky-footer{
   display: flex;
@@ -96,6 +99,7 @@ main{
 @import "parts/page-section_title-media";
 
 
+
 @import "footer";
 @import "footer-media";
 //last styles
@@ -107,6 +111,14 @@ main{
 //pages
 @import "pages/pages-main";
 @import "pages/pages-main-media";
+
+@import "pages/front-page";
+@import "pages/front-page-media";
+
+@import "pages/page-search";
+@import "pages/page-search-media";
+
+
 
 @import "pages/news";
 @import "pages/news-media";

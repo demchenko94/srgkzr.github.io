@@ -12,9 +12,9 @@
 
   <title>Метраж</title>
 </head>
-<body class="">
+<body class="page-search">
 
-  <div id="page-wrapper" class="page">
+  <div id="srch_page-wrapper" class="srch_page">
 		<header>
       <div class="header-menu-line">
         <div class="container">
@@ -604,98 +604,206 @@
         </div><!-- container -->
       </div><!-- header-search-line -->
     </header>
-    <main class="main">
+    <div id="srch_main" class="srch srch_main"><!-- main -->
 
-    </main>
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-sm-6 col-md-5 offset-md-1 col-lg-3 offset-lg-0 col-xl-2 footer_menu-col">
+      <div class="srch_main-wrap"><!-- main content parent -->
 
-            <div class="widget">
-              <h3 class="widget-title">Компания</h3>
-              <ul>
-                <li><a href="#">О компании</a></li>
-                <li><a href="#">Каталог услуг</a></li>
-                <li><a href="#">Наши реэлторы</a></li>
-                <li><a href="#">Отзывы клиентов</a></li>
-                <li><a href="#">Вакансии</a></li>
-                <li><a href="#">Контакты</a></li>
-              </ul>
-            </div>
-
-          </div>
-          <div class="col-12 col-sm-6 col-md-5 offset-md-1 col-lg-3 offset-lg-0 col-xl-3 footer_menu-col">
-
-            <div class="widget">
-              <h3 class="widget-title">Жилая недвижимость</h3>
-              <ul>
-                <li><a href="#">Новостройки</a></li>
-                <li><a href="#">Вторичка</a></li>
-                <li><a href="#">Элитная недвижимость</a></li>
-              </ul>
-            </div>
-
-            <div class="widget">
-              <h3 class="widget-title">Коммерческая недвижимость</h3>
-              <ul>
-                <li><a href="#">Офисы</a></li>
-                <li><a href="#">Торговые площадки</a></li>
-              </ul>
-            </div>
-
-          </div>
-          <div class="col-12 col-sm-6 col-md-5 offset-md-1 col-lg-3 offset-lg-0 col-xl-3 footer_menu-col">
-
-            <div class="widget">
-              <h3 class="widget-title">Земля</h3>
-              <ul>
-                <li><a href="#">Жилая (ИЖС)</a></li>
-                <li><a href="#">Сельхоз назначение</a></li>
-                <li><a href="#">Промышленного назначения</a></li>
-              </ul>
-            </div>
-
-            <div class="widget">
-              <h3 class="widget-title">Производства и помещения</h3>
-              <ul>
-                <li><a href="#">Производство</a></li>
-                <li><a href="#">Склады, гаражи, прочее</a></li>
-              </ul>
-            </div>
-
-          </div>
-          <div class="col-12 col-sm-6 col-md-5 offset-md-1 col-lg-3 offset-lg-0 col-xl-3 offset-xl-1">
-            <div class="widget widget_about">
-              <div class="footer_logo-wrap">
-                <a href="front-page.html" class="logo">
-                  <div class="logo_img">
-                    <img src="img/logo.svg" alt="Логотип">
-                  </div>
-                  <div class="logo_text">
-                    <span class="logo_title">Метраж</span>
-                    <span class="logo_sub-title">Агентство недвижимости</span>
-                  </div>
-                </a>
-              </div>
-              <div class="footer_social-buttons">
-                <ul class="social-buttons">
-                  <li><a href="#"><i class="icon-facebook"></i></a></li>
-                  <li><a href="#"><i class="icon-instagram-1"></i></a></li>
-                  <li><a href="#"><i class="icon-youtube-play"></i></a></li>
-                  <li><a href="#"><i class="icon-vkontakte"></i></a></li>
-                </ul>
-              </div>
-              <div class="footer_creators">
-                <p>АН «МЕТРАЖ» 2015-2017 (с)</p>
-                <p>Дизайн: Sergey Tomkovich</p>
-                <p>Разработка: IT GO Solutions</p>
-              </div>
-            </div>
-          </div>
+        <div class="srch_main-map-wrap"><!-- map parent -->
+          
         </div>
-      </div>
-    </footer>
+        <div class="srch_main-content-wrap"><!-- content parent -->
+          <div class="srch_main-content">
+            <div class="srch_main-content-inner">
+              <main>
+
+                <div class="sorting-line">
+                  <div class="container">
+                    <div class="sorting">
+
+                     <form action="#" method="post" class="sorting_i sorting_i-4 form-sorting">
+                        <span class="sorting_info">2156 обьявлений</span>
+                        <span class="sorting_i_select-wrap">
+                          <select class="sorting_i_select" name="name">
+                            <option value="0" selected>По дате добавления</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                          </select>
+                        </span>
+                      </form>
+
+                      <div class="sorting_i sorting_i-2">
+                        <span class="sorting_info">Вид:</span>
+                        <span class="sorting_i_select-wrap">
+                          <select id="sorting_view-select" class="sorting_i_select" name="name">
+                            <option value="map" selected>Список и карта</option>
+                            <option value="list">Список</option>
+                          </select>
+                        </span>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <!-- sorting-line -->
+                
+                <div class="srch_content-wrap">
+
+                  <div class="container">
+                    <div class="row">
+                      
+                      <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="house">
+                          <a href="#" class="house_top">
+                            <div class="house_img-wrap">
+                              <div href="#" class="house_img">
+                                <img src="img/search/search-1.jpg" alt="alt">
+                              </div>
+                              <span class="house_ad-type">Топ</span>
+                              <span class="house_number-photos">24</span>
+                            </div>
+                            <div class="house_cont-top">
+                              <div class="house_date-wrap">
+                                <p class="house_date">сегодня в 14:14</p>
+                                <p class="house_price">270 000 гр</p>
+                              </div>
+                              <div class="house_sizes-wrap">
+                                <span class="house_sizes"><span>1 комнатная</span> <span>(27 / 13 /5 м<sup><small>2</small></sup>)</span></span>
+                              </div>
+                            </div>
+                          </a>
+                          <div class="house_bottom">
+                            <div class="house_cont-bottom">
+                              <h3 class="house_adress"><a href="#">улица Энтузиастов, 24</a></h3>
+                              <p class="house_region">Ленинский район</p>
+                              <div class="house_description">
+                                <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Моей необходимыми безопасную продолжил, вдали свой реторический однажды снова мир.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div><!-- house -->
+                      </div><!-- col item -->
+
+                      <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="house">
+                          <a href="#" class="house_top">
+                            <div class="house_img-wrap">
+                              <div href="#" class="house_img">
+                                <img src="img/search/search-1.jpg" alt="alt">
+                              </div>
+                              <span class="house_ad-type">Топ</span>
+                              <span class="house_number-photos">24</span>
+                            </div>
+                            <div class="house_cont-top">
+                              <div class="house_date-wrap">
+                                <p class="house_date">сегодня в 14:14</p>
+                                <p class="house_price">270 000 гр</p>
+                              </div>
+                              <div class="house_sizes-wrap">
+                                <span class="house_sizes"><span>1 комнатная</span> <span>(27 / 13 /5 м<sup><small>2</small></sup>)</span></span>
+                              </div>
+                            </div>
+                          </a>
+                          <div class="house_bottom">
+                            <div class="house_cont-bottom">
+                              <h3 class="house_adress"><a href="#">улица Энтузиастов, 24</a></h3>
+                              <p class="house_region">Ленинский район</p>
+                              <div class="house_description">
+                                <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Моей необходимыми безопасную продолжил, вдали свой реторический однажды снова мир.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div><!-- house -->
+                      </div><!-- col item -->
+
+                      <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="house">
+                          <a href="#" class="house_top">
+                            <div class="house_img-wrap">
+                              <div href="#" class="house_img">
+                                <img src="img/search/search-1.jpg" alt="alt">
+                              </div>
+                              <span class="house_ad-type">Топ</span>
+                              <span class="house_number-photos">24</span>
+                            </div>
+                            <div class="house_cont-top">
+                              <div class="house_date-wrap">
+                                <p class="house_date">сегодня в 14:14</p>
+                                <p class="house_price">270 000 гр</p>
+                              </div>
+                              <div class="house_sizes-wrap">
+                                <span class="house_sizes"><span>1 комнатная</span> <span>(27 / 13 /5 м<sup><small>2</small></sup>)</span></span>
+                              </div>
+                            </div>
+                          </a>
+                          <div class="house_bottom">
+                            <div class="house_cont-bottom">
+                              <h3 class="house_adress"><a href="#">улица Энтузиастов, 24</a></h3>
+                              <p class="house_region">Ленинский район</p>
+                              <div class="house_description">
+                                <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Моей необходимыми безопасную продолжил, вдали свой реторический однажды снова мир.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div><!-- house -->
+                      </div><!-- col item -->
+
+                      <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                        <div class="house">
+                          <a href="#" class="house_top">
+                            <div class="house_img-wrap">
+                              <div href="#" class="house_img">
+                                <img src="img/search/search-1.jpg" alt="alt">
+                              </div>
+                              <span class="house_ad-type">Топ</span>
+                              <span class="house_number-photos">24</span>
+                            </div>
+                            <div class="house_cont-top">
+                              <div class="house_date-wrap">
+                                <p class="house_date">сегодня в 14:14</p>
+                                <p class="house_price">270 000 гр</p>
+                              </div>
+                              <div class="house_sizes-wrap">
+                                <span class="house_sizes"><span>1 комнатная</span> <span>(27 / 13 /5 м<sup><small>2</small></sup>)</span></span>
+                              </div>
+                            </div>
+                          </a>
+                          <div class="house_bottom">
+                            <div class="house_cont-bottom">
+                              <h3 class="house_adress"><a href="#">улица Энтузиастов, 24</a></h3>
+                              <p class="house_region">Ленинский район</p>
+                              <div class="house_description">
+                                <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Моей необходимыми безопасную продолжил, вдали свой реторический однажды снова мир.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div><!-- house -->
+                      </div><!-- col item -->
+
+
+
+
+
+                    </div>
+                  </div>
+
+                </div>
+                <!-- srch_content-wrap -->
+
+                <div class="div-div"></div>
+              </main>
+              <footer>footer</footer>
+
+            </div><!-- srch_main-content-inner -->
+
+
+          </div><!-- srch_main-content -->
+        </div><!-- srch_main-content-wrap -->
+
+      </div><!-- p-srch_wrap -->
+
+    </div><!-- .main -->
+
   </div>
 <!-- page -->
 

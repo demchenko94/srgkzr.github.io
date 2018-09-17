@@ -1,0 +1,51 @@
+.sorting{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	//компенсируем скролл
+	padding: 22px 0;
+	width: 100%;
+	color: $main-gray-c;
+	font-size: 13px;
+}
+
+.sorting_i{
+	padding: 0 4px 8px 4px;
+}
+.orting_info{
+	font-weight: 600;
+}
+
+.sorting_i_select-wrap{
+	position: relative;
+	display: inline-block;
+	padding: 0 20px 0 0;
+	&::before{
+		font-size: 13px;
+		display: block;
+		position: absolute;
+		top: 2px;
+		right: 7px;
+		color: $accent-c;
+    content: "\e80f";
+    font-family: 'fontello';
+    transition: 0.2s;
+	}
+}
+
+.sorting_i_select{
+	font-weight: 600;
+	color: $accent-c;
+	border: none;
+	outline: none;
+	appearance: none;
+	cursor: pointer;
+	background: transparent;
+	>option{
+		font-weight: 600;
+		color: $main-gray-c;
+	}
+	&::-ms-expand {
+    display: none;
+	}
+}
