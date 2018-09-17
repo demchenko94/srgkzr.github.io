@@ -2149,6 +2149,7 @@ footer {
 }
 
 .fp-menu-line .icon-phone:before {
+  display: none;
   position: absolute;
   top: -13px;
   left: -50px;
@@ -2282,6 +2283,7 @@ footer {
     display: none;
   }
   .fp-menu-line .icon-phone:before {
+    display: inline-block;
     position: relative;
     font-size: 15px;
     padding: 0 0 0 0;

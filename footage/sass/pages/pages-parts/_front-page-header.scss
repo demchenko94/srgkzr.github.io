@@ -24,6 +24,7 @@
 	}
 	.icon-phone{
 		&:before{
+			display: none;
 			position: absolute;
 			top: -13px;
 			left: -50px;
