@@ -459,8 +459,8 @@
                             <label class="search_input-l" for="commercial5">Гараж</label>
                           </li>
                           <li>
-                            <input class="search_input-i" type="checkbox" id="commercial5" name="commercial[]" value="Прочее"/>
-                            <label class="search_input-l" for="commercial5">Прочее</label>
+                            <input class="search_input-i" type="checkbox" id="commercial6" name="commercial[]" value="Прочее"/>
+                            <label class="search_input-l" for="commercial6">Прочее</label>
                           </li>
 
                         </ul>
@@ -605,11 +605,11 @@
       </div><!-- header-search-line -->
     </header>
     <div id="srch_main" class="srch srch_main"><!-- main -->
-
-      <div class="srch_main-wrap"><!-- main content parent -->
+      <div class="srch_main-wrap map-show"><!--  map-show -для список-карта  map-show-mobile -для мобильных при клике --> <!-- main content parent -->
 
         <div class="srch_main-map-wrap"><!-- map parent -->
-          
+          <div id="map" class="map"></div>
+          <span class="map-empty-info active">Объектов с данным местоположением/ориентиром нет. Пожалуйта выберите другое название</span>
         </div>
         <div class="srch_main-content-wrap"><!-- content parent -->
           <div class="srch_main-content">
@@ -620,7 +620,7 @@
                   <div class="container">
                     <div class="sorting">
 
-                     <form action="#" method="post" class="sorting_i sorting_i-4 form-sorting">
+                     <form action="#" method="post" class="sorting_i form-sorting">
                         <span class="sorting_info">2156 обьявлений</span>
                         <span class="sorting_i_select-wrap">
                           <select class="sorting_i_select" name="name">
@@ -632,12 +632,12 @@
                         </span>
                       </form>
 
-                      <div class="sorting_i sorting_i-2">
+                      <div class="sorting_i sorting_view">
                         <span class="sorting_info">Вид:</span>
                         <span class="sorting_i_select-wrap">
-                          <select id="sorting_view-select" class="sorting_i_select" name="name">
+                          <select id="sorting_view" class="sorting_i_select" name="name">
                             <option value="map" selected>Список и карта</option>
-                            <option value="list">Список</option>
+                            <option value="list_map">Список</option>
                           </select>
                         </span>
                       </div>
@@ -650,7 +650,7 @@
                 <div class="srch_content-wrap">
 
                   <div class="container">
-                    <div class="row">
+                    <div id="srch_row-content" class="row">
                       
                       <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
                         <div class="house">
@@ -706,7 +706,7 @@
                           </a>
                           <div class="house_bottom">
                             <div class="house_cont-bottom">
-                              <h3 class="house_adress"><a href="#">улица Энтузиастов, 24</a></h3>
+                              <h3 class="house_adress"><a href="#">улица Энтузиастов, 24 улица Энтузиастов, 24</a></h3>
                               <p class="house_region">Ленинский район</p>
                               <div class="house_description">
                                 <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Моей необходимыми безопасную продолжил, вдали свой реторический однажды снова мир.</p>
@@ -790,9 +790,96 @@
                 </div>
                 <!-- srch_content-wrap -->
 
-                <div class="div-div"></div>
               </main>
-              <footer>footer</footer>
+              <footer>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-12 col-sm-6 col-md-5 offset-md-1 col-lg-3 offset-lg-0 col-xl-2 footer_menu-col">
+
+                      <div class="widget">
+                        <h3 class="widget-title">Компания</h3>
+                        <ul>
+                          <li><a href="#">О компании</a></li>
+                          <li><a href="#">Каталог услуг</a></li>
+                          <li><a href="#">Наши реэлторы</a></li>
+                          <li><a href="#">Отзывы клиентов</a></li>
+                          <li><a href="#">Вакансии</a></li>
+                          <li><a href="#">Контакты</a></li>
+                        </ul>
+                      </div>
+
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-5 offset-md-1 col-lg-3 offset-lg-0 col-xl-3 footer_menu-col">
+
+                      <div class="widget">
+                        <h3 class="widget-title">Жилая недвижимость</h3>
+                        <ul>
+                          <li><a href="#">Новостройки</a></li>
+                          <li><a href="#">Вторичка</a></li>
+                          <li><a href="#">Элитная недвижимость</a></li>
+                        </ul>
+                      </div>
+
+                      <div class="widget">
+                        <h3 class="widget-title">Коммерческая недвижимость</h3>
+                        <ul>
+                          <li><a href="#">Офисы</a></li>
+                          <li><a href="#">Торговые площадки</a></li>
+                        </ul>
+                      </div>
+
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-5 offset-md-1 col-lg-3 offset-lg-0 col-xl-3 footer_menu-col">
+
+                      <div class="widget">
+                        <h3 class="widget-title">Земля</h3>
+                        <ul>
+                          <li><a href="#">Жилая (ИЖС)</a></li>
+                          <li><a href="#">Сельхоз назначение</a></li>
+                          <li><a href="#">Промышленного назначения</a></li>
+                        </ul>
+                      </div>
+
+                      <div class="widget">
+                        <h3 class="widget-title">Производства и помещения</h3>
+                        <ul>
+                          <li><a href="#">Производство</a></li>
+                          <li><a href="#">Склады, гаражи, прочее</a></li>
+                        </ul>
+                      </div>
+
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-5 offset-md-1 col-lg-3 offset-lg-0 col-xl-3 offset-xl-1">
+                      <div class="widget widget_about">
+                        <div class="footer_logo-wrap">
+                          <a href="front-page.html" class="logo">
+                            <div class="logo_img">
+                              <img src="img/logo.svg" alt="Логотип">
+                            </div>
+                            <div class="logo_text">
+                              <span class="logo_title">Метраж</span>
+                              <span class="logo_sub-title">Агентство недвижимости</span>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="footer_social-buttons">
+                          <ul class="social-buttons">
+                            <li><a href="#"><i class="icon-facebook"></i></a></li>
+                            <li><a href="#"><i class="icon-instagram-1"></i></a></li>
+                            <li><a href="#"><i class="icon-youtube-play"></i></a></li>
+                            <li><a href="#"><i class="icon-vkontakte"></i></a></li>
+                          </ul>
+                        </div>
+                        <div class="footer_creators">
+                          <p>АН «МЕТРАЖ» 2015-2017 (с)</p>
+                          <p>Дизайн: Sergey Tomkovich</p>
+                          <p>Разработка: IT GO Solutions</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </footer>
 
             </div><!-- srch_main-content-inner -->
 
@@ -800,6 +887,10 @@
           </div><!-- srch_main-content -->
         </div><!-- srch_main-content-wrap -->
 
+        <div id="btn-toggle-mobile" class="btn-toggle-mobile">
+          <span class="btn-toggle-mobile_map">Карта</span>
+          <span class="btn-toggle-mobile_list">Список</span>
+        </div>
       </div><!-- p-srch_wrap -->
 
     </div><!-- .main -->
@@ -850,33 +941,8 @@
 <!-- scripts -->
 	<script src="js/libs.min.js"></script>
 	<script src="js/main.js"></script>
-  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9c1skkMB8UkmUZGSu0EkB5RTMzQOW5L0" type="text/javascript"></script> -->
 
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9c1skkMB8UkmUZGSu0EkB5RTMzQOW5L0&libraries=places&callback=initAutocomplete" async defer></script>
-
-    <script>
-      var autocomplete;
-
-      function initAutocomplete() {
-
-      var cityBounds = new google.maps.LatLngBounds(
-        new google.maps.LatLng(50.098372, 36.115343),
-        new google.maps.LatLng(49.902965, 36.451859));
-
-        autocomplete = new google.maps.places.Autocomplete(
-            /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
-            {
-              bounds: cityBounds,
-              // strictBounds: true,
-              types: ['address'],
-              componentRestrictions: {country: 'ua'}
-            });
-        // autocomplete.addListener('place_changed', functionName);
-      }
-
-    </script>
-
-
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSObs2xDfHt4XHhgmseQd3lN55IVmfsVc&libraries=places" async defer></script>
 
 </body>
 </html>

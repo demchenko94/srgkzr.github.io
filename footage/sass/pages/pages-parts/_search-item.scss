@@ -59,6 +59,9 @@
 .house_top{
 	display: block;
 	position: relative;
+	&:hover{
+		text-decoration: none;
+	}
 }
 .house_cont-top{
 	position: absolute;

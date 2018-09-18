@@ -4,12 +4,9 @@
 @import "pages-parts/search-item";
 @import "pages-parts/search-item-media";
 
-
-
 .page-search{
 	position: static;
 }
-
 .srch_page{
   overflow: hidden;
   padding-top: 0;
@@ -22,22 +19,192 @@
 .srch_main{
 	height: 100%;
 }
-.srch_main-wrap{
+
+//header
+@media (max-width: 991px){
+	.srch_page.srch_form-open{//стили при открытии меню для этой страницы через JS
+			overflow-y: scroll !important;
+		.header-search-line{
+			padding-bottom: 20px;
+			.search_list_i-subway{
+				order: -1;
+			}
+			.search_subway-wrap{
+				height: 195px;
+			}
+		}
+		.srch_main-content{
+			overflow: hidden !important;
+		}
+		.srch_main-map-wrap,
+		.srch_main-content-wrap{
+			padding: 0 !important;
+		}
+	}//srch_form-open
+}//max-w 991
+//END header
+
+
+.srch_main-wrap{//род. карты и контента
+	position: relative;
 	height: 100%;
 	overflow: hidden;
 }
-.srch_main-content-wrap{
+
+.srch_main-map-wrap{//главный карты
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #eee;
+}
+
+.srch_main-content-wrap{//главный контента
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
 	position: relative;
 	height: 100%;
-	padding-bottom: 178px;//Компенсируем высоту header. падингом родителя скролящигося элемента
 }
+//контент
 .srch_main-content{
 	width: 100%;
 	height: 100%;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
-
-.div-div{
-	height: 1000px;
+.srch_main-map-wrap{//главный карты
+	padding-bottom: 60px;//Компенсируем высоту header. падингом родителя скролящигося элемента
 }
+.srch_main-content-wrap{//главный контента
+	padding-bottom: 60px;//Компенсируем высоту header. падингом родителя скролящигося элемента
+}
+//УТВ контент
+
+//Смена вида и адаптив
+.srch_main-wrap.map-show{
+	.srch_main-map-wrap{
+		display: none;
+	}
+	.srch_main-content-wrap{
+		display: block;
+	}
+}
+@media (max-width: 991px){
+	.srch_main-wrap.map-show-mobile{
+		.srch_main-map-wrap{
+			display: block;
+		}
+		.srch_main-content-wrap{
+			display: none;
+		}
+	}
+}
+//УТВ Смена вида и адаптив
+
+
+
+
+
+
+
+// MAP
+
+.map{
+	width: 100%;
+	height: 100%;
+}
+.map-empty-info{
+	display: none;
+}
+.map-empty-info.active{
+	display: block;
+	position: absolute;
+	margin: 0 10px 0 10px;
+	padding: 10px 15px;
+	top: 93px;
+	right: 0;
+	max-width: 300px;
+	background-color: rgba(37, 131, 180, 0.8);
+	color: #fff;
+	font-size: 15px;
+	border-radius: 10px;
+}
+
+//END MAP
+
+
+
+
+//Кнопка карты для мобильных
+.btn-toggle-mobile{
+	display: none;
+}
+@media (max-width: 991px){
+	.srch_main-wrap.map-show-mobile{
+		.btn-toggle-mobile{
+			.btn-toggle-mobile_map{
+				display: none;
+			}
+			.btn-toggle-mobile_list{
+				display: inline-block;
+			}
+		}
+	}
+	.btn-toggle-mobile{
+		opacity: 0.93;
+		display: block;
+		position: absolute;
+		top: 60px;
+		right: 0px;
+		padding: 5px 15px 5px 5px;
+		border: none !important;
+		outline: none !important;
+		border-radius: 4px;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+		text-transform: uppercase;
+		cursor: pointer;
+		font-size: 11px;
+		font-weight: 600;
+		letter-spacing: 1px;
+		transition: 0.2s;
+		text-align: center;
+		color: #fff;
+		background-color: $form-button-bg;
+		&:hover{
+	    background-image: linear-gradient(180deg, #279dc4 0%, #18709f 100%);
+		}
+		&:active{
+			box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+	    background-image: linear-gradient(180deg, #1870a0 0%, #186f9c 100%);
+		}
+		.tn-toggle-mobile_map{
+			display: inline-block;
+		}
+		.btn-toggle-mobile_list{
+			display: none;
+		}
+		.btn-toggle-mobile_list,
+		.btn-toggle-mobile_map{
+			&:after{
+    		content: "\f105";
+    		font-family: 'fontello';
+    		font-size: 15px;
+    		display: inline-block;
+    		position: absolute;
+    		top: 3px;
+    		right: 5px;
+    		transition: 0.2s;
+			}
+		}
+	}
+}
+//END Кнопка карты для мобильных
+
+
+
+

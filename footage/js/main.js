@@ -1,24 +1,36 @@
 (function($){
 
-	/*************************
-	  basicScript for all pages
-	*************************/
+/*************************
+  basicScript for all pages
+*************************/
 	function basicScript() {
 		window.windowWidth = $(window).outerWidth();
-
 
 		/*--toogle slide panel--*/
 		if ($("#m-slide-panel").length){
 			$(".m-slide-panel-toogle").on("click", function (){
+
 				$("#m-slide-panel").toggleClass("active");
 			});
 		}
+
 		/*--toogle search form mobile--*/
 		if ($("#icon-search").length){
-			$("#icon-search").on("click", function (){
-				$("#header-search-line").slideToggle(400);
-			});
+			var header_search_line = $("#header-search-line");
+			if ( !$("#srch_page-wrapper" ).length ){//если не страница поиска обьектов
+				$("#icon-search").on("click", function (){
+					header_search_line.slideToggle(400);
+				});
+			}else{
+				var srch_page_wrapper = $("#srch_page-wrapper");
+				$("#icon-search").on("click", function (){
+					srch_page_wrapper.toggleClass("srch_form-open");//дополнительно для страница поиска обьектов
+					header_search_line.slideToggle(400);
+					console.log(srch_page_wrapper)
+				});
+			}
 		}
+
 		/*--добавление липкого футера, если не IE--*/
 		if ( !isIE() && !$("body").hasClass("page-search") ){
 			$("#page-wrapper").addClass("sticky-footer");
@@ -26,21 +38,13 @@
 
 
 
-	};//END basicScript
+	};
+//END basicScript
 
 
-	/*************************
-	  initContentMap
-	*************************/
-	window.initContentMap = function (){
-		if ($("#content-map").length){
-
-
-
-		}//if
-	}//END initContentMap
-
-
+//-/*******************************/-//
+//-/ FORM ANIMATIONS FUNCTIONS /-//
+//-/*******************************/-//
 	/*************************
 	  searchFormAnimation
 	*************************/
@@ -437,17 +441,166 @@
 		}
 
 	}//END formShowExtraItems
-
-
-
 //-/*******************************/-//
 //-/ END FORM ANIMATIONS FUNCTIONS /-//
 //-/*******************************/-//
 
 
+/*************************
+  searchPageInit
+*************************/
+	function searchPageInit(){
+		if($("#srch_page-wrapper").length){
+
+		var page_wrap = $("#srch_page-wrapper");
+		var main_wrap = page_wrap.find("#srch_main > .srch_main-wrap");
+
+	//изменить вид (с картой или без)
+		$("#sorting_view").on('change', function() {
+			if ( this.value == "map" ){
+				main_wrap.addClass("map-show");
+			}else if( this.value == "list_map" ){
+				main_wrap.removeClass("map-show");
+			}
+		});
+	//изменить вид ( карта или список)
+		$("#btn-toggle-mobile").on('click', function() {
+				main_wrap.toggleClass("map-show-mobile");
+		});
+
+		};//if
+	};
+//END searchPageInit
+
+
+/*************************
+  initContentMap
+*************************/
 	/*************************
-	  formSearchSubmit
+	  initContentMap
 	*************************/
+	window.initContentMap = function (){
+
+		if ($("#map").length){
+
+			var markersData = [
+				{
+					lat: 50.005375,
+					lng: 36.321587,
+					name: "Объект 1",
+					address:"Адрес 1",
+					type: "type1"
+				},
+				{
+					lat: 49.995395,
+					lng: 36.321879,
+					name: "Объект 2",
+					address:"Адрес 2",
+					type: "type2"
+				},
+				{
+					lat: 50.010850,
+					lng: 36.342411,
+					name: "Объект 3",
+					address:"Адрес 3",
+					type: "type3"
+				}
+			];
+
+      var icons = {
+        type1: {
+          icon: 'img/1.png'
+        },
+        type2: {
+          icon: 'img/2.png'
+        },
+        type3: {
+          icon: 'img/3.png'
+        }
+      };
+
+
+			var element = document.getElementById('map');
+			var options = {
+				zoom: 14,
+		    center: {lat: 50.004934, lng: 36.319111},
+			}
+
+		  var map = new google.maps.Map(element, options);
+
+
+	    infoWindow = new google.maps.InfoWindow();
+	    
+	    google.maps.event.addListener(map, "click", function() {
+	      infoWindow.close();
+	    });
+	    
+	    for (var i = 0; i < markersData.length; i++){
+	      var latLng = new google.maps.LatLng(markersData[i].lat, markersData[i].lng);
+	      var name = markersData[i].name;
+	      var address = markersData[i].address;
+
+	      var type = markersData[i].type;
+	        
+	      addMarker(latLng, name, address, type);
+	    }
+
+
+			function addMarker(latLng, name, address, type) {
+			  var marker = new google.maps.Marker({
+			    position: latLng,
+			    map: map,
+			    icon: icons[type].icon,
+			    title: name
+			  });
+
+			  google.maps.event.addListener(marker, "click", function() {
+
+			    var contentString = '<div class="infowindow">' +
+			                            '<h3>' + name + '</h3>' +
+			                            '<p>' + address + '</p>' +
+			                        '</div>';
+
+			    infoWindow.setContent(contentString);
+
+			    infoWindow.open(map, marker);
+			  });
+			}
+
+		}//if
+	}
+//END initContentMap
+
+
+//-/*******************************/-//
+//-/ GOOGLE FUNCTIONS /-//
+//-/*******************************/-//
+
+/*************************
+  initAutocomplete
+*************************/
+	function initAutocomplete(){
+	  var autocomplete;
+		
+	  var cityBounds = new google.maps.LatLngBounds(
+	    new google.maps.LatLng(50.098372, 36.115343),
+	    new google.maps.LatLng(49.902965, 36.451859));
+	  autocomplete = new google.maps.places.Autocomplete(
+	    /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+	    {
+	      bounds: cityBounds,
+	      // strictBounds: true,
+	      types: ['address'],
+	      componentRestrictions: {country: 'ua'}
+	    });
+	  // autocomplete.addListener('place_changed', functionName);
+	}
+//END initAutocomplete
+
+
+/*************************
+  formSearchSubmit
+*************************/
 	function formSearchSubmit() {
 		if($("#search_form").length){
 
@@ -459,20 +612,22 @@
 
 				});//submit
 		};//if
-	};//END formSearchSubmit
+	};
+//END formSearchSubmit
 
 
-	/*************************
-	  SSS
-	*************************/
+/*************************
+  SSS
+*************************/
 	function SSS(){
 
-	};//END SSS
+	};
+//END SSS
 
-	/*************************
-	  other functions
-	*************************/
-	// 
+/*************************
+  other functions
+*************************/
+	//autoHeightAnimate - функция анимации для блоков height:auto
 	function autoHeightAnimate(element, time){
 	  var curHeight = element.height();
 	  var autoHeight = element.css('height', 'auto').height();
@@ -480,7 +635,7 @@
 	  element.stop().animate({ height: autoHeight }, time);
 	}
 	//END 
-	//Поиск браузеров
+	//Поиск IE браузеров
 	function isIE() {
 	  var ua = window.navigator.userAgent;
 	  var msie = ua.indexOf('MSIE '); // IE 10 or older
@@ -490,24 +645,24 @@
 	}
 	//END Поиск браузеров
 
-
-	//END other functions
+//END other functions
 
 
 	$(document).ready(function(){
 		basicScript();
 		searchFormAnimation();
+		searchPageInit();
 		formSearchSubmit();
+
 	});
 
 	$(window).on( "load", function(){
 		initContentMap();
+		initAutocomplete();
+
 	});
 	$(window).on( "resize", function(){});
 	$(window).on( "scroll", function() {});
-
-
-
 
 })(jQuery);
 

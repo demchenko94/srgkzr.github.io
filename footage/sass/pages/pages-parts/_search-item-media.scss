@@ -18,7 +18,39 @@
 }//
 @media only screen and (min-width : 1200px){
 
+.house_cont-top{
+	padding: 7px 15px 0;
+	position: relative;
+	justify-content: flex-start;
+	flex-direction: column;
+	color: $main-c;
+}
 
 
+.house_bottom{
+	padding: 0 15px 10px;
+}
+.house_price{
+	font-size: 16px;
+}
+.house_sizes{
+	flex-direction: row;
+}
+.house_date{
+	color: $main-gray-c;
+}
+.house_price,
+.house_date{
+	margin-bottom: 3px;
+}
+.house_sizes-wrap{
+	margin-bottom: 3px;
+}
+.house_adress{
+	margin-bottom: 3px;
+}
+.house_region{
+	margin-bottom: 0px;
+}
 }//
 

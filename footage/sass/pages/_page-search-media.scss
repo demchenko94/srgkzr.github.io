@@ -1,11 +1,15 @@
-@media only screen and (min-width : 320px){
-}
-
 
 @media only screen and (min-width : 480px){
+
+@media (max-width: 767px){
+	.srch_content-wrap{
+		.container{
+			max-width: 100%;
+		}
+	}
+}
+
 }//
-
-
 @media only screen and (min-width : 768px){
 
 
@@ -13,10 +17,112 @@
 
 @media only screen and (min-width : 992px){
 
+.srch_content-wrap,
+.sorting-line{
+	.container{
+		padding: 0 20px;
+	}	
+}
+.srch_main-map-wrap{//главный карты
+	width: 60%;
+	margin-right: 40%;	
+	height: 100%;
+}
+
+.srch_main-map-wrap{//главный карты
+	padding-bottom: 239px;//Компенсируем высоту header. падингом родителя скролящигося элемента
+}
+.srch_main-content-wrap{//главный контента
+	padding-bottom: 239px;//Компенсируем высоту header. падингом родителя скролящигося элемента
+}
+
+//Смена вида и адаптив
+.srch_main-wrap.map-show{
+
+	.srch_main-map-wrap{//главный карты
+		display: block;
+		width: 60%;
+		margin-right: 40%;	
+	}
+	.srch_main-content-wrap{//главный контента
+		display: block;
+		width: 40%;
+		margin-left: 60%;
+	}
+
+	main .col-lg-4{
+	  flex: 0 0 100%;
+	  max-width: 100%;
+	}
+	footer .col-lg-3{
+	  flex: 0 0 100%;
+	  max-width: 100%;
+	}
+	footer .widget_about{
+		max-width: 230px;
+		margin: 20px auto 0;
+	}
+	footer .widget{
+		text-align: center;
+	}
+	footer .social-buttons{
+		justify-content: center;
+	}
+}
+//УТВ Смена вида и адаптив
 
 
 }//
 @media only screen and (min-width : 1200px){
+
+
+//Смена вида и адаптив
+.srch_main-wrap.map-show{
+	.col-xl-4{
+	  flex: 0 0 50%;
+	  max-width: 50%;
+	}
+}
+//УТВ Смена вида и адаптив
+//Смена вида и адаптив
+.srch_main-wrap.map-show{
+
+	.srch_main-map-wrap{//главный карты
+		width: 50%;
+		margin-right: 50%;	
+	}
+	.srch_main-content-wrap{//главный контента
+		width: 50%;
+		margin-left: 50%;
+	}
+
+	main .col-xl-4{
+	  flex: 0 0 50%;
+	  max-width: 50%;
+	}
+	footer .col-xl-2,
+	footer .col-xl-3{
+	  flex: 0 0 50%;
+	  max-width: 50%;
+	}
+	footer .offset-xl-1{
+		margin-left: 0;
+	}
+
+	.srch_main-content-inner{
+		margin-left: 0;//добавлять js-сом в зависимости от скролла
+	}
+
+}
+
+.srch_main-map-wrap{//главный карты
+	padding-bottom: 178px;//Компенсируем высоту header. падингом родителя скролящигося элемента
+}
+.srch_main-content-wrap{//главный контента
+	padding-bottom: 178px;//Компенсируем высоту header. падингом родителя скролящигося элемента
+}
+
+//УТВ Смена вида и адаптив
 .srch_main-content-inner{
 	margin-left: 17px;//добавлять js-сом в зависимости от скролла
 }

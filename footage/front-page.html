@@ -449,8 +449,8 @@
                             <label class="search_input-l" for="commercial5">Гараж</label>
                           </li>
                           <li>
-                            <input class="search_input-i" type="checkbox" id="commercial5" name="commercial[]" value="Прочее"/>
-                            <label class="search_input-l" for="commercial5">Прочее</label>
+                            <input class="search_input-i" type="checkbox" id="commercial6" name="commercial[]" value="Прочее"/>
+                            <label class="search_input-l" for="commercial6">Прочее</label>
                           </li>
 
                         </ul>
@@ -850,7 +850,29 @@
 <!-- scripts -->
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9c1skkMB8UkmUZGSu0EkB5RTMzQOW5L0" type="text/javascript"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSObs2xDfHt4XHhgmseQd3lN55IVmfsVc&libraries=places&callback=initAutocomplete" async defer></script>
+
+    <script>
+      var autocomplete;
+
+      function initAutocomplete() {
+
+      var cityBounds = new google.maps.LatLngBounds(
+        new google.maps.LatLng(50.098372, 36.115343),
+        new google.maps.LatLng(49.902965, 36.451859));
+
+        autocomplete = new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+            {
+              bounds: cityBounds,
+              // strictBounds: true,
+              types: ['address'],
+              componentRestrictions: {country: 'ua'}
+            });
+        // autocomplete.addListener('place_changed', functionName);
+      }
+
+    </script>
 
 </body>
 </html>
