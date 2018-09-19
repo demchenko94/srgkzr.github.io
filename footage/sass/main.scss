@@ -42,7 +42,8 @@ h1,h2,h3,h4,h5,h6{
 .page-single-content{
 	padding: 38px 0 50px;
 }
-
+	//падинги для стандартных секций
+// .s-homescreen
 
 .button{
 	display: inline-block;
@@ -95,6 +96,9 @@ h1,h2,h3,h4,h5,h6{
 @import "parts/logos-media";
 @import "parts/search";
 @import "parts/search-media";
+@import "parts/slider-best-offers";
+
+
 
 //middle styles
 @import "parts/page-section_title";
@@ -125,3 +129,5 @@ h1,h2,h3,h4,h5,h6{
 @import "pages/news";
 @import "pages/news-media";
 
+@import "pages/reviews";
+@import "pages/reviews-media";

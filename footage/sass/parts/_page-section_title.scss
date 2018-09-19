@@ -3,6 +3,12 @@
 	justify-content: space-between;
 	padding: 0 0 35px;//38px 0 35px;
 }
+
+@media (max-width: 767px){
+	.sec-title{
+		max-width: 250px;
+	}
+}
 .sec-title{
 	padding: 0 0 0 10px;
 	position: relative;

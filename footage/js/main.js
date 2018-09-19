@@ -473,12 +473,39 @@
 //END searchPageInit
 
 
+
+
+
+//-/*******************************/-//
+//-/ GOOGLE FUNCTIONS /-//
+//-/*******************************/-//
+
+/*************************
+  initAutocomplete
+*************************/
+	function initAutocomplete(){
+		if ($("#autocomplete").length){
+	  var autocomplete;
+		
+	  var cityBounds = new google.maps.LatLngBounds(
+	    new google.maps.LatLng(50.098372, 36.115343),
+	    new google.maps.LatLng(49.902965, 36.451859));
+	  autocomplete = new google.maps.places.Autocomplete(
+	    /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+	    {
+	      bounds: cityBounds,
+	      // strictBounds: true,
+	      types: ['address'],
+	      componentRestrictions: {country: 'ua'}
+	    });
+	  // autocomplete.addListener('place_changed', functionName);
+		}//if
+	}
+//END initAutocomplete
+
 /*************************
   initContentMap
 *************************/
-	/*************************
-	  initContentMap
-	*************************/
 	window.initContentMap = function (){
 
 		if ($("#map").length){
@@ -572,30 +599,62 @@
 //END initContentMap
 
 
-//-/*******************************/-//
-//-/ GOOGLE FUNCTIONS /-//
-//-/*******************************/-//
+	/*************************
+	  projectsCarousel
+	*************************/
+	function projectsCarousel(){
+		if($("#best-slider").length){
 
-/*************************
-  initAutocomplete
-*************************/
-	function initAutocomplete(){
-	  var autocomplete;
-		
-	  var cityBounds = new google.maps.LatLngBounds(
-	    new google.maps.LatLng(50.098372, 36.115343),
-	    new google.maps.LatLng(49.902965, 36.451859));
-	  autocomplete = new google.maps.places.Autocomplete(
-	    /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
-	    {
-	      bounds: cityBounds,
-	      // strictBounds: true,
-	      types: ['address'],
-	      componentRestrictions: {country: 'ua'}
-	    });
-	  // autocomplete.addListener('place_changed', functionName);
-	}
-//END initAutocomplete
+			$('#best-slider').slick({
+			  slidesToShow: 3, //5
+			  slidesToScroll: 1,
+			  dots: true,
+			  arrows: false,
+			  // centerMode: true,
+			  focusOnSelect: true,
+			  // centerPadding: "100px",
+			  autoplay: false, //true,
+			 	responsive: [
+					{
+					  breakpoint: 1200,
+					  settings: {
+					  	dots: true,
+					    arrows: false,
+					    slidesToShow: 3
+					  }
+					},
+					{
+					  breakpoint: 992,
+					  settings: {
+					  	dots: true,
+					    arrows: false,
+					    slidesToShow: 2
+					  }
+					},
+					{
+					  breakpoint: 768,
+					  settings: {
+					  	dots: true,
+					    arrows: false,
+					    slidesToShow: 1
+					  }
+					}//,
+					// {
+					//   breakpoint: 550,
+					//   settings: {
+					//   	dots: true,
+					//     arrows: false,
+			  // 			centerMode: false,
+					//     slidesToShow: 1
+					//   }
+					// }
+
+				]
+			});
+
+		};
+	};//projectsCarousel
+
 
 
 /*************************
@@ -624,6 +683,7 @@
 	};
 //END SSS
 
+
 /*************************
   other functions
 *************************/
@@ -644,7 +704,6 @@
 	  return (msie > 0 || trident > 0);
 	}
 	//END Поиск браузеров
-
 //END other functions
 
 
@@ -653,7 +712,7 @@
 		searchFormAnimation();
 		searchPageInit();
 		formSearchSubmit();
-
+		projectsCarousel();
 	});
 
 	$(window).on( "load", function(){

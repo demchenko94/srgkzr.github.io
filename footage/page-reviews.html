@@ -7,38 +7,48 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
 
-
-
   <link rel="stylesheet" href="css/libs.css">
   <link rel="stylesheet" href="css/main.css">
 
   <title>Метраж</title>
 </head>
-<body class="front-page">
+<body class="page-reviews">
 
   <div id="page-wrapper" class="page">
 		<header>
-      <div class="container">
-        <div class="fp-menu-line">
-          <div id="icon-menu" class="icon_menu m-slide-panel-toogle"></div>
-          <a href="#" class="fp-menu-line_owner">Владельцам</a>
-          <a href="#" class="fp-menu-line_contact"><i class="icon-phone"></i><span>Контакты</span></a>
+      <div class="header-menu-line">
+        <div class="container">
+          
+          <nav class="menu-line">
+
+            <div class="icon_menu m-slide-panel-toogle"></div>
+
+            <a href="front-page.html" class="logo">
+              <div class="logo_img">
+                <img src="img/logo.svg" alt="Логотип">
+              </div>
+              <div class="logo_text">
+                <h1 class="logo_title">Метраж</h1>
+                <h3 class="logo_sub-title">Агентство недвижимости</h3>
+              </div>
+            </a>
+            
+            <div id="icon-search" class="icon_search"></div>
+
+            <ul id="main-menu" class="main-menu">
+              <li><a class="current_page_item" href="index.html">Продажа</a></li>
+              <li><a href="#">Аренда</a></li>
+              <li><a href="#">Наши риэлторы</a></li>
+              <li><a href="#">Владельцам</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+            
+          </nav><!-- menu-line -->
+
         </div>
       </div>
-      <div class="container">
-        <div class="fp-logo-line"><!-- Отдельный логотип для front page -->
-          <div class="fp-logo">
-            <div class="fp-logo_img">
-              <img src="img/logo_white.svg" alt="Логотип">
-            </div>
-            <div class="fp-logo_text">
-              <h1 class="fp-logo_title">Метраж</h1>
-              <h3 class="fp-logo_sub-title">Агентство недвижимости</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="fp-search-line" class="fp-search-line">
+      <div id="header-search-line" class="header-search-line">
         <div class="container">
           
           <form action="#" id="search_form" class="search_form search_wrap">
@@ -593,186 +603,17 @@
 
         </div><!-- container -->
       </div><!-- header-search-line -->
+      
     </header>
-
     <main class="main">
 
-      <section class="s-homescreen">
-        <div class="homescreen_wrap">
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-6">
-                <a href="#" class="homescreen_i">
-                  <img src="img/s-homescreen-residential.jpg" alt="Жилая недвижимость">
-                  <div class="homescreen_i_content">
-                    <h2 class="homescreen_i_title">Жилая недвижимость</h2>
-                    <span class="homescreen_i_count">Более 3419 объектов</span>
-                  </div>
-                </a>
-              </div>
-              <div class="col-12 col-md-6">
-                <a href="#" class="homescreen_i">
-                  <img src="img/s-homescreen-commercial.jpg" alt="Жилая недвижимость">
-                  <div class="homescreen_i_content">
-                    <h2 class="homescreen_i_title">Комерческая недвижимость</h2>
-                    <span class="homescreen_i_count">Более 2139 объектов</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section><!-- s-homescreen -->
+      <div class="page-content">
 
-      <section class="s-best-offers">
-
-        <div class="container">
-          <div class="sec-header">
-            <h2 class="sec-title">Лучшие предложения</h2>
-            <div class="sec-more">
-              <a href="#" class="sec-more_l">Все предложения</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="container">
-          <div id="best-slider" class="best-slider">
-
-            <div class="best-slider_i">
-              <div class="house">
-                <a href="#" class="house_top">
-                  <div class="house_img-wrap">
-                    <div href="#" class="house_img">
-                      <img src="img/search/search-1.jpg" alt="alt">
-                    </div>
-                    <span class="house_ad-type">Топ</span>
-                    <span class="house_number-photos">24</span>
-                  </div>
-                  <div class="house_cont-top">
-                    <div class="house_date-wrap">
-                      <p class="house_date">сегодня в 14:14</p>
-                      <p class="house_price">270 000 гр</p>
-                    </div>
-                    <div class="house_sizes-wrap">
-                      <span class="house_sizes"><span>1 комнатная</span> <span>(27 / 13 /5 м<sup><small>2</small></sup>)</span></span>
-                    </div>
-                  </div>
-                </a>
-                <div class="house_bottom">
-                  <div class="house_cont-bottom">
-                    <h3 class="house_adress"><a href="#">улица Энтузиастов, 24</a></h3>
-                    <p class="house_region">Ленинский район</p>
-                    <div class="house_description">
-                      <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Моей необходимыми безопасную продолжил, вдали свой реторический однажды снова мир.</p>
-                    </div>
-                  </div>
-                </div>
-              </div><!-- house -->
-            </div><!-- best-slider_i -->
-
-            <div class="best-slider_i">
-              <div class="house">
-                <a href="#" class="house_top">
-                  <div class="house_img-wrap">
-                    <div href="#" class="house_img">
-                      <img src="img/search/search-1.jpg" alt="alt">
-                    </div>
-                    <span class="house_ad-type">Топ</span>
-                    <span class="house_number-photos">24</span>
-                  </div>
-                  <div class="house_cont-top">
-                    <div class="house_date-wrap">
-                      <p class="house_date">сегодня в 14:14</p>
-                      <p class="house_price">270 000 гр</p>
-                    </div>
-                    <div class="house_sizes-wrap">
-                      <span class="house_sizes"><span>1 комнатная</span> <span>(27 / 13 /5 м<sup><small>2</small></sup>)</span></span>
-                    </div>
-                  </div>
-                </a>
-                <div class="house_bottom">
-                  <div class="house_cont-bottom">
-                    <h3 class="house_adress"><a href="#">улица Энтузиастов, 24</a></h3>
-                    <p class="house_region">Ленинский район</p>
-                    <div class="house_description">
-                      <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Моей необходимыми безопасную продолжил, вдали свой реторический однажды снова мир.</p>
-                    </div>
-                  </div>
-                </div>
-              </div><!-- house -->
-            </div><!-- best-slider_i -->
-            <div class="best-slider_i">
-              <div class="house">
-                <a href="#" class="house_top">
-                  <div class="house_img-wrap">
-                    <div href="#" class="house_img">
-                      <img src="img/search/search-1.jpg" alt="alt">
-                    </div>
-                    <span class="house_ad-type">Топ</span>
-                    <span class="house_number-photos">24</span>
-                  </div>
-                  <div class="house_cont-top">
-                    <div class="house_date-wrap">
-                      <p class="house_date">сегодня в 14:14</p>
-                      <p class="house_price">270 000 гр</p>
-                    </div>
-                    <div class="house_sizes-wrap">
-                      <span class="house_sizes"><span>1 комнатная</span> <span>(27 / 13 /5 м<sup><small>2</small></sup>)</span></span>
-                    </div>
-                  </div>
-                </a>
-                <div class="house_bottom">
-                  <div class="house_cont-bottom">
-                    <h3 class="house_adress"><a href="#">улица Энтузиастов, 24</a></h3>
-                    <p class="house_region">Ленинский район</p>
-                    <div class="house_description">
-                      <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Моей необходимыми безопасную продолжил, вдали свой реторический однажды снова мир.</p>
-                    </div>
-                  </div>
-                </div>
-              </div><!-- house -->
-            </div><!-- best-slider_i -->
-            <div class="best-slider_i">
-              <div class="house">
-                <a href="#" class="house_top">
-                  <div class="house_img-wrap">
-                    <div href="#" class="house_img">
-                      <img src="img/search/search-1.jpg" alt="alt">
-                    </div>
-                    <span class="house_ad-type">Топ</span>
-                    <span class="house_number-photos">24</span>
-                  </div>
-                  <div class="house_cont-top">
-                    <div class="house_date-wrap">
-                      <p class="house_date">сегодня в 14:14</p>
-                      <p class="house_price">270 000 гр</p>
-                    </div>
-                    <div class="house_sizes-wrap">
-                      <span class="house_sizes"><span>1 комнатная</span> <span>(27 / 13 /5 м<sup><small>2</small></sup>)</span></span>
-                    </div>
-                  </div>
-                </a>
-                <div class="house_bottom">
-                  <div class="house_cont-bottom">
-                    <h3 class="house_adress"><a href="#">улица Энтузиастов, 24</a></h3>
-                    <p class="house_region">Ленинский район</p>
-                    <div class="house_description">
-                      <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Моей необходимыми безопасную продолжил, вдали свой реторический однажды снова мир.</p>
-                    </div>
-                  </div>
-                </div>
-              </div><!-- house -->
-            </div><!-- best-slider_i -->
-
-          </div><!-- best-slider -->
-        </div>
-      </section>
-
-      <section class="s-news">
+        <div class="s-reviews">
 
           <div class="container">
             <div class="sec-header">
-              <h2 class="sec-title">Новости</h2>
+              <h2 class="sec-title">Отзывы</h2>
               <div class="sec-more">
                 <a href="#" class="sec-more_l">Все новости</a>
               </div>
@@ -780,143 +621,115 @@
           </div>
 
           <div class="container">
+
             <div class="row">
 
               <div class="col-12 col-lg-6">
-                <div class="news">
-                  <a href="#" class="news_img">
-                    <img src="img/news/news-1.jpg" alt="news">
-                  </a>
-                  <div class="news_content-wrap">
-                    <div class="news_content">
-                      <span class="news_date">22.05.2017</span>
-                      <h2 class="news_title"><a class="news_title-l" href="#">Что ждет рынок недвижимости в ближайшем будущем</a></h2>
-                      <div class="news_text">
-                        <p>В последние две недели</p>
-                        <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свое, ручеек всеми буквенных семантика, проектах большого эта взобравшись маленький.</p>
-                      </div>
+
+                <div class="reviews_i">
+                  <div class="reviews_header">
+                    <span class="reviews_date">25.01.2016</span>
+                    <div class="reviews_author">
+                      <span class="reviews_from">Риэлтор:</span>
+                      <a href="#" class="reviews_name">Метражкина Лилия</a>
                     </div>
                   </div>
-                </div><!-- news -->
-              </div><!-- item news -->
+                  <div class="reviews_content">
+                    Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Пор, переулка, живет. Инициал что живет переписывается рыбного семь запятых прямо, парадигматическая составитель оксмокс коварный текстов, языком предупредила о моей если осталось подзаголовок. До вопроса жаренные раз правилами своих дороге.
+                  </div>
+                </div><!-- reviews_i -->
+
+              </div><!-- col -->
 
               <div class="col-12 col-lg-6">
-                <div class="news">
-                  <a href="#" class="news_img">
-                    <img src="img/news/news-1.jpg" alt="news">
-                  </a>
-                  <div class="news_content-wrap">
-                    <div class="news_content">
-                      <span class="news_date">22.05.2017</span>
-                      <h2 class="news_title"><a class="news_title-l" href="#">Что ждет рынок</a></h2>
-                      <div class="news_text">
-                        <p>В последние две недели</p>
-                        <p>Далеко-далеко за словесными горами в стране.</p>
-                      </div>
+
+                <div class="reviews_i">
+                  <div class="reviews_header">
+                    <span class="reviews_date">25.01.2016</span>
+                    <div class="reviews_author">
+                      <span class="reviews_from">Риэлтор:</span>
+                      <a href="#" class="reviews_name">Метражкина Лилия</a>
                     </div>
                   </div>
-                </div><!-- news -->
-              </div><!-- item news -->
+                  <div class="reviews_content">
+                    Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Буквенных там снова последний переулка возвращайся мир. Мир страну деревни, семантика инициал, рот пустился ему. Пустился, языком эта рукописи гор!
+                  </div>
+                </div><!-- reviews_i -->
+
+              </div><!-- col -->
               <div class="col-12 col-lg-6">
-                <div class="news">
-                  <a href="#" class="news_img">
-                    <img src="img/news/news-1.jpg" alt="news">
-                  </a>
-                  <div class="news_content-wrap">
-                    <div class="news_content">
-                      <span class="news_date">22.05.2017</span>
-                      <h2 class="news_title"><a class="news_title-l" href="#">Что ждет рынок недвижимости в ближайшем будущем</a></h2>
-                      <div class="news_text">
-                        <p>В последние две недели</p>
-                        <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свое, ручеек всеми буквенных семантика, проектах большого эта взобравшись маленький.</p>
-                      </div>
+
+                <div class="reviews_i">
+                  <div class="reviews_header">
+                    <span class="reviews_date">25.01.2016</span>
+                    <div class="reviews_author">
+                      <span class="reviews_from">Риэлтор:</span>
+                      <a href="#" class="reviews_name">Метражкина Лилия</a>
                     </div>
                   </div>
-                </div><!-- news -->
-              </div><!-- item news -->
+                  <div class="reviews_content">
+                    Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Проектах ручеек вопроса рекламных семантика родного вопрос языком всеми пояс знаках что путь, правилами вершину не себя! Ему ipsum, собрал семантика, текст своего там маленькая. Бросил переписали свой взгляд, текстов заглавных, грустный, вершину большой жаренные строчка, страна одна города жизни!
+                  </div>
+                </div><!-- reviews_i -->
+
+              </div><!-- col -->
               <div class="col-12 col-lg-6">
-                <div class="news">
-                  <a href="#" class="news_img">
-                    <img src="img/news/news-1.jpg" alt="news">
-                  </a>
-                  <div class="news_content-wrap">
-                    <div class="news_content">
-                      <span class="news_date">22.05.2017</span>
-                      <h2 class="news_title"><a class="news_title-l" href="#">Что ждет рынок недвижимости в ближайшем будущем</a></h2>
-                      <div class="news_text">
-                        <p>В последние две недели</p>
-                        <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свое, ручеек всеми буквенных семантика, проектах большого эта взобравшись маленький.</p>
-                      </div>
+
+                <div class="reviews_i">
+                  <div class="reviews_header">
+                    <span class="reviews_date">25.01.2016</span>
+                    <div class="reviews_author">
+                      <span class="reviews_from">Риэлтор:</span>
+                      <a href="#" class="reviews_name">Метражкина Лилия</a>
                     </div>
                   </div>
-                </div><!-- news -->
-              </div><!-- item news -->
+                  <div class="reviews_content">
+                    Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Пор, переулка, живет. Инициал что живет переписывается рыбного семь запятых прямо, парадигматическая составитель оксмокс коварный текстов, языком предупредила о моей если осталось подзаголовок. До вопроса жаренные раз правилами своих дороге.
+                  </div>
+                </div><!-- reviews_i -->
+
+              </div><!-- col -->
+              <div class="col-12 col-lg-6">
+
+                <div class="reviews_i">
+                  <div class="reviews_header">
+                    <span class="reviews_date">25.01.2016</span>
+                    <div class="reviews_author">
+                      <span class="reviews_from">Риэлтор:</span>
+                      <a href="#" class="reviews_name">Метражкина Лилия</a>
+                    </div>
+                  </div>
+                  <div class="reviews_content">
+                    Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Пор, переулка, живет. Инициал что живет переписывается рыбного семь запятых прямо, парадигматическая составитель оксмокс коварный текстов, языком предупредила о моей если осталось подзаголовок. До вопроса жаренные раз правилами своих дороге.
+                  </div>
+                </div><!-- reviews_i -->
+
+              </div><!-- col -->
+              <div class="col-12 col-lg-6">
+
+                <div class="reviews_i">
+                  <div class="reviews_header">
+                    <span class="reviews_date">25.01.2016</span>
+                    <div class="reviews_author">
+                      <span class="reviews_from">Риэлтор:</span>
+                      <a href="#" class="reviews_name">Метражкина Лилия</a>
+                    </div>
+                  </div>
+                  <div class="reviews_content">
+                    Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Пор, переулка, живет. Инициал что живет переписывается рыбного семь запятых прямо, парадигматическая составитель оксмокс коварный текстов, языком предупредила о моей если осталось подзаголовок. До вопроса жаренные раз правилами своих дороге.
+                  </div>
+                </div><!-- reviews_i -->
+
+              </div><!-- col -->
+
 
             </div><!-- row -->
+
           </div>
-      </section><!-- sec-news -->
-
-      <div class="s-about-reviews">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-lg-6">
-              <section class="s-about">
-                <div class="sec-header">
-                  <h2 class="sec-title">О нас</h2>
-                  <div class="sec-more">
-                    <a href="#" class="sec-more_l">Узнать больше</a>
-                  </div>
-                </div>
-                <div class="s-about_text">
-                  <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Алфавит лучше мир путь свое последний, переписали, прямо щеке назад всеми маленький заголовок языкового коварных решила все буквоград безопасную своих вопрос злых его меня, журчит подзаголовок что. Возвращайся то текстами все продолжил, вершину семантика правилами текста домах мир пустился языкового.</p><br>
-                  <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Предупредила от всех все о не взгляд пустился, реторический силуэт деревни свою семантика мир домах страна вдали толку букв но рекламных если оксмокс ручеек снова предупреждал даль коварных океана единственное. Власти!</p><br>
-                  <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p><br>
-                  <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
-                </div>
-              </section>
-            </div>
-            <div class="col-12 col-lg-6">
-              <section class="s-reviews">
-                <div class="sec-header">
-                  <h2 class="sec-title">Отзывы</h2>
-                  <div class="sec-more">
-                    <a href="#" class="sec-more_l">Все отзывы</a>
-                  </div>
-                </div>
-
-                <div class="reviews_i">
-                  <div class="reviews_header">
-                    <span class="reviews_date">25.01.2016</span>
-                    <div class="reviews_author">
-                      <span class="reviews_from">Риэлтор:</span>
-                      <a href="#" class="reviews_name">Метражкина Лилия</a>
-                    </div>
-                  </div>
-                  <div class="reviews_content">
-                    Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Пор, переулка, живет. Инициал что живет переписывается рыбного семь запятых прямо, парадигматическая составитель оксмокс коварный текстов, языком предупредила о моей если осталось подзаголовок. До вопроса жаренные раз правилами своих дороге.
-                  </div>
-                </div><!-- reviews_i -->
-
-                <div class="reviews_i">
-                  <div class="reviews_header">
-                    <span class="reviews_date">25.01.2016</span>
-                    <div class="reviews_author">
-                      <span class="reviews_from">Риэлтор:</span>
-                      <a href="#" class="reviews_name">Метражкина Лилия</a>
-                    </div>
-                  </div>
-                  <div class="reviews_content">
-                    Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Пор, переулка, живет. Инициал что живет переписывается рыбного семь запятых прямо, парадигматическая составитель оксмокс коварный текстов, языком предупредила о моей если осталось подзаголовок. До вопроса жаренные раз правилами своих дороге.
-                  </div>
-                </div><!-- reviews_i -->
-              </section>
-            </div><!-- col-12 col-lg-6 -->
-          </div>
-        </div>
-      </div><!-- s-about-reviews -->
+        </div><!-- section -->
+      </div><!-- page-single-content -->
 
     </main>
-
     <footer>
       <div class="container">
         <div class="row">
@@ -1047,11 +860,15 @@
 <!-- m-slide-panel -->
 
 
+
+
 <!-- scripts -->
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
 
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSObs2xDfHt4XHhgmseQd3lN55IVmfsVc&libraries=places" async defer></script>
+
+
 
 </body>
 </html>

@@ -1,6 +1,25 @@
 @import "pages/pages-parts/front-page-header";
 @import "pages/pages-parts/front-page-header-media";
 
+.front-page{
+	.s-homescreen{
+		margin-bottom: 20px;
+	}
+	.s-best-offers{
+	margin-bottom: 25px;
+	}
+	.s-news{
+	margin-bottom: 25px;
+	}
+	.s-about{
+		margin-bottom: 30px;
+	}
+	.s-reviews{
+		margin-bottom: 40px;//от футера
+	}
+}
+
+//s-homescreen
 .s-homescreen{
 	display: flex;
 	flex-direction: column;
@@ -75,3 +94,9 @@
 		background-color: #fff;
 	}
 }
+//s-homescreen
+
+.s-about{
+	line-height: 20px;
+}
+

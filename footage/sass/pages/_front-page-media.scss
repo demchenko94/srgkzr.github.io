@@ -1,15 +1,46 @@
-@media only screen and (min-width : 320px){
-}
-
 
 @media only screen and (min-width : 480px){
 
-
+.front-page{
+	.s-homescreen{
+		margin-bottom: 30px;
+	}
+	.s-best-offers{
+	margin-bottom: 35px;
+	}
+	.s-news{
+	margin-bottom: 40px;
+	}
+	.s-about{
+		margin-bottom: 40px;
+	}
+	.s-reviews{
+		margin-bottom: 50px;//от футера
+	}
+}
 
 }//
 
 
 @media only screen and (min-width : 768px){
+
+.front-page{
+	.s-homescreen{
+		margin-bottom: 40px;
+	}
+	.s-best-offers{
+	margin-bottom: 40px;
+	}
+	.s-news{
+	margin-bottom: 35px;
+	}
+	.s-about{
+		margin-bottom: 40px;
+	}
+	.s-reviews{
+		margin-bottom: 60px;//от футера
+	}
+}
 
 .s-homescreen{
 	padding: 0 0 85px;
@@ -19,6 +50,24 @@
 }//
 
 @media only screen and (min-width : 992px){
+
+.front-page{
+	.s-homescreen{
+		margin-bottom: 40px;
+	}
+	.s-best-offers{
+	margin-bottom: 45px;
+	}
+	.s-news{
+	margin-bottom: 60px;
+	}
+	.s-about{
+		margin-bottom: 50px;
+	}
+	.s-reviews{
+		margin-bottom: 80px;//от футера
+	}
+}
 
 .s-homescreen{
 	padding: 0 0 45px;
